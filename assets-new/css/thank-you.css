@@ -1,0 +1,144 @@
+.thankyou-section{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.title-wrap h1{
+    font-size: 50px;
+    /* padding-bottom: 25px; */
+}
+.title-wrap p{
+    font-size: 18px;
+    padding-bottom: 0;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tick{
+    background: #ff6c1a;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 70px;
+    border: 3px solid #ff6c1a;
+    border-radius: 50%;
+    padding: 0 25px;
+}
+.content p {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.banner-cta-btns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;   
+    justify-content: center;
+    gap: 20px;
+  }
+  
+.banner-cta-btns a {
+    display: block;
+    padding: 12px 20px;
+    border: 1px solid #ff6c1a;
+    border-radius: 8px;
+    background: #fff;
+    color: #ff6c1a;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all ease-in .3s;
+    -moz-transition: all ease-in .3s;
+    -ms-transition: all ease-in .3s;
+    -o-transition: all ease-in .3s;
+    -webkit-transition: all ease-in .3s;
+}
+  
+.banner-cta-btns a:hover {
+    color: #fff;
+    background: #ff6c1a;
+}
+
+@media (max-width: 1199px) {
+    .title-wrap h1{
+        font-size: 45px;
+        line-height: 1.3;
+    }
+    .title-wrap p{
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .tick {
+        font-size: 50px;
+        padding: 0 20px;
+    }
+}
+@media (max-width: 991px){
+    .thankyou-section{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .title-wrap h1{
+        font-size: 35px;
+    }
+    .tick {
+        font-size: 45px;
+    }
+    .content p {
+        font-size: 21px;
+    }
+    .banner-cta-btns a{
+        padding: 10px 28px;       
+    }
+    .banner-cta-btns {
+        gap: 15px;
+    }
+}
+@media (max-width: 767px){
+    .title-wrap h1{
+        font-size: 30px;
+    }
+    .title-wrap p {
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: center !important;
+    }
+    .caption p {
+        padding-right: 0;
+    }
+    .banner-cta-btns {
+        gap: 5px;
+    }
+}
+@media (max-width: 576px) {
+    .thankyou-section{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .title-wrap h1{
+        font-size: 24px;
+        text-align: center !important;
+    }
+    .title-wrap{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
+    .tick {
+        font-size: 35px;
+        padding: 0 16px;
+    }
+    .content p{
+        font-size: 18px;
+    }
+    .banner-cta-btns a{
+        padding: 8px 24px;
+        gap: 10px;
+        font-size: 14px;       
+    }
+    .banner-cta-btns {
+    flex-direction: column;
+    }
+}

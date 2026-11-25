@@ -1,0 +1,238 @@
+.delivery-banner-bg {
+    background: url("../../assets-new/images/transgenie/delivery-banner-bg.jpg") no-repeat
+      center center;
+    background-size: cover;
+    padding: 200px 0 200px;
+  }
+  .bg-dark-blue {
+    background: #192a44;
+}
+  .play-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    z-index: 6;
+    width: 75px;
+    width: 4.6875rem;
+    height: 75px;
+    height: 4.6875rem;
+    background-color: #ff6c1a;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.2s cubic-bezier(0.2, 0.2, 0.38, 0.9) 0s,
+      opacity 0.2s cubic-bezier(0.2, 0.2, 0.38, 0.9) 0s;
+    transition: background-color 0.2s cubic-bezier(0.2, 0.2, 0.38, 0.9) 0s,
+      opacity 0.2s cubic-bezier(0.2, 0.2, 0.38, 0.9) 0s;
+  }
+  .play-link svg {
+    fill: #fff;
+    margin-left: 4px;
+    margin-left: 0.25rem;
+  }
+  .popup-video:focus .play-link,
+  .popup-video:focus-within .play-link,
+  .popup-video:hover .play-link {
+    background-color: rgba(38, 38, 38, 0.75);
+  }
+
+  .drone-icon-wrap {
+    padding: 50px;
+    background: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    width: 100%;
+    height: 98%;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+  }
+  .drone-icon-wrap:hover,
+  .drone-icon-wrap:focus {
+    box-shadow: 0 0 10px #ff6c1a inset;
+    transition: 0.4s ease-in-out;
+  }
+  .drone-icon-wrap img {
+    margin: 0 0 30px;
+  }
+  .drone-icon-wrap h4 {
+    font-size: 22px;
+    line-height: 33px;
+    color: var(--secondrycolor);
+    font-weight: 600;
+    margin: 0 0 15px;
+    padding: 0;
+  }
+
+  .what-wedo-applist {
+    border: 1px solid transparent;
+  }
+  .what-wedo-applist:hover,
+  .what-wedo-applist:focus {
+    box-shadow: 0px 3px 30px #0000001a;
+    border: 1px solid #ff6c1a;
+  }
+  .what-wedo-applist h3 {
+    padding-bottom: 5px !important;
+  }
+  .what-wedo-applist img {
+    width: 45px !important;
+    height: 45px !important;
+    object-fit: contain;
+    margin-bottom: 15px !important;
+  }
+  .what-wedo-applist {
+    transition: all 0.3s ease;
+  }
+  .pl-3 {
+    padding-left: 15px;
+  }
+  .what-wedo-applist {
+    background: #f3f6f9;
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .what-wedo-applist h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+@media (max-width: 1199px) {
+    .delivery-banner-bg {
+        padding: 150px 0px;
+      }
+      .drone-icon-wrap {
+        padding: 30px;
+      }
+      .drone-icon-wrap h4 {
+        font-size: 19px;
+        line-height: 28px;
+        margin: 0 0 10px;
+      }
+      .what-wedo-applist h3 {
+        font-size: 18px;
+        line-height: 28px;
+      }
+      .what-wedo-applist {
+        padding: 15px;
+      }
+      .what-wedo-applist img {
+        margin-bottom: 15px !important;
+      }
+}  
+@media (max-width: 991px) {
+    .delivery-banner-bg {
+        padding: 100px 0;
+      }
+      .drone-icon-wrap {
+        padding: 20px;
+      }
+      .drone-icon-wrap h4 {
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0 0 10px;
+      }
+      .drone-icon-wrap img {
+        margin: 0 0 15px;
+      }
+      .what-wedo-applist h3 {
+        font-size: 17px;
+      }
+} 
+@media (max-width: 767px) {
+    .delivery-banner-bg {
+        padding: 70px 0;
+      }
+      .drone-icon-wrap {
+        padding: 20px;
+      }
+      .drone-icon-wrap h4 {
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0 0 10px;
+      }
+      .drone-icon-wrap img {
+        margin: 0 0 15px;
+      }
+}
+@media (max-width: 576px) {
+    .delivery-banner-bg {
+        padding: 50px 0;
+      }
+      .play-link {
+        width: 3.6875rem;
+        height: 3.6875rem;
+      }
+      .play-link svg {
+        margin-left: 0;
+        width: 25px;
+      }
+      .drone-icon-wrap {
+        padding: 15px;
+      }
+      .drone-icon-wrap h4 {
+        font-size: 18px;
+      }
+}
+@media (max-width: 480px) {
+    .play-link {
+        width: 3rem;
+        height: 3rem;
+      }
+      .play-link svg {
+        width: 22px;
+      }
+      .drone-icon-wrap img {
+        margin: 0 0 10px;
+        width: 40px;
+        height: 40px;
+      }
+      .drone-icon-wrap h4 {
+        font-size: 16px;
+      }
+      .what-wedo-applist img {
+        margin-bottom: 10px !important;
+      }
+}
+
+
+
+.sticky { top: 130px!important; position: sticky; }
+.what-we-do-app { transition: 0.3s; -o-transition: 0.3s; -webkit-transition: 0.3s; }
+.what-we-do-app img { width: 60px; height: 60px; object-fit: contain; margin: 0 0 15px; }
+.what-we-do-app h3 a { font-size: 20px; color: var(--secondrycolor); }
+.what-we-do-app h3 a:hover { color: #ff6c1a; }
+.what-we-do-app:hover,
+.what-we-do-app:focus {
+  box-shadow: none;
+}
+
+.what-we-do { padding: 150px 0 100px; position: relative; }
+.what-we-do .title-wrap::before { content: ""; position: absolute; top: -50px; left: -50px; width: 410px; height: 330px; background-image: url(../images/left-pattern1.webp); background-repeat: no-repeat; background-position: left top; background-size: cover; z-index: 0; }
+.what-we-do .techstack .h2,
+.what-we-do .techstack h2 { color: #ff6c1a !important; font-size: 24px; font-weight: 700; line-height: 30px; margin: 0; padding-bottom: 20px; }
+.what-we-do .techstack h2 span { color: #767676 !important; }
+.what-we-do .techstack { padding-bottom: 0px; }
+.what-we-do .techstack p { margin-bottom: 0px; }
+.app-strategy { display: flex; }
+.app-strategy-img { min-width: 75px; }
+@media screen and (max-width: 1199px) {
+  .what-we-do .techstack .h2,
+  .what-we-do .techstack h2 { font-size: 20px; padding-bottom: 15px; }
+}
+@media (max-width: 991px) {
+  .what-we-do .title-wrap:before { width: 280px; height: 240px; }
+  .what-we-do .title-wrap:before { top: -35px; left: -40px; width: 300px; height: 240px; }
+  .story-section, .what-we-do { padding: 60px 0!important; }
+}
+@media (max-width: 576px) {
+  .what-we-do.wwd-sticky hr { margin: 5px 0 20px!important; }
+  .what-we-do, .technolgies, .what-we-dos { padding: 30px 0!important; }
+  .what-we-do .techstack .h2,
+  .what-we-do .techstack h2 { font-size: 18px; padding-bottom: 10px; }
+}
+@media (max-width: 400px) {
+  .what-we-do .techstack .h2,
+  .what-we-do .techstack h2 { font-size: 17px; -height: 28px; }
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url>
+  <loc>https://www.sparkouttech.com/igniting-possibilities-sparkouts-sixth-year-anniversary/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sparkout Tech Solutions News</news:name>
+      <news:language>en</news:language>
+    </news:publication>
+    <news:publication_date>2023-05-19</news:publication_date>
+    <news:title>Marking Sparkout's 6th-Year Anniversary</news:title>
+  </news:news>
+  </url>
+  <url>
+  <loc>https://www.sparkouttech.com/spreading-wings-sparkout-tech-solutions-to-the-us/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sparkout Tech Solutions News</news:name>
+      <news:language>en</news:language>
+    </news:publication>
+    <news:publication_date>2023-09-28</news:publication_date>
+    <news:title>Spreading the Wings of Sparkout Tech Solutions to the U.S.</news:title>
+  </news:news>
+  </url>
+  <url> 
+  <loc>https://www.sparkouttech.com/top-mobile-app-development-companies/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sparkout Tech Solutions News</news:name>
+      <news:language>en</news:language>
+    </news:publication>
+    <news:publication_date>2024-01-24</news:publication_date>
+    <news:title>Sparkout has hat-kicked its position in the list of top Mobile app development companies in the USA by Design Rush</news:title>
+  </news:news>
+  </url>
+  <url>
+  <loc>https://www.sparkouttech.com/top-custom-software-development-company-in-usa/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sparkout Tech Solutions News</news:name>
+      <news:language>en</news:language>
+    </news:publication>
+    <news:publication_date>2024-01-29</news:publication_date>
+    <news:title>Sparkout Tech Solutions Inc Takes the Spotlight: Among the Elite as Top Custom Software Development Company in the USA</news:title>
+  </news:news>
+  </url>
+  <url>
+  <loc>https://www.sparkouttech.com/ai-set-to-dominate-fintech-development/</loc>
+  <news:news>
+    <news:publication>
+      <news:name>Sparkout Tech Solutions News</news:name>
+      <news:language>en</news:language>
+    </news:publication>
+    <news:publication_date>2024-02-08</news:publication_date>
+    <news:title>The AI ​​Revolution for FinTech Development: Moving on to the Next 5 Years</news:title>
+  </news:news>
+  </url>
+</urlset>

@@ -1,0 +1,3267 @@
+<!DOCTYPE html>
+<html ⚡="">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Step-by-Step Guide to WSO2 API Manager & Framework Overview</title>
+    <link rel="canonical" href="https://www.sparkouttech.com/wso2-api-development-guide/" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="amp-google-client-id-api" content="googleanalytics" />
+    <link rel="icon" type="image/x-icon" href="./img/blog/fav.png">
+    <meta name="description"
+        content="Discover the WSO2 suite and how it can transform your API development and management. Learn about WSO2 API manager, different modules, and best practices.">
+    <meta name="keywords"
+        content="What is The WSO2, WSO2 API Integration, How Does WSO2 Work, Key Features Of WSO2,Benefits of WSO2, Use Cases Of WSO2, WSO2 Development Framework, WSO2 Integration Tools, API Management with WSO2">
+    <meta name="author" content="Sparkout Tech Solutions">
+    <meta property="og:title" content="Step-by-Step Guide to WSO2 API Manager & Framework Overview">
+    <meta property="og:site_name" content="Sparkout Tech Solutions">
+    <meta property="og:url" content="https://www.sparkouttech.com/wso2-api-development-guide/">
+    <meta property="og:description"
+        content="Discover the WSO2 suite and how it can transform your API development and management. Learn about WSO2 API manager, different modules, and best practices.">
+    <meta property="og:type"
+        content="Discover the WSO2 suite and how it can transform your API development and management. Learn about WSO2 API manager, different modules, and best practices.">
+    <meta property="og:image"
+        content="https://www.sparkouttech.com/assets-new/images/wso2-api-development/detailed-guide-to-wso2.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://www.sparkouttech.com/wso2-api-development-guide/">
+    <meta name="twitter:title" content="Step-by-Step Guide to WSO2 API Manager & Framework Overview">
+    <meta name="twitter:description"
+        content="Discover the WSO2 suite and how it can transform your API development and management. Learn about WSO2 API manager, different modules, and best practices.">
+    <meta name="twitter:image"
+        content="https://www.sparkouttech.com/assets-new/images/wso2-api-development/detailed-guide-to-wso2.png">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style amp-boilerplate="">
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+
+            to {
+                visibility: visible;
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+
+            to {
+                visibility: visible;
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+
+            to {
+                visibility: visible;
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+
+            to {
+                visibility: visible;
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+
+            to {
+                visibility: visible;
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate="">
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none;
+            }
+        </style>
+    </noscript>
+
+    <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
+    <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+    <script custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async></script>
+    <script custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js" async></script>
+    <script custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js" async></script>
+    <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
+
+    <style amp-custom="">
+        html {
+            font-family: Montserrat, sans-serif;
+            line-height: 1.15;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        article,
+        aside,
+        footer,
+        header,
+        nav,
+        section {
+            display: block;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 0.67em 0;
+        }
+
+        figcaption,
+        figure,
+        main {
+            display: block;
+        }
+
+        figure {
+            margin: 1em 40px;
+        }
+
+        hr {
+            box-sizing: content-box;
+            height: 0;
+            overflow: visible;
+        }
+
+        p {
+            text-align: left;
+        }
+
+        pre {
+            font-family: Montserrat, sans-serif;
+            font-size: 1em;
+        }
+
+        a {
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects;
+            color: #ff6b19;
+            text-decoration: none;
+        }
+
+        a:active,
+        a:hover {
+            outline-width: 0;
+        }
+
+        abbr[title] {
+            border-bottom: none;
+            text-decoration: underline;
+            text-decoration: underline dotted;
+        }
+
+        b,
+        strong {
+            font-weight: inherit;
+            font-weight: bolder;
+        }
+
+        code,
+        kbd,
+        samp {
+            font-family: Montserrat, sans-serif;
+            font-size: 1em;
+        }
+
+        dfn {
+            font-style: italic;
+        }
+
+        mark {
+            background-color: #ff0;
+            color: #000;
+        }
+
+        small {
+            font-size: 80%;
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+
+        sub {
+            bottom: -0.25em;
+        }
+
+        sup {
+            top: -0.5em;
+        }
+
+        audio,
+        video {
+            display: inline-block;
+        }
+
+        audio:not([controls]) {
+            display: none;
+            height: 0;
+        }
+
+        img {
+            border-style: none;
+        }
+
+        svg:not(:root) {
+            overflow: hidden;
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: Montserrat, sans-serif;
+            font-size: 100%;
+            line-height: 1.15;
+            margin: 0;
+        }
+
+        button,
+        input {
+            overflow: visible;
+        }
+
+        button,
+        select {
+            text-transform: none;
+        }
+
+        [type="reset"],
+        [type="submit"],
+        button,
+        html [type="button"] {
+            -webkit-appearance: button;
+            -moz-appearance: button;
+            appearance: button;
+        }
+
+        [type="button"]::-moz-focus-inner,
+        [type="reset"]::-moz-focus-inner,
+        [type="submit"]::-moz-focus-inner,
+        button::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+
+        [type="button"]:-moz-focusring,
+        [type="reset"]:-moz-focusring,
+        [type="submit"]:-moz-focusring,
+        button:-moz-focusring {
+            outline: 1px dotted ButtonText;
+        }
+
+        fieldset {
+            border: 1px solid silver;
+            margin: 0 2px;
+            padding: 0.35em 0.625em 0.75em;
+        }
+
+        progress {
+            display: inline-block;
+            vertical-align: baseline;
+        }
+
+        textarea {
+            overflow: auto;
+        }
+
+        [type="checkbox"],
+        [type="radio"] {
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        [type="number"]::-webkit-inner-spin-button,
+        [type="number"]::-webkit-outer-spin-button {
+            height: auto;
+        }
+
+        [type="search"] {
+            -webkit-appearance: textfield;
+            -moz-appearance: textfield;
+            appearance: textfield;
+            outline-offset: -2px;
+        }
+
+        [type="search"]::-webkit-search-cancel-button,
+        [type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit;
+        }
+
+        details,
+        menu {
+            display: block;
+        }
+
+        summary {
+            display: list-item;
+        }
+
+        canvas {
+            display: inline-block;
+        }
+
+        [hidden],
+        template {
+            display: none;
+        }
+
+        .h00 {
+            font-size: 4rem;
+        }
+
+        .h0,
+        .h1 {
+            font-size: 3rem;
+            color: #ff6c1a;
+        }
+
+        .h2 {
+            font-size: 2rem;
+            font-family: "Montserrat", sans-serif;
+            color: #ff6c1a;
+        }
+
+        .h3 {
+            font-size: 1.5rem;
+            color: #ff6c1a;
+        }
+
+        .h4 {
+            font-size: 1.125rem;
+            color: #ff6c1a;
+        }
+
+        .h5 {
+            font-size: 0.875rem;
+        }
+
+        .h6 {
+            font-size: 0.75rem;
+        }
+
+        .font-family-inherit {
+            font-family: Montserrat, sans-serif;
+        }
+
+        .font-size-inherit {
+            font-size: inherit;
+        }
+
+        .text-decoration-none {
+            text-decoration: none;
+        }
+
+        .bold {
+            font-weight: 700;
+        }
+
+        .regular {
+            font-weight: 400;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .caps {
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+        .left-align {
+            text-align: left;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .right-align {
+            text-align: right;
+        }
+
+        .justify {
+            text-align: justify;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        .break-word {
+            word-wrap: break-word;
+        }
+
+        .line-height-1 {
+            line-height: 1rem;
+        }
+
+        .line-height-2 {
+            line-height: 1.125rem;
+        }
+
+        .line-height-3 {
+            line-height: 1.5rem;
+        }
+
+        .line-height-4 {
+            line-height: 2rem;
+        }
+
+        .list-style-none {
+            list-style: none;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .truncate {
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .list-reset {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .table {
+            display: table;
+        }
+
+        .table-cell {
+            display: table-cell;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .overflow-scroll {
+            overflow: scroll;
+        }
+
+        .overflow-auto {
+            overflow: auto;
+        }
+
+        .clearfix:after,
+        .clearfix:before {
+            content: " ";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .fit {
+            max-width: 100%;
+        }
+
+        .max-width-1 {
+            max-width: 24rem;
+        }
+
+        .max-width-2 {
+            max-width: 32rem;
+        }
+
+        .max-width-3 {
+            max-width: 48rem;
+        }
+
+        .max-width-4 {
+            max-width: 64rem;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+        }
+
+        .align-baseline {
+            vertical-align: baseline;
+        }
+
+        .align-top {
+            vertical-align: top;
+        }
+
+        .align-middle {
+            vertical-align: middle;
+        }
+
+        .align-bottom {
+            vertical-align: bottom;
+        }
+
+        .m0 {
+            margin: 0;
+        }
+
+        .mt0 {
+            margin-top: 0;
+        }
+
+        .mr0 {
+            margin-right: 0;
+        }
+
+        .mb0 {
+            margin-bottom: 0;
+        }
+
+        .ml0,
+        .mx0 {
+            margin-left: 0;
+        }
+
+        .mx0 {
+            margin-right: 0;
+        }
+
+        .my0 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .m1 {
+            margin: 0.5rem;
+        }
+
+        .mt1 {
+            margin-top: 0.5rem;
+        }
+
+        .mr1 {
+            margin-right: 0.5rem;
+        }
+
+        .mb1 {
+            margin-bottom: 0.5rem;
+        }
+
+        .ml1,
+        .mx1 {
+            margin-left: 0.5rem;
+        }
+
+        .mx1 {
+            margin-right: 0.5rem;
+        }
+
+        .my1 {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .m2 {
+            margin: 1rem;
+        }
+
+        .mt2 {
+            margin-top: 1rem;
+        }
+
+        .mr2 {
+            margin-right: 1rem;
+        }
+
+        .mb2 {
+            margin-bottom: 1rem;
+        }
+
+        .ml2,
+        .mx2 {
+            margin-left: 1rem;
+        }
+
+        .mx2 {
+            margin-right: 1rem;
+        }
+
+        .my2 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .m3 {
+            margin: 1.5rem;
+        }
+
+        .mt3 {
+            margin-top: 1.5rem;
+        }
+
+        .mr3 {
+            margin-right: 1.5rem;
+        }
+
+        .mb3 {
+            margin-bottom: 1.5rem;
+        }
+
+        .ml3,
+        .mx3 {
+            margin-left: 1.5rem;
+        }
+
+        .mx3 {
+            margin-right: 1.5rem;
+        }
+
+        .my3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .m4 {
+            margin: 2rem;
+        }
+
+        .mt4 {
+            margin-top: 2rem;
+        }
+
+        .mr4 {
+            margin-right: 2rem;
+        }
+
+        .mb4 {
+            margin-bottom: 2rem;
+        }
+
+        .ml4,
+        .mx4 {
+            margin-left: 2rem;
+        }
+
+        .mx4 {
+            margin-right: 2rem;
+        }
+
+        .my4 {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .mxn1 {
+            margin-left: calc(0.5rem * -1);
+            margin-right: calc(0.5rem * -1);
+        }
+
+        .mxn2 {
+            margin-left: calc(1rem * -1);
+            margin-right: calc(1rem * -1);
+        }
+
+        .mxn3 {
+            margin-left: calc(1.5rem * -1);
+            margin-right: calc(1.5rem * -1);
+        }
+
+        .mxn4 {
+            margin-left: calc(2rem * -1);
+            margin-right: calc(2rem * -1);
+        }
+
+        .m-auto {
+            margin: auto;
+        }
+
+        .mt-auto {
+            margin-top: auto;
+        }
+
+        .mr-auto {
+            margin-right: auto;
+        }
+
+        .mb-auto {
+            margin-bottom: auto;
+        }
+
+        .ml-auto,
+        .mx-auto {
+            margin-left: auto;
+        }
+
+        .mx-auto {
+            margin-right: auto;
+        }
+
+        .my-auto {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .p0 {
+            padding: 0;
+        }
+
+        .pt0 {
+            padding-top: 0;
+        }
+
+        .pr0 {
+            padding-right: 0;
+        }
+
+        .pb0 {
+            padding-bottom: 0;
+        }
+
+        .pl0,
+        .px0 {
+            padding-left: 0;
+        }
+
+        .px0 {
+            padding-right: 0;
+        }
+
+        .py0 {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .p1 {
+            padding: 0.5rem;
+        }
+
+        .pt1 {
+            padding-top: 0.5rem;
+        }
+
+        .pr1 {
+            padding-right: 0.5rem;
+        }
+
+        .pb1 {
+            padding-bottom: 0.5rem;
+        }
+
+        .pl1 {
+            padding-left: 0.5rem;
+        }
+
+        .py1 {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .px1 {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        .p2 {
+            padding: 1rem;
+        }
+
+        .pt2 {
+            padding-top: 1rem;
+        }
+
+        .pr2 {
+            padding-right: 1rem;
+        }
+
+        .pb2 {
+            padding-bottom: 1rem;
+        }
+
+        .pl2 {
+            padding-left: 1rem;
+        }
+
+        .py2 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .px2 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .p3 {
+            padding: 1.5rem;
+        }
+
+        .pt3 {
+            padding-top: 1.5rem;
+        }
+
+        .pr3 {
+            padding-right: 1.5rem;
+        }
+
+        .pb3 {
+            padding-bottom: 1.5rem;
+        }
+
+        .pl3 {
+            padding-left: 1.5rem;
+        }
+
+        .py3 {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .px3 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        .p4 {
+            padding: 2rem;
+        }
+
+        .pt4 {
+            padding-top: 2rem;
+        }
+
+        .pr4 {
+            padding-right: 2rem;
+        }
+
+        .pb4 {
+            padding-bottom: 2rem;
+        }
+
+        .pl4 {
+            padding-left: 2rem;
+        }
+
+        .py4 {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .px4 {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .col {
+            float: left;
+        }
+
+        .col,
+        .col-right {
+            box-sizing: border-box;
+        }
+
+        .col-right {
+            float: right;
+        }
+
+        .col-1 {
+            width: 8.33333%;
+        }
+
+        .col-2 {
+            width: 16.66667%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33333%;
+        }
+
+        .col-5 {
+            width: 41.66667%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33333%;
+        }
+
+        .col-8 {
+            width: 66.66667%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33333%;
+        }
+
+        .col-11 {
+            width: 91.66667%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        @media (min-width: 40.06rem) {
+            .sm-col {
+                float: left;
+                box-sizing: border-box;
+            }
+
+            .sm-col-right {
+                float: right;
+                box-sizing: border-box;
+            }
+
+            .sm-col-1 {
+                width: 8.33333%;
+            }
+
+            .sm-col-2 {
+                width: 16.66667%;
+            }
+
+            .sm-col-3 {
+                width: 25%;
+            }
+
+            .sm-col-4 {
+                width: 33.33333%;
+            }
+
+            .sm-col-5 {
+                width: 41.66667%;
+            }
+
+            .sm-col-6 {
+                width: 50%;
+            }
+
+            .sm-col-7 {
+                width: 58.33333%;
+            }
+
+            .sm-col-8 {
+                width: 66.66667%;
+            }
+
+            .sm-col-9 {
+                width: 75%;
+            }
+
+            .sm-col-10 {
+                width: 83.33333%;
+            }
+
+            .sm-col-11 {
+                width: 91.66667%;
+            }
+
+            .sm-col-12 {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 52.06rem) {
+            .md-col {
+                float: left;
+                box-sizing: border-box;
+            }
+
+            .md-col-right {
+                float: right;
+                box-sizing: border-box;
+            }
+
+            .md-col-1 {
+                width: 8.33333%;
+            }
+
+            .md-col-2 {
+                width: 16.66667%;
+            }
+
+            .md-col-3 {
+                width: 25%;
+            }
+
+            .md-col-4 {
+                width: 33.33333%;
+            }
+
+            .md-col-5 {
+                width: 41.66667%;
+            }
+
+            .md-col-6 {
+                width: 50%;
+            }
+
+            .md-col-7 {
+                width: 58.33333%;
+            }
+
+            .md-col-8 {
+                width: 66.66667%;
+            }
+
+            .md-col-9 {
+                width: 75%;
+            }
+
+            .md-col-10 {
+                width: 83.33333%;
+            }
+
+            .md-col-11 {
+                width: 91.66667%;
+            }
+
+            .md-col-12 {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 64.06rem) {
+            .lg-col {
+                float: left;
+                box-sizing: border-box;
+            }
+
+            .lg-col-right {
+                float: right;
+                box-sizing: border-box;
+            }
+
+            .lg-col-1 {
+                width: 8.33333%;
+            }
+
+            .lg-col-2 {
+                width: 16.66667%;
+            }
+
+            .lg-col-3 {
+                width: 25%;
+            }
+
+            .lg-col-4 {
+                width: 33.33333%;
+            }
+
+            .lg-col-5 {
+                width: 41.66667%;
+            }
+
+            .lg-col-6 {
+                width: 50%;
+            }
+
+            .lg-col-7 {
+                width: 58.33333%;
+            }
+
+            .lg-col-8 {
+                width: 66.66667%;
+            }
+
+            .lg-col-9 {
+                width: 75%;
+            }
+
+            .lg-col-10 {
+                width: 83.33333%;
+            }
+
+            .lg-col-11 {
+                width: 91.66667%;
+            }
+
+            .lg-col-12 {
+                width: 100%;
+            }
+        }
+
+        .flex {
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        @media (min-width: 40.06rem) {
+            .sm-flex {
+                display: -ms-flexbox;
+                display: flex;
+            }
+        }
+
+        @media (min-width: 52.06rem) {
+            .md-flex {
+                display: -ms-flexbox;
+                display: flex;
+            }
+        }
+
+        @media (min-width: 64.06rem) {
+            .lg-flex {
+                display: -ms-flexbox;
+                display: flex;
+            }
+        }
+
+        .flex-column {
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        .flex-wrap {
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .items-start {
+            -ms-flex-align: start;
+            align-items: flex-start;
+        }
+
+        .items-end {
+            -ms-flex-align: end;
+            align-items: flex-end;
+        }
+
+        .items-center {
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .items-baseline {
+            -ms-flex-align: baseline;
+            align-items: baseline;
+        }
+
+        .items-stretch {
+            -ms-flex-align: stretch;
+            align-items: stretch;
+        }
+
+        .self-start {
+            -ms-flex-item-align: start;
+            align-self: flex-start;
+        }
+
+        .self-end {
+            -ms-flex-item-align: end;
+            align-self: flex-end;
+        }
+
+        .self-center {
+            -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+        }
+
+        .self-baseline {
+            -ms-flex-item-align: baseline;
+            align-self: baseline;
+        }
+
+        .self-stretch {
+            -ms-flex-item-align: stretch;
+            -ms-grid-row-align: stretch;
+            align-self: stretch;
+        }
+
+        .justify-start {
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+        }
+
+        .justify-end {
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+        }
+
+        .justify-center {
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .justify-between {
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+
+        .justify-around {
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+        }
+
+        .justify-evenly {
+            -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+        }
+
+        .content-start {
+            -ms-flex-line-pack: start;
+            align-content: flex-start;
+        }
+
+        .content-end {
+            -ms-flex-line-pack: end;
+            align-content: flex-end;
+        }
+
+        .content-center {
+            -ms-flex-line-pack: center;
+            align-content: center;
+        }
+
+        .content-between {
+            -ms-flex-line-pack: justify;
+            align-content: space-between;
+        }
+
+        .content-around {
+            -ms-flex-line-pack: distribute;
+            align-content: space-around;
+        }
+
+        .content-stretch {
+            -ms-flex-line-pack: stretch;
+            align-content: stretch;
+        }
+
+        .flex-auto {
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            min-width: 0;
+            min-height: 0;
+        }
+
+        .flex-none {
+            -ms-flex: none;
+            flex: none;
+        }
+
+        .order-0 {
+            -ms-flex-order: 0;
+            order: 0;
+        }
+
+        .order-1 {
+            -ms-flex-order: 1;
+            order: 1;
+        }
+
+        .order-2 {
+            -ms-flex-order: 2;
+            order: 2;
+        }
+
+        .order-3 {
+            -ms-flex-order: 3;
+            order: 3;
+        }
+
+        .order-last {
+            -ms-flex-order: 99999;
+            order: 99999;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .fixed {
+            position: fixed;
+        }
+
+        .top-0 {
+            top: 0;
+        }
+
+        .right-0 {
+            right: 0;
+        }
+
+        .bottom-0 {
+            bottom: 0;
+        }
+
+        .left-0 {
+            left: 0;
+        }
+
+        .z1 {
+            z-index: 1;
+        }
+
+        .z2 {
+            z-index: 2;
+        }
+
+        .z3 {
+            z-index: 3;
+        }
+
+        .z4 {
+            z-index: 4;
+        }
+
+        .border {
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        .border-top {
+            border-top-style: solid;
+            border-top-width: 1px;
+        }
+
+        .border-right {
+            border-right-style: solid;
+            border-right-width: 1px;
+        }
+
+        .border-bottom {
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+        }
+
+        .border-left {
+            border-left-style: solid;
+            border-left-width: 1px;
+        }
+
+        .border-none {
+            border: 0;
+        }
+
+        .rounded {
+            border-radius: 3px;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+
+        .rounded-top {
+            border-radius: 3px 3px 0 0;
+        }
+
+        .rounded-right {
+            border-radius: 0 3px 3px 0;
+        }
+
+        .rounded-bottom {
+            border-radius: 0 0 3px 3px;
+        }
+
+        .rounded-left {
+            border-radius: 3px 0 0 3px;
+        }
+
+        .not-rounded {
+            border-radius: 0;
+        }
+
+        .hide {
+            position: absolute;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+        }
+
+        @media (max-width: 40rem) {
+            .xs-hide {
+                display: none;
+            }
+        }
+
+        @media (min-width: 40.06rem) and (max-width: 52rem) {
+            .sm-hide {
+                display: none;
+            }
+        }
+
+        @media (min-width: 52.06rem) and (max-width: 64rem) {
+            .md-hide {
+                display: none;
+            }
+        }
+
+        @media (min-width: 64.06rem) {
+            .lg-hide {
+                display: none;
+            }
+        }
+
+        .display-none {
+            display: none;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fff;
+            color: #000000;
+            font-family: Montserrat, sans-serif;
+            min-width: 315px;
+            overflow-x: hidden;
+            font-smooth: always;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* main {
+        max-width: 700px;
+        margin: 0 auto;
+      } */
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        .ampstart-accent {
+            color: #003f93;
+        }
+
+        #content:target {
+            margin-top: calc(0px - 3.5rem);
+            padding-top: 3.5rem;
+        }
+
+        .ampstart-title-lg {
+            font-size: 3rem;
+            line-height: 3.5rem;
+            letter-spacing: 0.06rem;
+        }
+
+        .ampstart-title-md {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            letter-spacing: 0.06rem;
+        }
+
+        .ampstart-title-sm {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            letter-spacing: 0.06rem;
+        }
+
+        .ampstart-subtitle,
+        body {
+            line-height: 1.5rem;
+            letter-spacing: normal;
+        }
+
+        .ampstart-subtitle {
+            color: #ff6b19;
+            font-size: 1.3rem;
+        }
+
+        .ampstart-byline,
+        .ampstart-caption,
+        .ampstart-hint,
+        .ampstart-label {
+            font-size: 1rem;
+            color: #ff6b19;
+            line-height: 1.125rem;
+            letter-spacing: 0.06rem;
+        }
+
+        /* .ampstart-label {
+        text-transform: uppercase;
+      } */
+        .ampstart-footer,
+        .ampstart-small-text {
+            font-size: 0.75rem;
+            line-height: 1rem;
+            letter-spacing: 0.06rem;
+        }
+
+        .ampstart-card {
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+                0 1px 1px -1px rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .h1,
+        h1 {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+            color: #ff6c1a;
+            font-weight: 500;
+        }
+
+        .h2,
+        h2 {
+            font-size: 1.75rem;
+            line-height: 2rem;
+            color: #252b33;
+            font-weight: 500;
+        }
+
+        .h3,
+        h3 {
+            font-size: 1.3rem;
+            line-height: 1.75rem;
+            /* color: #ff6c1a; */
+            font-weight: 600;
+        }
+
+        .h4,
+        h4 {
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            color: #ff6c1a;
+        }
+
+        .h5,
+        h5 {
+            font-size: 0.875rem;
+            line-height: 1.125rem;
+        }
+
+        .h6,
+        h6 {
+            font-size: 0.75rem;
+            line-height: 1rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+            padding: 0;
+            /* font-weight: 400; */
+            letter-spacing: 0.06rem;
+        }
+
+        /* a,
+      a:active,
+      a:visited {
+        color: inherit;
+      } */
+        .callout_box {
+            background-color: #fff;
+            text-align: center;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 12px 20px 20px #d2d2d2;
+            margin: 25px 24px 30px;
+            border: solid 3px #ff6c1a;
+        }
+
+        .callout_box .call_heading {
+            font-size: 1.5rem;
+            padding-bottom: 0;
+            margin-top: 0;
+            line-height: 1.2;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 425px) {
+            .callout_box {
+                padding: 30px;
+            }
+
+            .list {
+                padding-left: 25px;
+            }
+        }
+
+        .table-responsive {
+            min-height: 0.01%;
+            overflow-x: unset;
+            padding: 0;
+            margin: 0 24px 20px;
+        }
+
+        .travel_table table {
+            box-shadow: 0 5px 20px rgb(0 0 0/20%);
+            width: 100%;
+            margin: 0 auto;
+            background: #fff;
+            font-size: 14px;
+        }
+
+        /* .travel_table table > tbody > tr {
+        border: 1px solid #ddd;
+      } */
+        /*
+      .travel_table table tr th:first-child,
+      .travel_table table tr th:last-child,
+      .travel_table table tr:first-child td:first-child,
+      .travel_table table tr:first-child td:last-child {
+        border: 1px solid #ddd;
+        border-radius: 0;
+        border-left: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+      } */
+
+        .table-responsive.sticky-table .table-bordered>tbody>tr>th {
+            position: sticky;
+            top: 56px;
+            z-index: 7;
+            background: #ff6c1a;
+            color: #fff;
+        }
+
+        .table-responsive.sticky-table .web-mobile-apps-table>tbody>tr:nth-child(2)>th {
+            top: 82px;
+        }
+
+        .spark-cta a.btn-style-one {
+            padding: 10px 38px;
+            color: #fff;
+            font-size: 16px;
+            line-height: 168%;
+            border-radius: 0;
+            height: auto;
+            width: auto;
+            border: 1px solid #ff6c1a;
+            font-weight: 600;
+            position: relative;
+            cursor: pointer;
+            background: #ff6c1a;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        .spark-cta {
+            margin-top: 30px;
+        }
+
+        .spark-cta a.btn-style-one:hover {
+            text-decoration: none;
+            background: #192a44;
+            color: #fff;
+        }
+
+        .ampstart-btn {
+            font-family: Montserrat, sans-serif;
+            font-weight: inherit;
+            font-size: 1rem;
+            line-height: 1.125rem;
+            padding: 0.7em 0.8em;
+            text-decoration: none;
+            white-space: nowrap;
+            word-wrap: normal;
+            vertical-align: middle;
+            cursor: pointer;
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
+        .ampstart-btn:visited {
+            color: #fff;
+        }
+
+        .ampstart-btn-secondary {
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000;
+        }
+
+        .ampstart-btn-secondary:visited {
+            color: #000;
+        }
+
+        .ampstart-btn:active .ampstart-btn:focus {
+            opacity: 0.8;
+        }
+
+        .ampstart-btn[disabled],
+        .ampstart-btn[disabled]:active,
+        .ampstart-btn[disabled]:focus,
+        .ampstart-btn[disabled]:hover {
+            opacity: 0.5;
+            outline: 0;
+            cursor: default;
+        }
+
+        .ampstart-dropcap:first-letter {
+            color: #000;
+            font-size: 3rem;
+            font-weight: 700;
+            float: left;
+            overflow: hidden;
+            line-height: 3rem;
+            margin-left: 0;
+            margin-right: 0.5rem;
+        }
+
+        .ampstart-initialcap {
+            padding-top: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .ampstart-initialcap:first-letter {
+            color: #000;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-left: -2px;
+        }
+
+        .ampstart-pullquote {
+            border: none;
+            border-left: 4px solid #000;
+            font-size: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .ampstart-byline time {
+            font-style: normal;
+            white-space: nowrap;
+        }
+
+        .amp-carousel-button-next {
+            background-image: url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Next</title><path d="M25.557 14.7L13.818 2.961 16.8 0l16.8 16.8-16.8 16.8-2.961-2.961L25.557 18.9H0v-4.2z" fill="%23FFF" fill-rule="evenodd"/></svg>');
+        }
+
+        .amp-carousel-button-prev {
+            background-image: url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Previous</title><path d="M33.6 14.7H8.043L19.782 2.961 16.8 0 0 16.8l16.8 16.8 2.961-2.961L8.043 18.9H33.6z" fill="%23FFF" fill-rule="evenodd"/></svg>');
+        }
+
+        .ampstart-dropdown {
+            min-width: 200px;
+        }
+
+        .ampstart-dropdown.absolute {
+            z-index: 100;
+        }
+
+        .ampstart-dropdown.absolute>section,
+        .ampstart-dropdown.absolute>section>header {
+            height: 100%;
+        }
+
+        .ampstart-dropdown>section>header {
+            background-color: #000;
+            border: 0;
+            color: #fff;
+        }
+
+        .ampstart-dropdown>section>header:after {
+            display: inline-block;
+            content: "+";
+            padding: 0 0 0 1.5rem;
+            color: #ff6c1a;
+        }
+
+        .ampstart-dropdown>[expanded]>header:after {
+            content: "–";
+        }
+
+        .absolute .ampstart-dropdown-items {
+            z-index: 200;
+        }
+
+        .ampstart-dropdown-item {
+            background-color: #000;
+            color: #003f93;
+            opacity: 0.9;
+        }
+
+        .ampstart-dropdown-item:active,
+        .ampstart-dropdown-item:hover {
+            opacity: 1;
+        }
+
+        .ampstart-footer {
+            background-color: #fff;
+            color: #000;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .ampstart-footer .ampstart-icon {
+            fill: #000;
+        }
+
+        .ampstart-footer .ampstart-social-follow li:last-child {
+            margin-right: 0;
+        }
+
+        .ampstart-image-fullpage-hero {
+            color: #fff;
+        }
+
+        .ampstart-fullpage-hero-heading-text,
+        .ampstart-image-fullpage-hero .ampstart-image-credit {
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            background: #000;
+            padding: 0 1rem 0.2rem;
+        }
+
+        .ampstart-image-fullpage-hero>amp-img {
+            max-height: calc(100vh - 3.5rem);
+        }
+
+        .ampstart-image-fullpage-hero>amp-img img {
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+
+        .ampstart-fullpage-hero-heading {
+            line-height: 3.5rem;
+        }
+
+        .ampstart-fullpage-hero-cta {
+            background: transparent;
+        }
+
+        .ampstart-readmore {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0, transparent);
+            color: #fff;
+            margin-top: 5rem;
+            padding-bottom: 3.5rem;
+        }
+
+        .ampstart-readmore:after {
+            display: block;
+            content: "⌄";
+            font-size: 2rem;
+        }
+
+        .ampstart-readmore-text {
+            background: #000;
+        }
+
+        @media (min-width: 52.06rem) {
+            .ampstart-image-fullpage-hero>amp-img {
+                height: 60vh;
+            }
+        }
+
+        .ampstart-image-heading {
+            color: #fff;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0, transparent);
+        }
+
+        .ampstart-image-heading>* {
+            margin: 0;
+        }
+
+        amp-carousel .ampstart-image-with-heading {
+            margin-bottom: 0;
+        }
+
+        .ampstart-image-with-caption figcaption {
+            color: #ff6b19;
+            line-height: 1.125rem;
+        }
+
+        amp-carousel .ampstart-image-with-caption {
+            margin-bottom: 0;
+        }
+
+        .ampstart-input {
+            max-width: 100%;
+            width: 300px;
+            min-width: 100px;
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+
+        .ampstart-input [disabled],
+        .ampstart-input [disabled]+label {
+            opacity: 0.5;
+        }
+
+        .ampstart-input [disabled]:focus {
+            outline: 0;
+        }
+
+        .ampstart-input>input,
+        .ampstart-input>select,
+        .ampstart-input>textarea {
+            width: 100%;
+            margin-top: 1rem;
+            line-height: 1.5rem;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #000000;
+            background: none;
+            color: #000000;
+            outline: 0;
+        }
+
+        .ampstart-input>label {
+            color: #003f93;
+            pointer-events: none;
+            text-align: left;
+            font-size: 0.875rem;
+            line-height: 1rem;
+            opacity: 0;
+            animation: 0.2s;
+            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            animation-fill-mode: forwards;
+        }
+
+        .ampstart-input>input:focus,
+        .ampstart-input>select:focus,
+        .ampstart-input>textarea:focus {
+            outline: 0;
+        }
+
+        .ampstart-input>input:focus:-ms-input-placeholder,
+        .ampstart-input>select:focus:-ms-input-placeholder,
+        .ampstart-input>textarea:focus:-ms-input-placeholder {
+            color: transparent;
+        }
+
+        .ampstart-input>input:focus::placeholder,
+        .ampstart-input>select:focus::placeholder,
+        .ampstart-input>textarea:focus::placeholder {
+            color: transparent;
+        }
+
+        .ampstart-input>input:not(:placeholder-shown):not([disabled])+label,
+        .ampstart-input>select:not(:placeholder-shown):not([disabled])+label,
+        .ampstart-input>textarea:not(:placeholder-shown):not([disabled])+label {
+            opacity: 1;
+        }
+
+        .ampstart-input>input:focus+label,
+        .ampstart-input>select:focus+label,
+        .ampstart-input>textarea:focus+label {
+            animation-name: a;
+        }
+
+        @keyframes a {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .ampstart-input>label:after {
+            content: "";
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 45%;
+            background: #003f93;
+            transition: 0.2s;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            visibility: hidden;
+            width: 10px;
+        }
+
+        .ampstart-input>input:focus+label:after,
+        .ampstart-input>select:focus+label:after,
+        .ampstart-input>textarea:focus+label:after {
+            left: 0;
+            width: 100%;
+            visibility: visible;
+        }
+
+        .ampstart-input>input[type="search"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        .ampstart-input>input[type="range"] {
+            border-bottom: 0;
+        }
+
+        .ampstart-input>input[type="range"]+label:after {
+            display: none;
+        }
+
+        .ampstart-input>select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        .ampstart-input>select+label:before {
+            content: "⌄";
+            line-height: 1.5rem;
+            position: absolute;
+            right: 5px;
+            zoom: 2;
+            top: 0;
+            bottom: 0;
+            color: #003f93;
+        }
+
+        .ampstart-input-chk,
+        .ampstart-input-radio {
+            width: auto;
+            color: #000000;
+        }
+
+        .ampstart-input input[type="checkbox"],
+        .ampstart-input input[type="radio"] {
+            margin-top: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #003f93;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+            text-align: center;
+        }
+
+        .ampstart-input input[type="radio"] {
+            border-radius: 20px;
+        }
+
+        .ampstart-input input[type="checkbox"]:not([disabled])+label,
+        .ampstart-input input[type="radio"]:not([disabled])+label {
+            pointer-events: auto;
+            animation: none;
+            vertical-align: middle;
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .ampstart-input input[type="checkbox"]+label:after,
+        .ampstart-input input[type="radio"]+label:after {
+            display: none;
+        }
+
+        .ampstart-input input[type="checkbox"]:after,
+        .ampstart-input input[type="radio"]:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            content: " ";
+            line-height: 1.4rem;
+            vertical-align: middle;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .ampstart-input input[type="checkbox"]:checked:after {
+            background-color: #003f93;
+            color: #fff;
+            content: "✓";
+        }
+
+        .ampstart-input input[type="radio"]:checked {
+            background-color: #fff;
+        }
+
+        .ampstart-input input[type="radio"]:after {
+            top: 3px;
+            bottom: 3px;
+            left: 3px;
+            right: 3px;
+            border-radius: 12px;
+        }
+
+        .ampstart-input input[type="radio"]:checked:after {
+            content: "";
+            font-size: 3rem;
+            background-color: #003f93;
+        }
+
+        .ampstart-input>label,
+        _:-ms-lang(x) {
+            opacity: 1;
+        }
+
+        .ampstart-input>input:-ms-input-placeholder,
+        _:-ms-lang(x) {
+            color: transparent;
+        }
+
+        .ampstart-input>input::placeholder,
+        _:-ms-lang(x) {
+            color: transparent;
+        }
+
+        .ampstart-input>input::-ms-input-placeholder,
+        _:-ms-lang(x) {
+            color: transparent;
+        }
+
+        .ampstart-input>select::-ms-expand {
+            display: none;
+        }
+
+        .ampstart-headerbar {
+            background-color: #fff;
+            color: #000;
+            z-index: 999;
+            box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .ampstart-headerbar+ :not(amp-sidebar),
+        .ampstart-headerbar+amp-sidebar+* {
+            margin-top: 3.5rem;
+        }
+
+        .ampstart-headerbar-nav .ampstart-nav-item {
+            padding: 0 1rem;
+            background: transparent;
+            opacity: 0.8;
+        }
+
+        .ampstart-headerbar-nav {
+            line-height: 3.5rem;
+        }
+
+        .ampstart-nav-item:active,
+        .ampstart-nav-item:focus,
+        .ampstart-nav-item:hover {
+            opacity: 1;
+        }
+
+        .ampstart-navbar-trigger:focus {
+            outline: none;
+        }
+
+        .ampstart-nav a,
+        .ampstart-navbar-trigger,
+        .ampstart-sidebar-faq a {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .ampstart-nav .ampstart-label {
+            color: inherit;
+        }
+
+        .ampstart-navbar-trigger {
+            line-height: 3.5rem;
+            font-size: 2rem;
+        }
+
+        .ampstart-headerbar-nav {
+            -ms-flex: 1;
+            flex: 1;
+        }
+
+        .ampstart-nav-search {
+            -ms-flex-positive: 0.5;
+            flex-grow: 0.5;
+        }
+
+        .ampstart-headerbar .ampstart-nav-search:active,
+        .ampstart-headerbar .ampstart-nav-search:focus,
+        .ampstart-headerbar .ampstart-nav-search:hover {
+            box-shadow: none;
+        }
+
+        .ampstart-nav-search>input {
+            border: none;
+            border-radius: 3px;
+            line-height: normal;
+        }
+
+        .ampstart-nav-dropdown {
+            min-width: 200px;
+        }
+
+        .ampstart-nav-dropdown amp-accordion header {
+            background-color: #fff;
+            border: none;
+        }
+
+        .ampstart-nav-dropdown amp-accordion ul {
+            background-color: #fff;
+        }
+
+        .ampstart-nav-dropdown .ampstart-dropdown-item,
+        .ampstart-nav-dropdown .ampstart-dropdown>section>header {
+            background-color: #fff;
+            color: #ff6c1a;
+        }
+
+        a.ampstart-nav-link {
+            color: #ff6c1a;
+        }
+
+        .ampstart-nav-dropdown .ampstart-dropdown-item a {
+            color: #000000;
+        }
+
+        .ampstart-sidebar {
+            background-color: #fff;
+            color: #000;
+            min-width: 300px;
+            width: 300px;
+        }
+
+        .ampstart-sidebar .ampstart-icon {
+            fill: #003f93;
+        }
+
+        .ampstart-sidebar-header {
+            line-height: 3.5rem;
+            min-height: 3.5rem;
+        }
+
+        .ampstart-sidebar .ampstart-dropdown-item,
+        .ampstart-sidebar .ampstart-dropdown header,
+        .ampstart-sidebar .ampstart-faq-item,
+        .ampstart-sidebar .ampstart-nav-item,
+        .ampstart-sidebar .ampstart-social-follow {
+            margin: 0 0 1.3rem;
+        }
+
+        .ampstart-faq-item,
+        .ampstart-faq-item a {
+            color: #ff6c1a;
+        }
+
+        .ampstart-sidebar .ampstart-nav-dropdown {
+            margin: 0;
+        }
+
+        .ampstart-sidebar .ampstart-navbar-trigger {
+            line-height: inherit;
+        }
+
+        .ampstart-navbar-trigger svg {
+            pointer-events: none;
+        }
+
+        .ampstart-related-article-section {
+            border-color: #000000;
+        }
+
+        .ampstart-related-article-section .ampstart-heading {
+            color: #000000;
+            font-weight: 400;
+        }
+
+        .ampstart-related-article-readmore {
+            color: #000;
+            letter-spacing: 0;
+        }
+
+        .ampstart-related-section-items>li {
+            border-bottom: 1px solid #000000;
+        }
+
+        .ampstart-related-section-items>li:last-child {
+            border: none;
+        }
+
+        .ampstart-related-section-items .ampstart-image-with-caption {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        .ampstart-related-section-items .ampstart-image-with-caption>amp-img,
+        .ampstart-related-section-items .ampstart-image-with-caption>figcaption {
+            -ms-flex: 1;
+            flex: 1;
+        }
+
+        .ampstart-related-section-items .ampstart-image-with-caption>figcaption {
+            padding-left: 1rem;
+        }
+
+        @media (min-width: 40.06rem) {
+            .ampstart-related-section-items>li {
+                border: none;
+            }
+
+            .ampstart-related-section-items .ampstart-image-with-caption>figcaption {
+                padding: 1rem 0;
+            }
+
+            .ampstart-related-section-items .ampstart-image-with-caption>amp-img,
+            .ampstart-related-section-items .ampstart-image-with-caption>figcaption {
+                -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+            }
+        }
+
+        .ampstart-social-box {
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .ampstart-social-box>amp-social-share {
+            background-color: #000;
+        }
+
+        .ampstart-icon {
+            fill: #ff6c1a;
+        }
+
+        .ampstart-input {
+            width: 100%;
+        }
+
+        main .ampstart-social-follow {
+            margin-left: auto;
+            margin-right: auto;
+            width: 315px;
+        }
+
+        main .ampstart-social-follow li {
+            transform: scale(1.8);
+        }
+
+        h1+.ampstart-byline time {
+            font-size: 1.3rem;
+            font-weight: 400;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            .h1,
+            h1 {
+                font-size: 27px;
+                line-height: 32px;
+            }
+
+            .h2,
+            h2 {
+                font-size: 25px;
+                line-height: 30px;
+            }
+
+            .h3,
+            h3 {
+                font-size: 22px;
+                line-height: 25px;
+                font-weight: 400;
+            }
+
+            .ampstart-subtitle,
+            h1+.ampstart-byline time {
+                font-size: 16px;
+            }
+
+            main .ampstart-social-follow {
+                width: 280px;
+            }
+        }
+
+        .main-content-alt {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .mb-3 {
+            margin-bottom: 1rem;
+            color: #ff6c1a;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .ampstart-nav-dropdown .ampstart-dropdown-item a:hover {
+            color: #ff6c1a;
+        }
+
+        @media (max-width: 480px) {
+            .callout_box .spark-cta a.btn-style-one {
+                text-wrap: wrap;
+                height: auto;
+                padding: 10px;
+            }
+
+            .table-responsive.sticky-table {
+                max-width: 640px;
+                overflow: auto;
+            }
+
+            .table-responsive.sticky-table .table-bordered>tbody>tr>th {
+                top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start Navbar -->
+    <header class="ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl2 pr4">
+        <div role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0"
+            class="ampstart-navbar-trigger pr2">
+            ☰
+        </div>
+        <amp-img src="img/blog/logo.png" width="168" height="37" layout="fixed" class="my0 mx-auto"
+            alt="The Blog"></amp-img>
+    </header>
+
+<!-- Start Sidebar -->
+<amp-sidebar
+id="header-sidebar"
+class="ampstart-sidebar px3"
+layout="nodisplay"
+>
+<div class="flex justify-start items-center ampstart-sidebar-header">
+  <div
+    role="button"
+    aria-label="close sidebar"
+    on="tap:header-sidebar.toggle"
+    tabindex="0"
+    class="ampstart-navbar-trigger items-start"
+  >
+    ✕
+  </div>
+</div>
+<ul class="ampstart-sidebar-faq list-reset m0">
+  <li class="ampstart-faq-item">
+    <a href="https://www.sparkouttech.com/" class="text-decoration-none"
+      >Home</a
+    >
+  </li>
+</ul>
+<nav class="ampstart-sidebar-nav ampstart-nav">
+  <ul class="list-reset m0 p0 ampstart-label">
+    <li class="ampstart-nav-item ampstart-nav-dropdown relative">
+      <!-- Start Dropdown-inline -->
+      <amp-accordion
+        layout="container"
+        disable-session-states=""
+        class="ampstart-dropdown"
+      >
+        <section>
+          <header>AI</header>
+
+          <ul class="ampstart-dropdown-items list-reset m0 p0">
+            <h5 class="mb-3">AI Solutions</h5>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/botpress-ai-development/"
+                target="_blank"
+                class="text-decoration-none"
+                >Botpress AI Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/runway-ai-development/"
+                target="_blank"
+                class="text-decoration-none"
+                >Runway AI Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/deepgram-ai-development/"
+                class="text-decoration-none"
+                >Deepgram AI Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/livekit-ai-development/"
+                target="_blank"
+                class="text-decoration-none"
+                >Livekit AI Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/elevenlabs-ai-development/"
+                target="_blank"
+                class="text-decoration-none"
+                >Elevenlabs development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/bland-ai-development/"
+                class="text-decoration-none"
+                >Bland AI development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/guardrails-ai-development/"
+                class="text-decoration-none"
+                >Guardrails AI development</a
+              >
+            </li>
+            <h5 class="mb-3">AI Development</h5>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ai-development-company/"
+                class="text-decoration-none"
+                >AI Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ai-chatbot-development/"
+                class="text-decoration-none"
+                >AI Chatbot Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ai-agent-development/"
+                class="text-decoration-none"
+                >AI Agent Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ai-app-development-company/"
+                class="text-decoration-none"
+                >Ai App Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/enterprise-ai-development-company/"
+                class="text-decoration-none"
+                >Enterprise AI Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/agentic-ai-development/"
+                class="text-decoration-none"
+                >Agentic Ai Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ai-consulting-services/"
+                class="text-decoration-none"
+                >AI Consulting Services</a
+              >
+            </li>
+            <h5 class="mb-3">Industries</h5>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ai-agents-in-finance/"
+                target="_blank"
+                class="text-decoration-none"
+                >AI for Banking & Finance</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ai-agents-in-healthcare/"
+                target="_blank"
+                class="text-decoration-none"
+                >AI for Healthcare</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/sales-ai-agent/"
+                target="_blank"
+                class="text-decoration-none"
+                >AI for Retail and E-Commerce</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/contact-us/"
+                class="text-decoration-none"
+                >AI for Manufacturing</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/contact-us/"
+                class="text-decoration-none"
+                >AI for Education</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/contact-us/"
+                class="text-decoration-none"
+                >AI for Logistics & Transportation</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/contact-us/"
+                class="text-decoration-none"
+                >AI for Real Estate</a
+              >
+            </li>
+          </ul>
+        </section>
+      </amp-accordion>
+      <!-- End Dropdown-inline -->
+    </li>
+    <li class="ampstart-nav-item ampstart-nav-dropdown relative">
+      <!-- Start Dropdown-inline -->
+      <amp-accordion
+        layout="container"
+        disable-session-states=""
+        class="ampstart-dropdown"
+      >
+        <section>
+          <header>Solutions</header>
+
+          <ul class="ampstart-dropdown-items list-reset m0 p0">
+            <h5 class="mb-3">Blockchain Solutions</h5>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.blockchainx.tech/nft-marketplace-development/"
+                target="_blank"
+                class="text-decoration-none"
+                >NFT Marketplace</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.blockchainx.tech/metaverse-development-company/"
+                target="_blank"
+                class="text-decoration-none"
+                >Metaverse</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/blockchain-development-company/"
+                class="text-decoration-none"
+                >Enterprise Blockchain Solutions</a
+              >
+            </li>
+            <h5 class="mb-3">Digital Experience (DX)</h5>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ui-ux-development/"
+                class="text-decoration-none"
+                >Customer Experience - UI/UX</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/mobile-app-design-agency/"
+                class="text-decoration-none"
+                >User-Centric Mobile Designs</a
+              >
+            </li>
+            <h5 class="mb-3">Digital Solutions</h5>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://eatzilla.info/"
+                target="_blank"
+                class="text-decoration-none"
+                >AI - Ondemand Delivery Solutions</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.rentalslew.com/"
+                target="_blank"
+                class="text-decoration-none"
+                >Rental Management</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.transgenie.io/"
+                target="_blank"
+                class="text-decoration-none"
+                >SupplyChain Traceability on Blockchain</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ai-document-understanding/"
+                class="text-decoration-none"
+                >Intelligent Document Understanding AI</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/chat-app-development/"
+                class="text-decoration-none"
+                >Enterprise Chat Application Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/hrms-software-development/"
+                class="text-decoration-none"
+                >Human Resource Management Software Development</a
+              >
+            </li>
+            <h5 class="mb-3">IT Life Cycle</h5>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/custom-software-development-services/" class="text-decoration-none">Custom Software Development</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/artificial-intelligence-application-development-company/"
+                class="text-decoration-none"
+                >AI/ML Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/generative-ai-development/"
+                class="text-decoration-none"
+                >Generative AI</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/web-application-development/"
+                class="text-decoration-none"
+                >Modern Web Services</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/mobile-application-development/"
+                class="text-decoration-none"
+                >Mobile Solutions</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/devops-services/"
+                class="text-decoration-none"
+                >DevOps Solutions</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/quality-assurance-and-testing-services/"
+                class="text-decoration-none"
+                >Quality Assurance & Testing</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ar-vr-application-development/"
+                class="text-decoration-none"
+                >Spatial Computing - AR / VR / MR</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/internet-of-things/"
+                class="text-decoration-none"
+                >Internet of Things (IOT)</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/staff-augmentation-services/" class="text-decoration-none">Staff Augmentation Services</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/mvp-development-services/" class="text-decoration-none">MVP Development Services</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/application-modernization-services/" class="text-decoration-none">Application Modernization Services</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/cloud-migration-services/" class="text-decoration-none">Cloud Migration Services</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/software-modernization-services/" class="text-decoration-none">Software Modernization Services</a>
+            </li>
+          </ul>
+        </section>
+      </amp-accordion>
+      <!-- End Dropdown-inline -->
+    </li>
+
+    <li class="ampstart-nav-item ampstart-nav-dropdown relative">
+      <amp-accordion
+        layout="container"
+        disable-session-states=""
+        class="ampstart-dropdown"
+      >
+        <section>
+          <header>Industries</header>
+          <ul class="ampstart-dropdown-items list-reset m0 p0">
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/online-food-delivery-solution/"
+                class="text-decoration-none"
+                >Food & Beverages</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/travel-application-development/"
+                class="text-decoration-none"
+                >Travel</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.transgenie.io/"
+                target="_blank"
+                class="text-decoration-none"
+                >Supply Chain</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/fintech-software-development-company/"
+                class="text-decoration-none"
+                >Fintech</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/real-estate-app-development/"
+                class="text-decoration-none"
+                >Real Estate</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/healthcare-software-development/"
+                class="text-decoration-none"
+                >Healthcare</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/government-software-development-services/"
+                class="text-decoration-none"
+                >Government</a
+              >
+            </li>
+          </ul>
+        </section>
+      </amp-accordion>
+    </li>
+
+    <li class="ampstart-nav-item ampstart-nav-dropdown relative">
+      <amp-accordion layout="container" disable-session-states="" class="ampstart-dropdown">
+        <section>
+          <header>Hire</header>
+          <ul class="ampstart-dropdown-items list-reset m0 p0">
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/hire-nodejs-developers/" class="text-decoration-none">Hire NodeJS Developers</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/hire-reactjs-developers/" class="text-decoration-none">Hire ReactJS Developers</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/hire-angularjs-developers/" class="text-decoration-none">Hire AngularJS Developers</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/hire-android-developers/" class="text-decoration-none">Hire Android Developers</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/hire-ios-developers/" class="text-decoration-none">Hire IOS Developers</a>
+            </li>
+          </ul>
+        </section>
+      </amp-accordion>
+    </li>
+
+    <li class="ampstart-nav-item ampstart-nav-dropdown relative">
+      <!-- Start Dropdown-inline -->
+      <amp-accordion
+        layout="container"
+        disable-session-states=""
+        class="ampstart-dropdown"
+      >
+        <section>
+          <header>Company</header>
+          <ul class="ampstart-dropdown-items list-reset m0 p0">
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/about-us/"
+                class="text-decoration-none"
+                >About Us</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/portfolio/"
+                class="text-decoration-none"
+                >Clients</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/design-portfolio/"
+                class="text-decoration-none"
+                >Design Portfolio</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/careers/"
+                class="text-decoration-none"
+                >Careers</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/blog/"
+                class="text-decoration-none"
+                >Blog</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/news/"
+                class="text-decoration-none"
+                >News</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/case-studies/"
+                class="text-decoration-none"
+                >Case Study</a
+              >
+            </li>
+          </ul>
+        </section>
+      </amp-accordion>
+      <!-- End Dropdown-inline -->
+    </li>
+  </ul>
+</nav>
+
+<ul class="ampstart-sidebar-faq list-reset m0">
+  <li class="ampstart-faq-item">
+    <a
+      href="https://www.sparkouttech.com/contact-us/"
+      class="text-decoration-none"
+      >Get a Quote</a
+    >
+  </li>
+</ul>
+</amp-sidebar>
+<!-- End Sidebar -->
+    <!-- End Navbar -->
+    <main id="content" role="main" class="">
+        <article class="recipe-article">
+            <header>
+                <amp-img src="img/wso2-api-development/detailed-guide-to-wso2.png" alt="WSO2 API Manager and WSO2 Framework For Businesses"
+                    title="WSO2 API Manager and WSO2 Framework For Businesses" width="966" height="507" layout="responsive"
+                    class="mb4  full-banner"></amp-img>
+
+                <!-- End byline -->
+
+            </header>
+            <div class="main-content-alt">
+                <!-- <span class="ampstart-subtitle block px3 pt2 mb2">UI UX design</span> -->
+                <h1 class="mb3 px3">A Detailed Guide to WSO2 API Manager and WSO2 Framework For Businesses</h1>
+
+                <!-- Start byline -->
+                <address class="ampstart-byline clearfix mb2 px3 h5">
+                    <time class="ampstart-byline-pubdate block bold my1" datetime="2024-09-27">Feb 19, 2025</time>
+                </address>
+
+                <p class="mb3 px3">
+                    If you have found this blog then I would assume that you are a business owner or a developer looking to explore what WSO2 can do and how you can use it to build better applications. The WSO2 API manager is a very popular solution for managing your APIs and allows businesses to create, publish and manage APIs securely. WSO2 as a whole is an open source technology provider that specialize in API management, integration and identity solutions. And you heard it right, it's open source which means that if you’re using the technology to build applications for your business you don’t have to worry about paying any licensing fees. Which is why it is very popular with developers around the world and also why I decided to write this blog post. In this blog, we will go through <a href="https://www.sparkouttech.com/wso2-development-company/" target="_blank">WSO2’s solutions</a> and see how businesses can use it to enhance their applications.
+                </p>
+
+                <amp-img src="img/wso2-api-development/wso2-logo-and-related-illustrations.png" alt="A Detailed Guide to WSO2 API Manager" title="A Detailed Guide to WSO2 API Manager" width="652" height="428" layout="responsive" class="mb3 mx3" ></amp-img>
+
+                <p class="mb3 px3">
+                    We will also take a look at solutions like the WSO2 API manager to understand how you can manage your APIs seamlessly and why you should use this technology to do that. So without any further ado let’s jump right into our blog. 
+                </p>
+
+                <p class="mb3 px3">
+                    Let’s get started. 
+                </p>
+
+                <h2 class="mb3 px3">What is The WSO2 API Platform?</h2>
+                <p class="mb3 px3">Now let’s just take care of the elephant in the room first and see what the word means. It’s not really an API that WSO2 provides; any API that you create using the WSO2 platform can be called a WSO2 API. But now that we have that covered let’s discuss a bit more in depth about the technology and why you should be using it. These APIs are created using their API manager and these APIs facilitate communication between different applications which allows you to expose your services securely. The WSO2 API manager provides you with a centralized gateway to manage your APIs, ensure that they are secure, for throttling and to monitor your APIs seamlessly. </p>
+
+                <p class="mb3 px3">
+                    There are a few core components of the WSO2 API manager and you have to learn about them if you want to use the platform effectively.
+                </p>
+                <ul class="list">
+                    <li class="pb1"><b>API Gateway:</b> This gateway handles things like API requests, enforces policies and routes your traffic efficiently.</li>
+                    <li class="pb1"><b>Publisher Portal:</b> The publisher portal allows you to create, document and manage your APIs.</li> 
+                    <li class="pb1"><b>Developer Portal:</b> This portal provides you with self services API discovery and subscription for third party developers.</li> 
+                    <li class="pb1"><b>Traffic Management:</b> This feature allows you to implement rate limiting, caching and throttling to optimize performance.</li>
+                    <li><b>Security & Authentication:</b> It supports OAuth2, JWT, mutual SSL and API key authentication. </li>
+                </ul>
+                <p class="mb3 px3">
+                    There are also a few different types of APIs that you can manage with WSO2:
+                </p>
+                <ul class="list">
+                    <li class="pb1"><b>Public APIs:</b> These APIs would be open to external developers for innovation and integration.</li> 
+                    <li class="pb1"><b>Private APIs:</b> These kinds of APIs for use in your internal systems and for your employees to use securely.</li> 
+                    <li class="pb1"><b>Partner APIs:</b> These are APIs that you would share with your business partners with specific access controls.</li> 
+                    <li class="pb1"><b>Monetized APIs:</b> Now these are the kinds of APIs you would be familiar with if you’re a developer because these are provided as a paid service with costs based on their usage. </li>
+                </ul>
+
+                <h3 class="mb3 px3">A Deep Dive Into WSO2 API Integration</h3>
+                <p class="mb3 px3">As you may already know modern applications rely heavily on APIs to connect to things like microservices, databases and external services. What the WSO2 API manager does is that it simplifies the integration process of these APIs and provides a centralized hub for managing these APIs across distributed environments. WSO2 also provides you with resources that you can use to integrate APIs into your applications in simple steps. The first step is the creation of the APIs where you define the API endpoints, methods and authentication mechanisms. Then comes the publishing and deployment where you deploy your APIs to the gateway and make them accessible through the developer portal. And very importantly you have to make sure that you have security implementations where you enforce authentication and authorization policies. 
+                </p>
+                <amp-img src="img/wso2-api-development/a-real-world-example-for-hospitals.png" alt="A Real World Example for Hospitals" title="A Real World Example for Hospitals" width="652" height="390" layout="responsive" class="mb3 mx3" ></amp-img>
+                <p class="mb3 px3">
+                    WSO2 API manager also provides you with features to manage your traffic where you can apply throttling, caching and loading balancing to streamline the API consumption. Another major part of the process is the monitoring and analytics. You have to be able to track things like your API usage, detect anomalies in the system and apply optimizations for better performance. Integration with third party services is also a big deal because many times you would want to use third party services like payment gateways to enable features inside your applications. The good news there is that the WSO2 API manager supports integration with cloud services like AWS, Azure and Google Cloud which are the providers most application developers use. You can also connect seamlessly with enterprise applications that you may be using like for example Salesforce, SAP and modern applications. 
+                </p>
+
+                <h3 class="mb3 px3">How Does WSO2 Work?</h3>
+                <p class="mb3 px3">
+                    We are moving farther now and let’s look at how WSO2 really works and we are going to start with an overview of the architecture. Firstly, WSO2 is based on microservices architecture which means that it is scalable and flexible. It also uses API Gateway as a centralized control point for API traffic which is also a great benefit you get with WSO2 API manager. What’s more impressive is that WSO2 has built in capabilities for managing identity and access for secure API interactions. It also includes great tools for analytics and monitoring which is great for getting performance insight. 
+                </p>
+
+                <h3 class="mb3 px3">The Workflow of API Requests in WSO2:</h3>
+                <p class="mb2 px3">
+                    1. Client Request: This is the point where an application or user initiates an API request.</p> 
+                    <p class="mb2 px3">2. API Gateway Processing: At this step the request is validated, checked against security policies and routed to the backend.</p>  
+                    <p class="mb2 px3">3. Backend Response: At this point the API fetches the data or executes operations and then sends the response back.</p> 
+                    <p class="mb2 px3">4. Logging & analytics: This is where the request details are recorded for monitoring the performance and for auditing using the WSO2 API manager.</p>
+                
+                <p class="mb2 px3">
+                    One of the great benefits of WSO2 is that you get multiple options for deploying your APIs. There are 3 options that you can choose from; On Premises, Cloud Based and Hybrid and all of these options make sense for different purposes. For example if you have a financial business or if you are in the healthcare space then it would make sense for you to deploy your APIs and application locally. Meaning that you would install it within your company’s infrastructure for getting full control. This is especially important for finance and healthcare companies because you would handle a lot of your customer’s personal data and you have to also comply with different global regulations like HIPAA, GDPR, CCPA and SOC2. 
+                </p>
+                <p class="mb2 px3">
+                    WSO2 API solutions can also be used in a cloud based setting where you can deploy your solution using cloud providers like AWS, Azure and Google Cloud. This is great for businesses that want rapid scaling like in the case of SaaS products or consumer facing applications where you will handle millions of users with good monthly growth of users. Last but not least is a combination of both these approaches which you can call “Hybrid.” Here you would combine on premises and cloud infrastructure for flexibility and deploy APIs that handle sensitive information on premises servers and deploy APIs that handle functionality related APIs on cloud infrastructure. The WSO2 API is so flexible that you can truly tailor your API solutions to the specific needs of your business.
+                </p>
+
+                <h3 class="mb3 px3">Discover The Key Features Of WSO2</h3>
+                <p class="mb2 px3">
+                    The good news as you may have already figured out is that WSO2 provides a framework for end to end management of your API lifecycle. Let’s break these up into their individual components and see what features you get with WSO2. 
+                </p>
+
+                <h3 class="mb3 px3">API Design</h3>
+                <p class="mb2 px3">
+                    For the API design you can use something like OpenAPI/Swagger specifications. WSO2 supports popular API types like REST GraphQL, SOAP and WebSocket APIs. It also provides you with API versioning so that you can maintain backward compatibility.
+                </p>
+                <h3 class="mb3 px3">1. Full API Lifecycle Management</h3>
+                <h4 class="mb2 px3">API Development</h4>
+                <p class="mb2 px3">
+                    The WSO2 API manager is also great for API development and gives you a very intuitive interface where you can define APIn resources and methods. You can also integrate with backend services like REST endpoints, SOAP services and event driven architectures. WSO2 also allows you to set rate limits to your APIs, enable access control and set monetization policies during the development.
+                </p>
+                <h4 class="mb2 px3">API Deployment</h4>
+                <p class="mb3 px3">As we already discussed in an early part of this blog WSO2 supports deployment on cloud native, on premises and hybrid infrastructure. You can also automate API deployment by using continuous integration/continuous deployment or CI/CD pipelines. It also enables API containerization using Docker and Kubernetes for superior scalability. </p>
+                <h4 class="mb2 px3">API Monitoring & analytics</h4>
+                <p class="mb3 px3">The WSO2 API manager also provides you with powerful tools to monitor and analyze the performance of your APIs. It provides you with detailed dashboards where you can monitor your API traffic in real time. It logs and racks API performance, latency and errors so that you can always learn from your data and make adjustments to make your system more efficient. It also integrates with external monitoring tools like Prometheus, Grafana and ELK stack if you want to use those solutions. </p>
+                <h4 class="mb2 px3">API Retirement</h4>
+                <p class="mb3 px3">This is an advanced feature you get with WSO2 where you can control the depreciation of older API versions to make way for newer versions. This is especially great if you provide customers with paid APIs and you can notify API consumers before discontinuing the services. WSO2 API manager also maintains backwards compatibility by providing alternative endpoints.</p>
+                
+                <h3 class="mb3 px3">2. Built-in Security Features</h3>
+                <p class="mb3 px3">The API manager also comes with security features that are enterprise grade which you can use to protect your API endpoints and ensure that your data exchanges are secure.</p>
+                <h4 class="mb2 px3">Authentication Mechanisms</h4>
+                <ul class="list">
+                    <li class="pb1">OAuth2 & OpenID Connect: It provides authentication based on tokens which ensure secure aPI access.</li> 
+                    <li class="pb1">JSON Web Tokens or JWT: Ensures that your API requests are authentic and secure.</li> 
+                    <li class="pb1">Mutual TLS or mTLS: It strengthens your API security by verifying client server connections.</li> 
+                    <li>API Key Authentication: This allows you to implement simple authentication using unique API keys.</li>
+                </ul>
+                <h4 class="mb2 px3">Access Control & Authentication</h4>
+                <ul class="list">
+                    <li class="pb1">Role Based Access Control: The WSO2 API manager allows you to assign permissions based on the user role.</li> 
+                    <li class="pb1">Multi Factor Authentication: This enhances the security for API consumers by authenticating their access using one time passwords.</li>  
+                    <li>Scope Based Authorization: This allows you to restrict API access based on predefined scopes. </li>
+                </ul>
+                <h4 class="mb2 px3">Authentication Mechanisms</h4>
+                <ul class="list">
+                    <li class="pb1">IP Whitelisting & Blacklisting: Here you can easily restrict access to your APIs based on IP addresses. </li>
+                    <li class="pb1">Request Validation & Payload Security: It prevents things like SQL injections, XML external entity or XXE and cross site scripting or XSS. </li>
+                    <li>GDPR & HIPAA Compliance: Another great feature in the WSO2 API manager is that it comes with data privacy and security if you operate in highly regulated industries like finance and healthcare</li>
+                </ul>
+
+                <h3 class="mb3 px3">3. Scalability & Performance </h3>
+                <p class="mb3 px3">WSO2’s API manager is built on microservices architecture which ensures that you get high availability and scalability if you’re an enterprise that handles large volumes of API requests. But to understand how all of this works let’s look at some of the key performance features that you get with WSO2. Horizontal and vertical scaling is something you can do with the platform where you can scale API gateway nodes dynamically based on the traffic demands. You can also use Kubernetes and cloud auto scaling for distributed environments and balance loads. WSO2 API manager also supports asynchronous processing which optimizes API response times by handling requests asynchronously. You can also enable caching and throttling which reduces backend load by caching AI response and limits excessive API calls. It also supports data streaming in real time using solutions like Kafka, RabbitMQ and WebSockets. </p>
+                <p class="mb3 px3">
+                    Now let’s look at some performance optimization strategies that you can use to maximize the performance of your APIs. With WSO2 you get effective traffic management where you can implement rate limits and quota management for your APIs. The WSO2 API manager also allows you to distribute your deployments which means that you can deploy API gateways across multiple data centers for redundancy. It also supports clustering of API gateway which is where you can ensure high availability by clustering API gateway instances.
+                </p>
+
+                <h3 class="mb3 px3">4. Comprehensive Analytics</h3>
+                <p class="mb3 px3">Another great thing going for WSO2 are the tools they provide for monitoring and analyzing your APIs. This includes providing businesses with real time monitoring, logging and insights so that you can optimize your API performance and detect any security threats. The first among these are the API monitoring and usage tracking features you get with WSO2 API manager where you can do real time API traffic analysis and capture request response data, error rates and latencies. You also get analytics on the basis of APIs and users so that you can track APIs on the basis of endpoints as well as consumers. Performance dashboards are also something you get with WSO2 where you can access visual insights through their built in analytics tools.</p>
+                <p class="mb3 px3">Apart from this you also get great tools for security and compliance monitoring. A great example for this is the anomaly detection feature that you get with the WSO2 API manager where you can identify unusual API traffic patterns and potential breaches of security. You also get access to the audit logging feature that maintains logs for API access, modifications and failures. Another great feature is for GDPR compliant data retention where you can ensure data privacy while storing logs. Additionally, WSO2 also allows you to integrate with external analytics tools to make the most out of your data and make your systems more efficient. For example you can implement the ELK stack which enables you to have custom log processing and visualization. The WSO2 API manager allows you to connect with advanced performance monitoring tools like Premetheus and Grafana. You can also connect Google Analytics and business intelligence tools which allow for tracking API events and business intelligence reporting. </p>
+
+                <h3 class="mb3 px3">5. Developer Portal</h3>
+                <p class="mb3 px3">
+                    The WSO2 developer portal or the API Marketplace as it is sometimes called provides you with a self service interface for exploring, testing and subscribing to different APIs.
+                </p>
+                <p class="mb3 px3"><b>Key Features of the Developer Portal </b></p>
+                <ul class="list">
+                    <li class="pb1">API Discovery & Documentation: It allows developers to browse API catalogs and view relevant documentation.</li>
+                    <li class="pb1">API Subscription Management: This allows users to register for API access and manage usage limits easily. </li>
+                    <li class="pb1">Interactive API Testing: This is also called the Try It Out Feature and lets you access the built in console for testing your endpoints. </li>
+                    <li class="pb1">SDK & Code Samples: The WSO2 API manager also provides you with auto generated SDKs which support multiple programming languages.</li>
+                    <li>API Monetization: You can easily monetize your APIs with multiple models like pay as you go, subscriptions and billing integrations</li>
+                </ul>
+                <h3 class="mb3 px3">Benefits of the Developer Portal</h3>
+                <p class="mb3 px3">One of the major benefits of the developer portal is that it enhances API adoption and encourages third party developers to use the APIs. Collaboration is a big part of modern software development and features like the ones WSO2 provides enhance opportunities for collaboration. It also improves the discoverability of your APIs where internal and external teams can easily find and test your APIs with the WSO2 API manager. And of course you can make use of API economy and monetize your aPIs for generating additional revenue for your business and even if you are an independent developer. </p>
+                <h3 class="mb3 px3">Let’s Learn About The Use Cases Of WSO2</h3>
+                <p class="mb3 px3">The use cases for WSO2 are as wide as the features they provide and we are going to take a quick look at some of the different ways you can use the technology. </p>
+                <h3 class="mb3 px3">Financial Services</h3>
+                <p class="mb3 px3">Financial services can benefit greatly with WSO2 with features that let you build API driven applications like banking, implement fintech integrations and ensure regulatory compliance. WSO2 API manager is a great solution for open banking and PSD2 compliance and enables banks to expose APIs securely to any third party providers. It also supports OAuth2, <a href="https://www.techtarget.com/whatis/definition/OpenID" target="_blank" rel="nofollow">OpenID Connect</a> and API security standards which are very important for finance applications. You can also seamlessly manage customer consent and access control when it comes to banking data. Additionally, it allows you to ensure compliance with open banking standards like PSD2, UK Open Banking and so on.</p>
+                <h3 class="mb3 px3">E-Commerce</h3>
+                <p class="mb3 px3">For e-commerce businesses WSO2 provides features to streamline your technology components by integrating storefronts, payment gateways, supply chains and customer management systems. The WSO2 API manager allows you to seamlessly integrate payment gateways like Stripe, PayPal, Square and so on. It also implements PCI DSS compliant secure transactions as well as helping you manage transaction security using tokenizations and encrypted payment data. You can also integrate web, mobile and in store shopping experiences through APIs. Additionally, it also allows you to streamline your supply chain operations with features like automated order fulfillment, shipment tracking and warehouse management. </p>
+                <h3 class="mb3 px3">Healthcare</h3>
+                <p class="mb3 px3">WSO2 is a great solution for businesses operating in the <a href="https://www.sparkouttech.com/healthcare-software-development/" target="_blank">healthcare sector</a> and allows them to connect systems like Electronic Medical Records, hospital management platforms and insurance providers which ensures that your data exchanges are secure and compliant. The WSO2 API has FHIR & HL7 based API interoperability which means that it supports cross institution data sharing for organizations like hospitals, labs and insurers. All of this while ensuring compliance with global regulations lole HIPAA, GDPR and regional healthcare regulations.</p>
+                <h3 class="mb3 px3">Government & Public Services</h3>
+                <p class="mb3 px3">WSO3 has been a strong choice for building applications in the public sector because it enables API driven data exchange and e-government services. One of the things you can build using WSO2 for the government is citizen portals and digital identity management solutions where you can enable secure access to government service using single sign on or SSO. WSO2 API manager also supports national identity verification using technologies like OAuth2, OpenID Connect and <a href="https://www.blockchainx.tech/" target="_blank">blockchain based ID solutions</a>. The platform also supports open data and smart city initiatives where you can seamlessly facilitate sharing of data between government agencies through standardized APIs.</p>
+                <h3 class="mb3 px3">An Overview Of The WSO2 Development Framework</h3>
+                <p class="mb3 px3">The WSO2 framework is very easy to approach and allows you to create solutions for your business rapidly using popular software development technologies. It supports various programming languages. The architecture is based on Java but it supports languages like Python, JavaScript and other languages for providing you with maximum flexibility. The WSO2 API manager also allows you to customize your solutions using Java extensions and scripting.  The development approach is also very flexible because of the modular and microservices based architecture and WSO2 also provides you with <a href="https://www.sparkouttech.com/custom-software-development-services/" target="_blank">software development</a> kits or SDKs for customizing your APIs. It also supports automated deployment with Jenkins, GitHub Actions and Kubernetes as well as providing useful tools for version control and rollback mechanisms.</p>
+                <h3 class="mb3 px3">A Closer Look Into The WSO2 Enterprise Integrator Documentation</h3>
+                <p class="mb3 px3">Firstly, let’s talk about why documentation is so important because it helps developers understand system configurations, integration patterns and the best practices to follow when using WSO2 API manager. Many people assume that just because you are a developer you would know how to use all technologies especially when you know the programming language or frameworks. However, each solution is different and it is far easier to build the software you need if you have things like examples, tutorials and API references helping you onboard quickly. Now the documentation for WSO2 is quite extensive and contains the following sections. </p>
+                <ul class="list">
+                    <li class="pb1">Getting Started Guide: It covers installation, configuration patterns and best practices.</li> 
+                    <li class="pb1">API Development Guide: It covers detailed and step by step instructions for building and managing your APIs.</li> 
+                    <li class="pb1">Security & Authentication: This covers the WSO2 API manager documentation on implementing OAuth, JQT and other security protocols.</li> 
+                    <li class="pb1">Performance Optimization: This covers the best practices you should follow for scaling your API traffic and improving efficiency.</li> 
+                    <li>Troubleshooting &  FAQs: This section would cover the common issues that you may encounter and their solutions.</li>
+                </ul>
+
+                <h3 class="mb3 px3">WSO2 Integration Tools That You Need To Know About</h3>
+                <p class="mb3 px3">WSO2 provides you with a lot more features and tools than the API manager and is a full fledged API management solution for business. Let’s take a look at some of the tools available and see how you can use them to build WSO2 API for your business. </p>
+
+                <h3 class="mb3 px3">WSO2 API Manager</h3>
+                <p class="mb3 px3">The API manager is an end to end solution for managing your APIs and can help you ensign, publish, secure, monitor and manage your APIs throughout their lifecycle. It also provides you with security and access control features for things like implementing OAuth2, OpenID Connect, JWT Authentication and API key security. It supports access controls based on user roles and you can also integrate it with external identity providers. You also get features like rate limiting and traffic control where you can enable throttling policies to prevent API abuse and to make sure that users use your WSO2 API fairly. The API manager also provides you with tools to monetize your APIs where you can create customized pricing plans for API usage and distribute it as a service. It also supports billing and invoicing integration for monetizing your APIs.</p>
+                <h3 class="mb3 px3">WSO2 Enterprise Integrator</h3>
+                <p class="mb3 px3">The enterprise integrator from WSO2 is a very comprehensive middleware platform and is designed for integrating applications, databases, legacy systems and service orchestration for your business. WSO2’s Enterprise Service Bus or ESB is a system that facilitates things like message transformation, protocol mediation and service orchestration. It supports multiple communication protocols which includes HTTP. JMS, MQTT and FTP. It also supports data integration and ETL for your WSO2 API based application and can connect and synchronize structured as well as unstructured data across different databases. Additionally, it supports extract, transform and load processes for data warehouses and analytics. It also provides you with pre-built connectors and adapters like ready to use connectors for Salesforce, SAP, AWS, Google Cloud and more. This reduces the complexity of integrating third party services.</p>
+                <h3 class="mb3 px3">WSO2 Identity Server</h3>
+                <p class="mb3 px3">If you’re looking for a robust identity and access management solution for your business then the identity server is the right solution for you where you can do things like authentication, authorization and identity federation for your enterprise. It also allows you to integrate your WSO2 API with external identity providers like Google, Facebook, Azure AD and so on. There is also the privileged access management or PAM where you can securely manage access for privileged users to critical applications and systems. It also gives you tools for auditing and session recording for high security environments. The single sign on feature is also beneficial for businesses looking to enable SSO across multiple applications and can provide your users with a seamless experience.</p>
+                <h3 class="mb3 px3">WSO2 Microintegrator</h3>
+                <p class="mb3 px3">Their micro integrator is an integration engine that is lightweight and is designed for containerized and cloud native environments. It is container and Kubernetes ready for use in your WSO2 API development and is built for microservices architecture optimized for Docker and Kubernetes. The API driven service to service communication you get with WSO2 also minimizes your overhead. There is also a service chaining and message mediation feature that orchestrates and mediates messages between your microservices efficiently. The platform also supports low latency and high throughput designed for high performance API interactions in low latency environments. This is ideal if you’re building real time applications like in the case of fintech, gaming and IoT.</p>
+                <h3 class="mb3 px3">WSO2 Streaming Integrator</h3>
+                <p class="mb3 px3">If you’re building a WSO2 API for use cases like data streaming then the streaming integrator is the perfect solution for real time data streaming, analytics and event processing. It is capable of processing high velocity data streams from IoT devices, sensors and logs. It also supports event based architectures with low latency processing. The complex event processing or CEP is also a great addition to this and is capable of detecting patterns and correlations in streaming data. This enables features like fraud detection, anomaly detection and predictive analytics. You can also integrate your application and WSO2 API with big data and <a href="https://www.sparkouttech.com/ai-development-company/">AI systems</a> like Apache Kafka, Apache Spark and Hadoop for big data analytics. It also enables real time insights using machine learning models.</p>
+
+                <h4 class="mb3 px3">Embrace The Future Of API Management with WSO2 Framework</h4>
+                <p class="mb3 px3">WSO2 is the perfect solution for businesses looking to build scalable APIs for their business applications. The platform offers you a comprehensive suite of integration tools for all your diverse business needs from API lifecycle management and secure identity authentication to real time analytics. The WSO2 API management solution is also open source and enterprise grade which means that you can build scalable APIs for your business without having to worry about huge overheads and inferior solutions. It is a modern integration and API management platform with support for microservices architecture. By using WSO2 your organization can reduce the complexity of integration, improve the security of your applications and APIs and accelerate innovation.  </p>
+
+            </div>
+
+            <ul class="ampstart-social-follow list-reset flex justify-around items-center flex-wrap m0 mb2 pt3">
+                <li>
+                    <a href="https://twitter.com/sparkouttech" target="_blank" class="inline-block p1"
+                        aria-label="Link to AMP HTML Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="22.2" viewBox="0 0 53 49">
+                            <title>Twitter</title>
+                            <path
+                                d="M45 6.9c-1.6 1-3.3 1.6-5.2 2-1.5-1.6-3.6-2.6-5.9-2.6-4.5 0-8.2 3.7-8.2 8.3 0 .6.1 1.3.2 1.9-6.8-.4-12.8-3.7-16.8-8.7C8.4 9 8 10.5 8 12c0 2.8 1.4 5.4 3.6 6.9-1.3-.1-2.6-.5-3.7-1.1v.1c0 4 2.8 7.4 6.6 8.1-.7.2-1.5.3-2.2.3-.5 0-1 0-1.5-.1 1 3.3 4 5.7 7.6 5.7-2.8 2.2-6.3 3.6-10.2 3.6-.6 0-1.3-.1-1.9-.1 3.6 2.3 7.9 3.7 12.5 3.7 15.1 0 23.3-12.6 23.3-23.6 0-.3 0-.7-.1-1 1.6-1.2 3-2.7 4.1-4.3-1.4.6-3 1.1-4.7 1.3 1.7-1 3-2.7 3.6-4.6"
+                                class="ampstart-icon ampstart-icon-twitter"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/sparkouttech" target="_blank" class="inline-block p1"
+                        aria-label="Link to AMP HTML Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="23.6" viewBox="0 0 56 55">
+                            <title>Facebook</title>
+                            <path
+                                d="M47.5 43c0 1.2-.9 2.1-2.1 2.1h-10V30h5.1l.8-5.9h-5.9v-3.7c0-1.7.5-2.9 3-2.9h3.1v-5.3c-.6 0-2.4-.2-4.6-.2-4.5 0-7.5 2.7-7.5 7.8v4.3h-5.1V30h5.1v15.1H10.7c-1.2 0-2.2-.9-2.2-2.1V8.3c0-1.2 1-2.2 2.2-2.2h34.7c1.2 0 2.1 1 2.1 2.2V43"
+                                class="ampstart-icon ampstart-icon-fb"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/sparkout_tech/" target="_blank" class="inline-block p1"
+                        aria-label="Link to AMP HTML Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 54 54">
+                            <title>instagram</title>
+                            <path
+                                d="M27.2 6.1c-5.1 0-5.8 0-7.8.1s-3.4.4-4.6.9c-1.2.5-2.3 1.1-3.3 2.2-1.1 1-1.7 2.1-2.2 3.3-.5 1.2-.8 2.6-.9 4.6-.1 2-.1 2.7-.1 7.8s0 5.8.1 7.8.4 3.4.9 4.6c.5 1.2 1.1 2.3 2.2 3.3 1 1.1 2.1 1.7 3.3 2.2 1.2.5 2.6.8 4.6.9 2 .1 2.7.1 7.8.1s5.8 0 7.8-.1 3.4-.4 4.6-.9c1.2-.5 2.3-1.1 3.3-2.2 1.1-1 1.7-2.1 2.2-3.3.5-1.2.8-2.6.9-4.6.1-2 .1-2.7.1-7.8s0-5.8-.1-7.8-.4-3.4-.9-4.6c-.5-1.2-1.1-2.3-2.2-3.3-1-1.1-2.1-1.7-3.3-2.2-1.2-.5-2.6-.8-4.6-.9-2-.1-2.7-.1-7.8-.1zm0 3.4c5 0 5.6 0 7.6.1 1.9.1 2.9.4 3.5.7.9.3 1.6.7 2.2 1.4.7.6 1.1 1.3 1.4 2.2.3.6.6 1.6.7 3.5.1 2 .1 2.6.1 7.6s0 5.6-.1 7.6c-.1 1.9-.4 2.9-.7 3.5-.3.9-.7 1.6-1.4 2.2-.7.7-1.3 1.1-2.2 1.4-.6.3-1.7.6-3.5.7-2 .1-2.6.1-7.6.1-5.1 0-5.7 0-7.7-.1-1.8-.1-2.9-.4-3.5-.7-.9-.3-1.5-.7-2.2-1.4-.7-.7-1.1-1.3-1.4-2.2-.3-.6-.6-1.7-.7-3.5 0-2-.1-2.6-.1-7.6 0-5.1.1-5.7.1-7.7.1-1.8.4-2.8.7-3.5.3-.9.7-1.5 1.4-2.2.7-.6 1.3-1.1 2.2-1.4.6-.3 1.6-.6 3.5-.7h7.7zm0 5.8c-5.4 0-9.7 4.3-9.7 9.7 0 5.4 4.3 9.7 9.7 9.7 5.4 0 9.7-4.3 9.7-9.7 0-5.4-4.3-9.7-9.7-9.7zm0 16c-3.5 0-6.3-2.8-6.3-6.3s2.8-6.3 6.3-6.3 6.3 2.8 6.3 6.3-2.8 6.3-6.3 6.3zm12.4-16.4c0 1.3-1.1 2.3-2.3 2.3-1.3 0-2.3-1-2.3-2.3 0-1.2 1-2.3 2.3-2.3 1.2 0 2.3 1.1 2.3 2.3z"
+                                class="ampstart-icon ampstart-icon-instagram"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </article>
+    </main>
+
+    <!-- Start Footer -->
+    <footer class="ampstart-footer flex flex-column items-center px3">
+        <nav class="ampstart-footer-nav">
+            <ul class="list-reset flex flex-wrap mb3">
+                <li class="px1">
+                    <a class="text-decoration-none ampstart-label"
+                        href="https://www.sparkouttech.com/about-us/">About</a>
+                </li>
+                <li class="px1">
+                    <a class="text-decoration-none ampstart-label"
+                        href="https://www.sparkouttech.com/contact-us/">Contact</a>
+                </li>
+                <li class="px1">
+                    <a class="text-decoration-none ampstart-label"
+                        href="https://www.sparkouttech.com/terms-conditions/">Terms</a>
+                </li>
+            </ul>
+        </nav>
+        <small> © Sparkout Tech, 2025 </small>
+    </footer>
+    <!-- End Footer -->
+</body>
+
+</html>

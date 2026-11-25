@@ -1,0 +1,21 @@
+<svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_12230_2486)">
+<path d="M54.9316 37.6465H10.9863V72.8027H54.9316V37.6465Z" stroke="#FF6C1A" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M10.9863 64.0137H6.5918C4.1647 64.0137 2.19727 62.0462 2.19727 59.6191V50.8301C2.19727 48.403 4.1647 46.4355 6.5918 46.4355H10.9863" stroke="#FF6C1A" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M54.9316 46.4355H59.3262C61.7533 46.4355 63.7207 48.403 63.7207 50.8301V59.6191C63.7207 62.0462 61.7533 64.0137 59.3262 64.0137H43.9453" stroke="#FF6C1A" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M24.1699 55.2246C26.597 55.2246 28.5645 53.2571 28.5645 50.8301C28.5645 48.403 26.597 46.4355 24.1699 46.4355C21.7429 46.4355 19.7754 48.403 19.7754 50.8301C19.7754 53.2571 21.7429 55.2246 24.1699 55.2246Z" stroke="#FF6C1A" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M41.748 55.2246C44.1751 55.2246 46.1426 53.2571 46.1426 50.8301C46.1426 48.403 44.1751 46.4355 41.748 46.4355C39.321 46.4355 37.3535 48.403 37.3535 50.8301C37.3535 53.2571 39.321 55.2246 41.748 55.2246Z" stroke="#FF6C1A" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M26.3672 64.0137H39.5508" stroke="#FF6C1A" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M19.7754 37.6465V26.6602" stroke="#FF6C1A" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M46.1426 37.6465V26.6602" stroke="#FF6C1A" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M42.041 19.7754L33.252 24.1699V6.5918C33.252 4.1647 35.2194 2.19727 37.6465 2.19727H68.4082C70.8353 2.19727 72.8027 4.1647 72.8027 6.5918V15.3809C72.8027 17.808 70.8353 19.7754 68.4082 19.7754H42.041Z" stroke="#FF6C1A" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M44.2383 8.78906V13.1836" stroke="#FF6C1A" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M53.0273 8.78906V13.1836" stroke="#FF6C1A" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M61.8164 8.78906V13.1836" stroke="#FF6C1A" stroke-width="2" stroke-miterlimit="10"/>
+</g>
+<defs>
+<clipPath id="clip0_12230_2486">
+<rect width="75" height="75" fill="white"/>
+</clipPath>
+</defs>
+</svg>

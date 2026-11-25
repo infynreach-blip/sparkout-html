@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
+  <title>How To Build an AI Chatbot for Your Website | Step-by-Step Guide</title>
+  <meta name="description"
+    content="Learn how to build an AI chatbot for your website - from planning and development to deployment. Discover costs, tools, & strategies involved." />
+  <meta name="keywords"
+    content="How To Build An Ai Chatbot For Your Website, How To Build An Ai Chatbot, Build Your Own Ai Chatbot, How To Build An Ai Chatbot, How To Create An Ai Bot, Benefits Of Ai Chatbot, How To Build An Ai Chatbot From Scratch, Cost To Build Your Own Ai Chatbot" />
+  <meta name="author" content="Sparkout Tech Solutions" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="How To Build an AI Chatbot for Your Website | Step-by-Step Guide" />
+  <meta property="og:site_name" content="Sparkout Tech Solutions" />
+  <meta property="og:url" content="https://www.sparkouttech.com/how-to-build-ai-chatbot-for-website/">
+  <meta property="og:description"
+    content="Learn how to build an AI chatbot for your website - from planning and development to deployment. Discover costs, tools, & strategies involved." />
+  <meta property="og:type"
+    content="Learn how to build an AI chatbot for your website - from planning and development to deployment. Discover costs, tools, & strategies involved." />
+  <meta property="og:image"
+    content="https://www.sparkouttech.com/assets-new/images/how-to-build-an-ai-chatbot-blog/how-to-build-an-ai-chatbot-banner.jpg" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="https://www.sparkouttech.com/how-to-build-ai-chatbot-for-website/">
+  <meta name="twitter:title" content="How To Build an AI Chatbot for Your Website | Step-by-Step Guide">
+  <meta name="twitter:description"
+    content="Learn how to build an AI chatbot for your website - from planning and development to deployment. Discover costs, tools, & strategies involved.">
+  <meta name="twitter:image"
+    content="https://www.sparkouttech.com/assets-new/images/how-to-build-an-ai-chatbot-blog/how-to-build-an-ai-chatbot-banner.jpg">
+  <link rel="canonical" href="https://www.sparkouttech.com/how-to-build-ai-chatbot-for-website/" />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="amphtml" href="https://www.sparkouttech.com/amp/how-to-build-ai-chatbot-for-website.html">
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+  </noscript>
+  <link rel="stylesheet" href="../assets-new/fonts-demo/bootstrap-icons.css" media="print" onload="this.media='all'" />
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style"
+    onload="this.rel='stylesheet'">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../assets-new/css/common.css" media="all" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="../assets-new/css/common.css" />
+  </noscript>
+  <link rel="stylesheet" href="../assets-new/css/how-build-ai-agent.css" media="all" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="../assets-new/css/how-build-ai-agent.css" />
+  </noscript>
+</head>
+
+<body>
+  <div id="header"></div>
+  <section class="blog-detail-section">
+    <div class="container">
+      <div class="title-wrap pb-0 mb-0 mt-3 mt-sm-4 mt-lg-5">
+        <div class="h4"><span class="dots"></span>Artificial Intelligence</h4>
+        </div>
+        <h1>How To<span> Build an AI Chatbot</span> for Your Website<span class="dots"></span> </h1>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-9">
+          <div class="details-img-wrap">
+            <picture>
+              <source srcset="../assets-new/images/how-to-build-an-ai-chatbot-blog/how-to-build-an-ai-chatbot-banner.webp" type="image/webp" />
+              <img src="../assets-new/images/how-to-build-an-ai-chatbot-blog/how-to-build-an-ai-chatbot-banner.jpg"
+              alt="Illustration showing the process and tools on how to build an AI chatbot for your website, featuring chatbot architecture, website integration, and automation flow."
+              title="How To Build an AI Chatbot for Your Website" width="831" height="436"
+              class="img-fluid" />
+            </picture>
+            
+          </div>
+        </div>
+        <div class="col-lg-3 d-lg-block d-none">
+          <div class="banner-right">
+            <div class="banner-right-wrap">
+              <picture>
+                <source srcset="../assets-new/images/how-build-ai-agent/ai-team.webp" type="image/webp" />
+                <img src="../assets-new/images/how-build-ai-agent/ai-team.jpg" alt="How to Build AI Agent with our Team"
+                  title="An 8-Step Development Guide" width="261" height="174" class="img-fluid w-100" />
+              </picture>
+            </div>
+            <div class="banner-right-content">
+              <div class="h3">Build AI Chatbots for Instant Support</div>
+              <p>Automate support, capture leads, and boost engagement with custom AI chatbots.</p>
+              <div class="banner-cta-btns d-flex justify-content-center">
+                <a target="_blank" href="https://www.sparkouttech.com/contact-us/"
+                  class="d-flex align-items-center justify-content-center gap-2 w-100">
+                  Start Building Now
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                    <path d="M13.8068 5.4325L4.38965 14.8496" stroke="currentColor" stroke-width="1.5"
+                      stroke-linecap="round"></path>
+                    <path
+                      d="M6.11426 4.31897C6.11426 4.31897 13.3371 3.7101 14.4334 4.80621C15.5295 5.90233 14.9204 13.1253 14.9204 13.1253"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="author-main row gy-4">
+        <div class="col-lg-5">
+          <div class="blog-author-detail d-flex gap-4">
+            <picture>
+              <source srcset="../assets-new/images/testimonial/yokesh-sankar.webp" type="image/webp" />
+              <img src="../assets-new/images/testimonial/yokesh-sankar.png" alt="yokesh-sankar" title="yokesh-sankar"
+                width="70" height="70" loading="lazy" class="img-fluid rounded-circle" />
+            </picture>
+            <div>
+              <p class="author pb-0">
+                <a href="https://www.sparkouttech.com/author/yokesh-sankar/">Yokesh Sankar</a>
+              </p>
+              <p class="author-detail pb-0">COO | June 05, 2025 | 12 Mins</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <iframe style="border-radius:12px" 
+            src="https://open.spotify.com/embed/episode/4547U9se3UNIzEAJGfWCQG?utm_source=generator" 
+            width="100%" 
+            height="80" 
+            frameborder="0" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+          </iframe>
+
+
+        </div>
+      </div>
+
+      <div class="table-of-content-section position-relative d-lg-none d-block mb-3">
+        <div class="toc-main my-0">
+          <div class="dropdown">
+            <button class="btn btn-toc dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Table of Contents
+            </button>
+            <ul class="btn-toc dropdown-menu toc-tab-menu">
+              <li class="mb-2">
+                <a href="#" class="menu-link" data-target="item-1">Why AI Chatbot Needed</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="menu-link" data-target="item-2">Types of AI Chatbots</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="menu-link" data-target="item-3">AI Chatbot Strategy</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="menu-link" data-target="item-4">Build AI Chatbot Guide</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="menu-link" data-target="item-5">No-Code AI Chatbot Tools</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="menu-link" data-target="item-6">AI Chatbot Development Cost</a>
+              </li>
+               <li class="mb-2">
+                <a href="#" class="menu-link" data-target="item-7">AI Chatbot Challenges</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="menu-link" data-target="item-8">Why Sparkout for Chatbots</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="menu-link" data-target="item-9">Future of Web Chatbots</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="blogs-main-content-wrap">
+        <div class="row">
+          <div class="col-lg-3 blog-right-side d-lg-block d-none">
+            <div class="table-of-content-section">
+              <div class="recent-blogs-head pb-2">
+                <div class="h2">Table of contents</div>
+              </div>
+              <div class="toc-scroll">
+
+                <div class="sidebar-blogs-single">
+                  <div class="h4"><a href="#" class="menu-link" data-target="item-1">Why AI Chatbot Needed</a></div>
+                </div>
+
+                <div class="sidebar-blogs-single">
+                  <div class="h4"><a href="#" class="menu-link" data-target="item-2">Types of AI Chatbots</a></div>
+                </div>
+
+                <div class="sidebar-blogs-single">
+                  <div class="h4"><a href="#" class="menu-link" data-target="item-3">AI Chatbot Strategy</a></div>
+                </div>
+
+                <div class="sidebar-blogs-single">
+                  <div class="h4"><a href="#" class="menu-link" data-target="item-4">Build AI Chatbot Guide</a></div>
+                </div>
+
+                <div class="sidebar-blogs-single">
+                  <div class="h4"><a href="#" class="menu-link" data-target="item-5">No-Code AI Chatbot Tools</a></div>
+                </div>
+
+                <div class="sidebar-blogs-single">
+                  <div class="h4"><a href="#" class="menu-link" data-target="item-6">AI Chatbot Development Cost</a></div>
+                </div>
+
+                <div class="sidebar-blogs-single">
+                    <div class="h4"><a href="#" class="menu-link" data-target="item-7">AI Chatbot Challenges</a></div>
+                  </div>
+
+                <div class="sidebar-blogs-single">
+                    <div class="h4"><a href="#" class="menu-link" data-target="item-8">Why Sparkout for Chatbots</a></div>
+                  </div>
+
+                  <div class="sidebar-blogs-single">
+                    <div class="h4"><a href="#" class="menu-link" data-target="item-9">Future of Web Chatbots</a></div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="blog-post-content">
+                <p>In the digital-first era, businesses are focusing more on providing instant customer engagement. This is when an AI chatbot comes in. If you have ever wondered how to build an AI chatbot for your website, then this blog has got you covered.</p>
+                <p>Since customers look for instant responses, personalized experiences, and round-the-clock availability, businesses that don't keep up will lose leads and loyalty in no time. This is why smart brands are investing in <a href="https://www.sparkouttech.com/enterprise-ai-chatbot-development-service/" target="_blank" class="internal-links">AI chatbot development</a>.</p>
+                <p>A well-structured chatbot will not only automate conversations but also boost user engagement, reduce support costs, and operate 24/7. It is like having a team member who never takes a rest and always brings the right answer.</p>
+                <p>Here in this guide, you will find the entire AI chatbot development process—from choosing the right tools to training your bot and deploying it into your existing systems. No matter if you are starting from scratch, a start-up founder, or an enterprise owner, we have got you covered.</p>
+
+                <div id="item-1" class="content">
+                    <h2 class="pt-2 pt-md-4 pt-lg-5">Why Do You Need an AI Chatbot for Your Website?</h2>
+                    <p>Adding an AI chatbot to your website is a smart move, as it helps unlock real value for your business and your users. Here are the benefits of an AI chatbot when integrated into a website:</p>
+                    <div class="details-img-wrap pb-3 my-3">
+                        <img src="../assets-new/images/how-to-build-an-ai-chatbot-blog/why-retail-ai-agents.webp"
+                          alt="Reasons why you need an AI chatbot for your website: automate support, improve user experience, boost lead generation, and reduce manual workload."
+                          title="Why Do You Need an AI Chatbot for Your Website" width="831" height="382"
+                          class="img-fluid" />
+                      </div>
+                    
+                    <p>
+                        1. <b>Automates Customer Support</b> <br>The biggest flex and benefit of an AI chatbot is its ability to take up repetitive support queries and answer them instantly. This covers everything from answering FAQs to troubleshooting common problems, with chatbots providing real-time assistance. Thus, chatbots not only reduce wait times but also improve customer satisfaction. On the other hand, they reduce human agent intervention and help them focus on complex and high-priority tasks.
+                    </p>
+                    <p>
+                        2. <b>Increase Conversation & Lead Generation</b> <br> AI chatbots integrated into your website can proactively engage visitors, qualify leads, and guide them to purchase or sign up. They also help reduce drop-offs by asking the right questions and offering timely suggestions. This way, the chatbots push users down the funnel and boost conversion rates.
+                    </p>
+                    <p>
+                        3. <b>Enhance User Experience</b> <br> With a well-trained AI chatbot, users can find what they want much faster. Furthermore, these chatbots can recommend products, offer support, and personalize content based on user behavior, which contributes to a smoother, more engaging website experience.
+                    </p>
+                    <p>
+                        4. <b>Reduce Human Workload</b> <br> AI chatbots can handle several interactions at the same time, which otherwise wouldn't be possible with a single human agent. Thus, the chatbot eases the pressure on the service team and reduces operational costs by minimizing the need for a large support staff during peak hours or after business hours.
+                    </p>
+                    <div class="ai-cta-main py-4">
+                          <div class="row ai-cta">
+                            <div class="col-lg-7 p-0 d-flex align-items-center text-lg-start text-center">
+                              <div class="title-wrap cta text-center mb-0">
+                                <div class="h2 text-center text-lg-start mb-2 mb-md-3 p-0">
+                                     <span>Turn Traffic into Sales</span> - Use AI-Powered Chatbots
+                                                </div>
+                                <p class="text-center text-lg-start">
+                                    Discover how AI chatbot development can automate support, boost leads, & scale your business 24/7.
+                                </p>
+                                <div class="banner-cta-btns d-flex justify-content-center justify-content-lg-start mt-3">
+                                  <a target="_blank" href="https://www.sparkouttech.com/contact-us/"
+                                    class="d-flex align-items-center justify-content-center w-auto gap-2">
+                                    Get a Consultation
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"
+                                      fill="none">
+                                      <path d="M13.8068 5.4325L4.38965 14.8496" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round"></path>
+                                      <path
+                                        d="M6.11426 4.31897C6.11426 4.31897 13.3371 3.7101 14.4334 4.80621C15.5295 5.90233 14.9204 13.1253 14.9204 13.1253"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    </svg>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="col-lg-5 p-0 position-relative d-lg-flex align-items-end justify-content-center d-none">
+                              <picture>
+                                <source type="image/webp" srcset="../assets-new/images/how-build-ai-agent/ai-expert.webp" />
+                                <img loading="lazy" src="../assets-new/images/how-build-ai-agent/ai-expert.png"
+                                  alt="ai-expert" title="ai-expert" width="254" height="307" class="img-fluid" />
+                              </picture>
+                            </div>
+                          </div>
+                      </div>
+                </div>
+
+              <div id="item-2" class="content">
+                <h2 class="pt-2 pt-md-4">Know the Types of AI Chatbots</h2>
+                <p>Based on your business goals and user needs, choosing the right type is vital when it comes to <a href="https://www.sparkouttech.com/ai-chatbot-development" target="_blank" class="internal-links">chatbot development</a>. The two major types of chatbots are as follows:</p>
+        
+                  <p>1. <b>Rule-Based Chatbots</b> <br> As the name suggests, these chatbots follow predefined workflows or decision trees. They are capable of handling simple tasks like answering FAQs, booking appointments, collecting contact details, etc. Although rule-based chatbots have limited capability to handle complex or unpredictable queries, they can be deployed at a faster rate.</p>
+                  <p>2. <b>AI-Powered Chatbots (NLP & ML)</b> <br> These are advanced chatbots and use Natural Language Processing (NLP) and Machine Learning (ML) to understand user intent and learn from interactions. Modern AI chatbot development involves them to engage in more human-like conversations and improve over time. Thus, they are ideal for handling dynamic scenarios in large-scale applications. </p>
+                
+                  <h3>Use Cases Across Industries</h3>
+                  <p>Get to know the impact of AI chatbot development across a wide range of industries.</p>
+
+                  <div class="table-responsive ai-table">
+                    <table class="table border mb-4">
+                        <thead>
+                            <tr>
+                                <th>Industry</th>
+                                <th>Use Cases</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="fw-medium">
+                                    eCommerce
+                                </td>
+                                <td>
+                                    Product recommendations, Order tracking, Return handling, 24/7 customer support
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium">SaaS</td>
+                                <td>User onboarding, Feature guidance, Troubleshooting, Churn reduction</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium">Healthcare</td>
+                                <td>Appointment scheduling, Symptom checking, Patient triage</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium">Finance</td>
+                                <td>Account inquiries, Transaction tracking, Budgeting assistance, & Fraud alerts</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium">Education</td>
+                                <td>Course selection, Deadline reminders, Student support, & FAQs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+              </div>
+
+              <div id="item-3" class="content">
+                <h2 class="pt-2 pt-md-4">AI Chatbot Strategy Planning</h2>
+                <p>Just before getting into the development process, it is vital to lay a solid foundation. No matter if you are working with a team or learning to build an AI chatbot from scratch, the following section highlights the strategies that you should follow for your chatbot to drive real-time success.</p>
+                <div class="details-img-wrap pb-3 my-3">
+                    <img src="../assets-new/images/how-to-build-an-ai-chatbot-blog/ai-chatbot-strategy-planning.webp"
+                      alt="Strategy planning infographic showing how to build an AI chatbot for your website, including defining goals, identifying use cases, and starting with website integration."
+                      title="AI Chatbot Strategy Planning for Your Website" width="831" height="406"
+                      class="img-fluid" />
+                  </div>
+                
+                <p>1. <b>Define Your Goals</b> <br> Begin by identifying what you want your AI chatbot to perform. Some of the common objectives include lead generation, customer support, user onboarding, and feedback collection.</p>
+                <p>2. <b>Identify Use Cases</b> <br> With the goals defined, you should determine the tasks your chatbot should handle—for instance, booking appointments, answering FAQs, or upselling products. With clear use cases, the chatbot can effortlessly converse and perform tasks.</p>
+                <p>3. <b>Start with Your Website</b> <br> As you are focusing on AI chatbot development for your website, that should be your core platform. A chatbot on your website is accessible to all visitors and can be integrated easily. Besides, it offers great support, brings in leads, and enhances user engagement.</p>
+                <p>If needed, you can even extend the functionality to other platforms like mobile apps, messaging platforms, and live chat tools.</p>
+                <div class="common-section py-4 mb-3">
+                    <div class="container">
+                      <div class="row ai-cta-request">
+                        <div class="col-lg-12 p-0">
+                          <div class="title-wrap mb-0 text-center">
+                            <div class="mb-xl-3 mb-2 p-0 h2">
+                                Let's Build an <span>AI Chatbot Strategy</span> That Works
+                            </div>
+                            <P class="f-sora">
+                                Not sure where to begin? Our experts will help you identify the right use cases &  map your goals.
+                            </P>
+                            <div class="banner-cta-btns d-flex justify-content-center">
+                              <a target="_blank" href="https://www.sparkouttech.com/contact-us/"
+                                class="d-flex align-items-center justify-content-center w-auto gap-2">
+                                Book a Strategy Call
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"
+                                  fill="none">
+                                  <path d="M13.8068 5.4325L4.38965 14.8496" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                                  <path
+                                    d="M6.11426 4.31897C6.11426 4.31897 13.3371 3.7101 14.4334 4.80621C15.5295 5.90233 14.9204 13.1253 14.9204 13.1253"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <div id="item-4" class="content">
+                <h2 class="pt-2 pt-md-4">How to Build an AI Chatbot for Your Website from Scratch?</h2>
+                <p>The following step-by-step breakdown of how to build an AI chatbot for your website is all you need to turn your idea into action.</p>
+
+                <div class="details-img-wrap pb-3 my-3">
+                    <img src="../assets-new/images/how-to-build-an-ai-chatbot-blog/build-your-ai-chatbot-from-scratch.webp"
+                      alt="Steps on how to build an AI chatbot for your website from scratch, including chatbot design, tech stack selection, training, and deployment."
+                      title="Build Your AI Chatbot from Scratch" width="831" height="493"
+                      class="img-fluid" />
+                  </div>
+
+                  <div class="sub-titles">Step 1: Choose a Development Approach</div>
+                <p>Begin by deciding on the development approach on which you are about to build your chatbot. You can choose between the following ways:</p>
+                <p>
+                    1. <b>No-Code Platforms</b> <br> - You can create simple chatbots with drag-and-drop interfaces quickly using Landbot, Tidio, ManyChat, etc. This is suitable for lead capturing or offering basic support.
+                </p>
+                <p>
+                    2. <b>Custom Development</b> <br> - This offers more control and scalability. Hence, it is ideal if you are integrating advanced NLP, business logic, or deep learning capabilities.
+                </p>
+                <p>Additionally, those who prefer a scalable, enterprise-grade solution can partner with AI chatbot development companies, as they will handle everything from UX design to backend integrations.</p>
+
+                <div class="sub-titles">Step 2: Design the Conversation Flow</div>
+                <p>The next step is to plan how your bot will talk. A well-defined conversation flow is vital for effective AI agent development. For this:</p>
+                <ul>
+                    <li>Define your bot persona and tone.</li>
+                    <li>Build flows around common queries and FAQs.</li>
+                    <li>Include fallback intents for out-of-scope questions or unclear inputs.</li>
+                    <li>Finally, ensure the experience is helpful and human-like.</li>
+                </ul>
+
+                <div class="sub-titles">Step 3: Choose Your Tech Stack</div>
+                <p>For a chatbot to be powerful and adaptable, choosing the right tech stack is important. You should select between:</p>
+                <ul class="mb-0">
+                    <li><b>NLP Engines</b> - Dialogflow, Rasa, IBM Watson, GPT-4</li>
+                    <li><b>Integration Tools</b> - APIs, CRMs, live chat platforms, webhooks</li>
+                </ul>
+                <p class="pb-4">Ensure you choose a stack that supports long-term <a href="https://www.sparkouttech.com/ai-development-company/" target="_blank" class="internal-links">AI development</a> and scales with your business.</p>
+
+                <div class="sub-titles">Step 4: Develop & Train Your Bot</div>
+                <p>It is essential to train your chatbot with high-quality data for reliable and accurate results. This is the step where the chatbot comes to life.</p>
+                <ul>
+                    <li>Use machine learning models and training datasets to enhance recognition and contextual understanding.</li>
+                    <li>Include training examples for a wide range of use cases.</li>
+                    <li>Use edge cases to train your bot on how to respond when it doesn't understand the user.</li>
+                </ul>
+
+                <div class="sub-titles">Step 5: Deploy & Monitor</div>
+                <p>When the chatbot is ready, it’s time to deploy it on your website.</p>
+                <ul>
+                    <li>Use a plugin, script, or backend integration based on your tech stack.</li>
+                    <li>Use dashboards to monitor key metrics like customer satisfaction, user retention, resolution rate, and escalation to human support.</li>
+                </ul>
+                <p>You should continuously optimize the chatbot based on real usage data to improve performance over time.</p>
+
+              </div>
+
+              <div id="item-5" class="content">
+                <h2 class="pt-2 pt-md-4">Is It Possible to Create an AI Bot With No-Code Tools</h2>
+                <p>Yes. If you are not a developer or looking for faster ways to launch, no-code platforms offer everything you need to create an AI chatbot for your website.</p>
+
+                  <p>You can rely on popular <a href="https://en.wikipedia.org/wiki/No-code_development_platform" target="_blank" class="internal-links">no-code tools</a> like Tidio, Landbot, and ManyChat to build and deploy a chatbot. They use drag-and-drop interfaces, pre-built templates, and visual conversational flows.</p>
+
+                  <p>Companies can rely on no-code chatbot tools to capture leads, answer FAQs, book appointments, and automate support. Hence, they are ideal for small businesses that cannot afford a heavy investment in development.</p>  
+                
+              </div>
+              
+              <div id="item-6" class="content">
+                <h2 class="pt-2 pt-md-4">Cost to Build Your Own AI Chatbot</h2>
+                <div class="details-img-wrap pb-3 my-3">
+                  <img src="../assets-new/images/how-to-build-an-ai-chatbot-blog/ai-chatbot-development-costs.webp"
+                    alt="Breakdown of factors affecting the cost to build your own AI chatbot for your website, including complexity, integrations, custom features, and development options."
+                    title="Cost to Build Your Own AI Chatbot" width="831" height="370"
+                    class="img-fluid" />
+                </div>
+                <p>Are you wondering how much it would cost to build your own AI chatbot? Then the development cost varies based on certain factors, ranging from technical complexity to choosing in-house or external experts. Take a look at the key cost factors in brief:</p>
+               <p>1. <b>Complexity of the Bot</b> Simple bots are affordable and can be built with no-code tools. Whereas complex AI bots cost more due to advanced logic and training needs as they use NLP, machine learning, and adaptive responses.</p>
+               <p>2. <b>Integrations</b> The cost increases when you want your chatbot to connect to CRMs, payment gateways, or helpdesk platforms. Besides, custom integrations require additional API development and testing.</p>
+               <p>3. <b>Custom Features</b> Integrating features like multilingual support, analytics dashboards, and advanced personalization will increase development time and cost. You will have to pay even more if you want to integrate voice capability or sentiment analysis.</p>
+               <p>4. <b>Development or Vendor Partner</b> Relying on freelancers costs you less, but you might lack long-term support. At the same time, partnering with specialized AI chatbot development companies costs more as they cover everything from strategy planning to design, deployment, and scaling.</p>
+
+               <div class="sub-titles">In short:</div>
+               <p>Understanding the price range will help you set the right budget and choose the platform that matches your business goals.</p>
+               <ul>
+                <li>No-code bots cost between $0–$100/month (subscription-based).</li>
+                <li>Custom bots range from $3,000–$30,000 based on features, NLP models, and integrations.</li>
+                <li>Enterprise AI agents cost $50,000+, for full-scale <a href="https://www.sparkouttech.com/ai-agent-development/" target="_blank" class="internal-links">AI agent development</a>.</li>
+               </ul>
+
+               <div class="common-section py-4 mb-3">
+                <div class="container">
+                  <div class="row ai-cta-request">
+                    <div class="col-lg-12 p-0">
+                      <div class="title-wrap mb-0 text-center">
+                        <div class="mb-xl-3 mb-2 p-0 h2">
+                            <span>Let's Price It</span> Out for You
+                        </div>
+                        <P class="f-sora">
+                            Know your AI chatbot development cost upfront based on your needs & tech stack.
+                        </P>
+                        <div class="banner-cta-btns d-flex justify-content-center">
+                          <a target="_blank" href="https://www.sparkouttech.com/contact-us/"
+                            class="d-flex align-items-center justify-content-center w-auto gap-2">
+                            Request a Quote
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"
+                              fill="none">
+                              <path d="M13.8068 5.4325L4.38965 14.8496" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                              <path
+                                d="M6.11426 4.31897C6.11426 4.31897 13.3371 3.7101 14.4334 4.80621C15.5295 5.90233 14.9204 13.1253 14.9204 13.1253"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div id="item-7" class="content">
+                <h2 class="pt-2 pt-md-4">Challenges Faced When Building an AI Chatbot</h2>
+                <p>Developing an AI agent is not a hassle-free task. In the middle of the development, teams will often run into data issues, technical limitations, and unpredictable user behaviour. Here are some of the key challenges faced by businesses while building an AI agent.</p>
+                <p><b>Limited Training Data</b><br class="d-block">Most of the chatbots fail because the training data isn’t transparent enough. If the dataset doesn’t match real user behaviour, the chatbots will give you false answers. This makes the whole experience feel robotic.</p>
+                <p><b>Low Language Understanding Accuracy</b><br class="d-block">Chatbots at a basic level usually struggle with slang, mixed languages, typos, and messy human inputs. Misinterpretations, even at the minimal level, will make the bot feel clueless and break the chat flow.</p>
+                <p><b>Edge Case Handle Failure</b><br class="d-block">Users won’t just follow the usual and predictable patterns. During this situation, if the bot can’t manage the sudden topic jumps or random queries, the user experience becomes frustrating instead of helpful.</p>
+                <p><b>Complicated System Integrations</b><br class="d-block">Linking the chatbot to CRMs, databases, and third-party tools can be challenging and often gets messed up. A weak and outdated backend will instantly limit how smart and flexible the bot can be.</p>
+                <p><b>Difficulty in Maintaining Accuracy</b><br class="d-block">The AI medals can degrade if they aren’t upgraded. As the market evolves, the chatbot needs regular tuning to stay competitive. So, without proper maintenance, the chatbot becomes unreliable and outdated so quickly.</p>
+                    </div>
+              <div id="item-8" class="content">
+                <h2 class="pt-2 pt-md-4">Why Choose Sparkout Tech for AI Chatbot Development?</h2>
+                <p>If you are a start-up or an enterprise, choose <a href="https://www.sparkouttech.com/" target="_blank" class="internal-links"> Sparkout Tech </a> as your AI chatbot development company, as we offer the strategy and tools needed for your chatbot to meet your business requirements.</p>
+
+                <div class="sub-titles">When to Partner with Sparkout Tech:</div>
+                    <p>1. Businesses looking for custom chatbot development beyond what no-code can offer.</p>
+                    <p>2. If you need to integrate complex systems like CRMs, ERPs, e-commerce platforms, or helpdesks.</p>
+                    <p>3. When you need advanced AI chatbot development using NLP, machine learning, or GPT-based models.</p>
+                    <p>4. If you need an end-to-end AI agent development provider who handles everything from ideation to post-launch support.</p>
+
+                    <div class="sub-titles">Things That Set Sparkout Tech Apart:</div>
+                    <p>Choosing Sparkout means you're working with an expert team that blends AI innovation with business insights. We stand ahead of competitors with:</p>
+                    <ul>
+                        <li>Deep AI Expertise</li>
+                        <li>Tailored Solutions</li>
+                        <li>Seamless Integration</li>
+                        <li>Scalable Architecture</li>
+                        <li>Transparent Process</li>
+                    </ul>  
+                    <p>We take around 2–4 weeks to deliver a standard chatbot, while for an AI-powered bot with NLP, CRM integration, and personalization features, we take around 1–2 months.</p>
+                    <p>For a full AI agent solution, we take around 2–6+ months, as it involves integrating custom ML models, an analytics dashboard, and multi-platform AI.</p>
+                    </div>
+                <div class="common-section py-4 mb-3">
+                    <div class="container">
+                      <div class="row ai-cta-request">
+                        <div class="col-lg-12 p-0">
+                          <div class="title-wrap mb-0 text-center">
+                            <div class="mb-xl-3 mb-2 p-0 h2">
+                                <span>Build With Sparkout's </span> AI Experts
+                            </div>
+                            <P class="f-sora">
+                                We craft intelligent AI chatbot solutions that scale, adapt, and deliver measurable impact.
+                            </P>
+                            <div class="banner-cta-btns d-flex justify-content-center">
+                              <a target="_blank" href="https://www.sparkouttech.com/contact-us/"
+                                class="d-flex align-items-center justify-content-center w-auto gap-2">
+                                Talk to Our AI Team
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"
+                                  fill="none">
+                                  <path d="M13.8068 5.4325L4.38965 14.8496" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                                  <path
+                                    d="M6.11426 4.31897C6.11426 4.31897 13.3371 3.7101 14.4334 4.80621C15.5295 5.90233 14.9204 13.1253 14.9204 13.1253"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              <div id="item-9" class="content">
+                <h2 class="pt-2 pt-md-4">Future of AI Chatbots in Web Engagement</h2>
+                <p>AI chatbots in recent times are becoming proactive, intelligent digital assistants that can transform how businesses engage with users online. The future of these agents is bright, and we may expect the following aspects:</p>
+                <p>1. Tomorrow’s chatbots will be more autonomous and capable of handling tasks without human oversight. They will shift from offering only scripted responses to true agentic AI that understands context, learns from interactions, and improves continuously.</p>
+                <p>2. Voice-enabled chatbots will come into effect, and there will be an increase in web chatbots handling voice input. This enables faster communication, improves accessibility, and enhances customer engagement.</p>
+                <p>3. With AI and deep analytics, future chatbots will offer hyper-personalized interactions. Thus, chatbots will provide personalized recommendations, adapt to user preferences, and deliver better outcomes using past interactions.</p>
+                <p>As AI chatbot development advances, these bots will work alongside human agents to predict needs, reduce friction, and increase engagement.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--end-->
+
+  <section class="common-py my-3 my-lg-5 pt-3 pt-lg-5">
+    <div class="container">
+      <div class="row align-items-center pb60">
+        <div class="col-lg-12">
+          <div class="title-wrap mb-0 text-center">
+            <div class="h2">
+              <span>Frequently Asked Questions</span> How Can <br class="d-lg-block d-none"> We Assist You?<span
+                class="dots"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row faq">
+        <div class="accordion" id="accordionExample">
+          <!--start-->
+          <div class="accordion-item">
+            <div class="accordion-header" id="heading1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                aria-expanded="true" aria-controls="collapse1">
+                1. How is an AI chatbot different from a live chat?
+              </button>
+            </div>
+            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="pb-0 pe-lg-5">
+                    Live chat connects the users with a human agent in real-time. Whereas an AI chatbot uses NLP to simulate human-like conversations automatically. In recent times, websites are using both for seamless support.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--end-->
+          <!--start-->
+          <div class="accordion-item">
+            <div class="accordion-header" id="heading2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                2. Is it possible to build a multilingual AI chatbot?
+              </button>
+            </div>
+            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="pb-0 pe-lg-5">
+                    Yes. With the modern NLP platforms like Dialog Flow & GPT-based models, it is possible to build a multilingual AI chatbot. Thus, you can support a global audience with localized experiences. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--end-->
+          <!--start-->
+          <div class="accordion-item">
+            <div class="accordion-header" id="heading3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                3. Are AI chatbots secure for handling sensitive information? 
+              </button>
+            </div>
+            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="pb-0 pe-lg-5">
+                    Yes. At Sparkout Tech, we use reputable platforms with encryption and compliance standards like GDPR and HIPAA. We ensure the chatbot collects only necessary data and securely stores or processes it. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--end-->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="common-section bg-grey">
+    <div class="container blog-section py-0">
+      <div class="row m-0">
+        <div class="col-lg-6">
+          <div class="title-wrap">
+            <div class="h4"><span class="dots"></span> Blog</div>
+            <div class="h2">
+              <span>Take a peek </span> at our blogs on <br>everything tech<span class="dots"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="title-wrap">
+            <p> A collection of highly curated blogs on the latest technology and major industry events. Stay up-to-date
+              on topics such as Blockchain, Artificial Intelligence, and much more.</p>
+            <a href="https://www.sparkouttech.com/blog/" class="btn btn-primary" target="_blank">View all blogs
+              <picture>
+                <source type="image/webp" srcset="../assets-new/images/home-new/icon-arrow-up.webp">
+                <source type="image/png" srcset="../assets-new/images/home-new/icon-arrow-up.png">
+                <img src="../assets-new/images/home-new/icon-arrow-up.svg" alt="arrow-icon" title="arrow-icon"
+                  width="21" height="21" class="img-fluid" loading="lazy">
+              </picture>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row row-gap-5 m-0">
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="blog-card">
+                <a href="https://www.sparkouttech.com/how-to-build-retail-ai-agent/" target="_blank">
+                  <figure>
+                    <picture>
+                        <source srcset="../assets-new/images/how-to-build-retail-ai-agent-blog/how-to-build-retail-ai-agent-banner.webp" type="image/webp" />
+                        <img src="../assets-new/images/how-to-build-retail-ai-agent-blog/how-to-build-retail-ai-agent-banner.jpg" alt="A Retail AI agent assisting a store by automating tasks, analyzing customer behavior, and offering personalized service to improve efficiency and customer satisfaction." title="How a Retail AI Agent Improves Store Operations and Customer Service" width="966" height="507" class="img-fluid"/>
+                      </picture>
+                  </figure>
+                  <div class="desc">
+                    <div class="bolg-category-title d-flex align-items-center">
+                      <div class="h4">AI</div>
+                      <picture>
+                        <source type="image/webp" srcset="../assets-new/images/home-new/icon-arrow-up.webp"/>
+                        <source type="image/png" srcset="../assets-new/images/home-new/icon-arrow-up.png"/>
+                        <img src="../assets-new/images/home-new/icon-arrow-up.svg" alt="arrow-icon" title="arrow-icon" width="21" height="21" class="img-fluid" loading="lazy"/>
+                      </picture>
+                    </div>
+                    <div class="h3">How to Build a Retail AI Agent to Automate Sales, Inventory & Customer Service</div>
+                  </div>
+                </a>
+              </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="blog-card">
+              <a href="https://www.sparkouttech.com/how-to-build-ai-web-agent/" target="_blank">
+                <figure>
+                  <img loading="lazy" src="../assets-new/images/how-to-build-ai-web-agent-blog/ai-web-agent-banner.webp"
+                    alt="AI Web Agents: Capabilities, planning, tools, cost, use cases, future trends & Sparkout Tech benefits."
+                    title="How to Build an AI Web Agent" width="966" height="507" class="img-fluid" />
+                </figure>
+                <div class="desc">
+                  <div class="bolg-category-title d-flex align-items-center">
+                    <div class="h4">AI</div>
+                    <picture>
+                      <source type="image/webp" srcset="../assets-new/images/home-new/icon-arrow-up.webp" />
+                      <source type="image/png" srcset="../assets-new/images/home-new/icon-arrow-up.png" />
+                      <img loading="lazy" data-src="../assets-new/images/home-new/icon-arrow-up.svg" alt="arrow-icon"
+                        title="arrow-icon" width="21" height="21" class="img-fluid" />
+                    </picture>
+                  </div>
+                  <div class="h3">
+                    How to Build an AI Web Agent That Automates Workflow & Scales with Your Business
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="blog-card">
+              <a href="https://www.sparkouttech.com/how-to-build-manufacturing-ai-agent/" target="_blank">
+                <figure>
+                  <picture>
+                      <source srcset="../assets-new/images/manufacturing-ai-agent/manufacturing-ai-agents.webp" type="image/webp" />
+                      <img src="../assets-new/images/manufacturing-ai-agent/manufacturing-ai-agents.jpg" alt="Comparison of traditional chatbots and AI agents highlighting differences in capabilities, adaptability, and business outcomes."
+                      title="Traditional Chatbot vs AI Agent: Key Differences & Business Impact" width="966" height="507" class="img-fluid"/>
+                    </picture>
+                </figure>
+                <div class="desc">
+                  <div class="bolg-category-title d-flex align-items-center">
+                    <div class="h4">AI</div>
+                    <picture>
+                      <source type="image/webp" srcset="../assets-new/images/home-new/icon-arrow-up.webp"/>
+                      <source type="image/png" srcset="../assets-new/images/home-new/icon-arrow-up.png"/>
+                      <img src="../assets-new/images/home-new/icon-arrow-up.svg" alt="arrow-icon" title="arrow-icon" width="21" height="21" class="img-fluid" loading="lazy"/>
+                    </picture>
+                  </div>
+                  <div class="h3">Manufacturing AI Agents -  The Smartest Way to Automate, Optimize, & Future-Proof Your Factory</div>
+                </div>
+              </a>
+            </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <hr />
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="title-wrap">
+            <div class="h4"><span class="dots"></span> Contact</div>
+            <div class="h2">
+              <span>Turn Ideas </span> into Reality! <span class="dots"></span>
+            </div>
+          </div>
+          <div class="getintochform position-relative">
+            <form id="quickcontactForm">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-floating mb-4">
+                    <input type="text" id="name1" name="name" placeholder="Name" class="form-control" />
+                    <label for="name1">Name <span class="red">*</span></label>
+                    <small class="error" id="name1Error"></small>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-floating mb-4">
+                    <input type="email" id="email1" name="email" placeholder="name@gmail.com" class="form-control" />
+                    <label for="email1">E-mail <span class="red">*</span></label>
+                    <small class="error" id="email1Error"></small>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-floating mb-4">
+                    <input type="text" id="whatapp_telegram1" name="whatapp_telegram" placeholder="Whatsapp/Telegram Id"
+                      class="form-control" />
+                    <label for="whatapp_telegram1">Whatsapp/Telegram Id</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-floating mb-4">
+                    <input type="text" id="country1" name="country" placeholder="Country" class="form-control" />
+                    <label for="country1">Country</label>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="form-floating mb-4">
+                    <textarea class="form-control" placeholder="Message" id="description1"
+                      name="description"></textarea>
+                    <label for="description1">Message</label>
+                    <small class="error" id="description1Error"></small>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="mb-4">
+                    <!-- <label for="enquiry_type1" class="sr-only">Enquiry Type</label> -->
+                    <select id="enquiry_type1" name="enquiry_type" class="form-control">
+                      <option value="">Enquiry Type</option>
+                      <option value="Business Enquiry">Business Enquiry</option>
+                      <option value="Partnership">Partnership</option>
+                      <option value="Career Opportunities">Career Opportunities</option>
+                      <option value="Event/Media Enquiry">Event/Media Enquiry</option>
+                      <option value="Investment">Investment</option>
+                      <option value="I want to sell a service">I want to sell a service</option>
+                    </select>
+                    <small class="error" id="enquiry_type1Error"></small>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <button type="submit" class="btn btn-primary">Send</button>
+                  <div id="responseMessage1" class="mt-3"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="quick-contact d-flex justify-content-between">
+            <div class="q-contact">
+              <div class="h4 mb-0">For Business</div>
+              <p>
+                <i class="bi bi-envelope-open"></i>
+                <a href="mailto:sales@sparkouttech.com">sales@sparkouttech.com</a>
+              </p>
+              <p>
+                <i class="bi bi-whatsapp"></i>
+                <a href="https://wa.me/7708889555" target="_blank" rel="noopener noreferrer">+91 77088 89555</a>
+              </p>
+              <p>
+                <i class="bi bi-microsoft-teams"></i>
+                <a href="https://teams.microsoft.com/l/chat/0/0?users=yokesh@sparkouttech.com" target="_blank"
+                  rel="noopener noreferrer">yokesh sankar</a>
+              </p>
+              <p>
+                <i class="bi bi-telegram"></i>
+                <a href="https://t.me/yokesh_sankar" target="_blank" rel="noopener noreferrer">t.me/yokesh_sankar</a>
+              </p>
+            </div>
+            <div class="q-contact">
+              <div class="h4 mb-0">For Jobs</div>
+              <p>
+                <i class="bi bi-people"></i>
+                <a href="https://www.sparkouttech.com/careers/">See job
+                  openings</a>
+              </p>
+            </div>
+            <div class="q-contact">
+              <div class="h4 mb-0">Join CodeSpot</div>
+              <p>
+                <i class="bi bi-book"></i>
+                <a href="https://www.codespotfoundation.org/" target="_blank" rel="noopener noreferrer">CodeSpot
+                  Foundation</a>
+              </p>
+              <p>
+                <i class="bi bi-whatsapp"></i>
+                <a href="https://wa.me/8072395240" target="_blank" rel="noopener noreferrer">+91 80723 95240</a>
+              </p>
+            </div>
+            <div class="q-contact">
+              <div class="h4 mb-0">Contact HR</div>
+              <p>
+                <i class="bi bi-envelope-open"></i>
+                <a href="mailto:career@sparkouttech.com">career@sparkouttech.com</a>
+              </p>
+              <p>
+                <i class="bi bi-whatsapp"></i>
+                <a href="https://wa.me/8667726177" target="_blank" rel="noopener noreferrer">+91 86677 26177</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="btm-hr" />
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch('../header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+  </script>
+
+  <script>
+    fetch('../footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+
+  <script type="text/javascript">
+    // ---------- Scroll-to-top functionality -----------
+    const scroller = document.querySelector('.scroller');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scroller.style.display = 'block';
+      } else {
+        scroller.style.display = 'none';
+      }
+    });
+
+    scroller.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuLinks = document.querySelectorAll(".menu-link");
+      const sections = Array.from(document.querySelectorAll(".content"));
+
+      // Scroll to section on click
+      menuLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("data-target");
+          const section = document.getElementById(targetId);
+          if (section) {
+            window.scrollTo({
+              top: section.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Highlight active menu on scroll
+      window.addEventListener("scroll", function () {
+        let currentSection = null;
+        const scrollPos = window.scrollY + 100; // Offset for header height
+
+        sections.forEach(section => {
+          if (scrollPos >= section.offsetTop) {
+            currentSection = section;
+          }
+        });
+
+        if (currentSection) {
+          const id = currentSection.id;
+          menuLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("data-target") === id) {
+              link.classList.add("active");
+            }
+          });
+        }
+      });
+    });
+  </script>
+  <script src="../assets-new/form-contact.js"></script>
+  <script src="../assets-new/sticky-social-share.js"></script>
+</body>
+
+</html>

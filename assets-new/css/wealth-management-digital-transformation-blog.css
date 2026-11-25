@@ -1,0 +1,20 @@
+.env {background-color: rgb(249 249 249);flex-direction: column;display: flex;margin-right: 15%;position: relative;margin-bottom: 30px;}
+  .env-last {margin-right: 7%;}
+  .env-title {text-align: center;background-color: #192b45;padding: 20px 15px;}
+  .env-title h4 {font-size: 20px;color: #ff6c1a;line-height: 1.2;}
+  .env-title p {font-size: 14px;color: #ffffff;line-height: 1.2;margin-bottom: 0px;padding:0;}
+  .env-content {font-size: 22px;line-height: 1.2;color: #1b3b6e;padding: 30px 30px 30px 20px;}
+  .right-arrow-wrap {position: absolute;bottom: 50px;right: -15px;}
+  .num-right-arrow {width: 45px;height: 100px;position: relative;background: rgb(249 249 249);text-align: right;font-size: 30px;font-weight: bold;line-height: 100px;color: #1b3b6e;}
+  .num-right-arrow:before {content: "";position: absolute;right: -50px;bottom: 0;width: 0;height: 0;border-left: 50px solid rgb(249 249 249);border-top: 50px solid transparent;border-bottom: 50px solid transparent;}
+  @media (max-width: 640px) {
+    .num-right-arrow {font-size: 26px;height: 90px;}
+    .num-right-arrow:before {right: -40px;border-left: 40px solid rgb(249 249 249);border-top: 40px solid transparent;border-bottom: 40px solid transparent;}
+    .right-arrow-wrap {right: 0;bottom: 30px;}
+    .env {margin-right: 10%;}
+  }
+  @media (max-width: 575px) {
+    .num-right-arrow {font-size: 20px;height: 80px;}
+    .right-arrow-wrap {bottom: 15px;}
+    .num-right-arrow:before {right: -30px;border-left: 30px solid rgb(249 249 249);border-top: 30px solid transparent;border-bottom: 30px solid transparent;}
+  }

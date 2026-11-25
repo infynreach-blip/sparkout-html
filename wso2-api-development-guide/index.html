@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
+    <title>Step-by-Step Guide to WSO2 API Manager & Framework Overview</title>
+    <meta name="description"
+      content="Discover the WSO2 suite and how it can transform your API development and management. Learn about WSO2 API manager, different modules, and best practices." />
+    <meta name="keywords"
+      content="What is The WSO2, WSO2 API Integration, How Does WSO2 Work, Key Features Of WSO2,Benefits of WSO2, Use Cases Of WSO2, WSO2 Development Framework, WSO2 Integration Tools, API Management with WSO2" />
+    <meta name="author" content="Sparkout Tech Solutions" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title"
+      content="Step-by-Step Guide to WSO2 API Manager & Framework Overview" />
+    <meta property="og:site_name" content="Sparkout Tech Solutions" />
+    <meta property="og:url"
+      content="https://www.sparkouttech.com/wso2-api-development-guide/">
+    <meta property="og:description"
+      content="Discover the WSO2 suite and how it can transform your API development and management. Learn about WSO2 API manager, different modules, and best practices." />
+    <meta property="og:type"
+      content="Discover the WSO2 suite and how it can transform your API development and management. Learn about WSO2 API manager, different modules, and best practices." />
+    <meta property="og:image"
+      content="https://www.sparkouttech.com/assets-new/images/wso2-api-development/detailed-guide-to-wso2.png" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site"
+      content="https://www.sparkouttech.com/wso2-api-development-guide/">
+    <meta name="twitter:title"
+      content="Step-by-Step Guide to WSO2 API Manager & Framework Overview">
+    <meta name="twitter:description"
+      content="Discover the WSO2 suite and how it can transform your API development and management. Learn about WSO2 API manager, different modules, and best practices.">
+    <meta name="twitter:image"
+      content="https://www.sparkouttech.com/assets-new/images/wso2-api-development/detailed-guide-to-wso2.png">
+    <link rel="canonical"
+      href="https://www.sparkouttech.com/wso2-api-development-guide/" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="amphtml" href="https://www.sparkouttech.com/amp/wso2-api-development-guide.html">
+    <link rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+    </noscript>
+    <link rel="stylesheet" href="../assets-new/fonts-demo/bootstrap-icons.css"
+      media="print" onload="this.media='all'" />
+    <link rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      as="style" onload="this.rel='stylesheet'">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      defer></script>
+    <link rel="stylesheet" href="../assets-new/css/common.css" media="all"
+      onload="this.media='all'" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <noscript><link rel="stylesheet"
+        href="../assets-new/css/common.css" /></noscript>
+    <link rel="stylesheet" href="../assets-new/css/blog.css" media="all"
+      onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="../assets-new/css/blog.css" />
+    </noscript>
+  </head>
+  <body>
+    <div id="header"></div>
+    <section class="blog-detail-section">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-lg-9">
+            <div class="title-wrap pb-0 mb-0">
+              <div class="h4"><span class="dots"></span>AI</div>
+              <h1><span>A Detailed Guide </span>to WSO2 API Manager and WSO2 Framework For Businesses<span class="dots"></span> </h1>
+            </div>
+            <div class="blog-author-detail mb-4">
+                  <picture>
+                    <source srcset="../assets-new/images/testimonial/yokesh-sankar.webp" type="image/webp"/>
+                    <img src="../assets-new/images/testimonial/yokesh-sankar.png" alt="yokesh-sankar" title="yokesh-sankar" width="35" height="35" loading="lazy" class="img-fluid"/>
+                  </picture>
+                <div class="ps-3">
+                  <p>
+                    <a href="https://www.sparkouttech.com/author/yokesh-sankar/">Yokesh Sankar</a>
+                    <span>
+                      <i class="bi-calendar"></i> Feb 19, 2025
+                    </span>
+                    <span> <i class="bi bi-book"></i> 8 mins </span>
+                  </p>
+                </div>
+              </div>
+            <div class="details-img-wrap">
+              <picture>
+                <source
+                  srcset="../assets-new/images/wso2-api-development/detailed-guide-to-wso2.webp"
+                  type="image/webp" />
+                <img
+                  src="../assets-new/images/wso2-api-development/detailed-guide-to-wso2.png"
+                  alt="WSO2 API Manager and WSO2 Framework For Businesses"
+                  title="WSO2 API Manager and WSO2 Framework For Businesses" width="966" height="507"
+                  class="img-fluid" />
+              </picture>
+            </div>
+            <div class="blog-content-wrap">
+                <p>If you have found this blog then I would assume that you are a business owner or a developer looking to explore what WSO2 can do and how you can use it to build better applications. The WSO2 API manager is a very popular solution for managing your APIs and allows businesses to create, publish and manage APIs securely. WSO2 as a whole is an open source technology provider that specialize in API management, integration and identity solutions. And you heard it right, it's open source which means that if you’re using the technology to build applications for your business you don’t have to worry about paying any licensing fees. Which is why it is very popular with developers around the world and also why I decided to write this blog post. In this blog, we will go through <a href="https://www.sparkouttech.com/wso2-development-company/" target="_blank">WSO2’s solutions</a> and see how businesses can use it to enhance their applications. </p>
+                <picture>
+                    <source
+                      srcset="../assets-new/images/wso2-api-development/wso2-logo-and-related-illustrations.webp"
+                      type="image/webp" />
+                    <img
+                      src="../assets-new/images/wso2-api-development/wso2-logo-and-related-illustrations.png"
+                      alt="A Real World Example for Hospitals"
+                      title="A Real World Example for Hospitals" width="996" height="654"
+                      class="img-fluid pb-3" loading="lazy" />
+                  </picture>
+                <p>We will also take a look at solutions like the WSO2 API manager to understand how you can manage your APIs seamlessly and why you should use this technology to do that. So without any further ado let’s jump right into our blog.</p>
+                <p>Let’s get started.</p>
+
+              <h2>What is The WSO2 API Platform?</h2>
+              <p>Now let’s just take care of the elephant in the room first and see what the word means. It’s not really an API that WSO2 provides; any API that you create using the WSO2 platform can be called a WSO2 API. But now that we have that covered let’s discuss a bit more in depth about the technology and why you should be using it. These APIs are created using their API manager and these APIs facilitate communication between different applications which allows you to expose your services securely. The WSO2 API manager provides you with a centralized gateway to manage your APIs, ensure that they are secure, for throttling and to monitor your APIs seamlessly. </p>
+
+              <p>
+                There are a few core components of the WSO2 API manager and you have to learn about them if you want to use the platform effectively.
+              </p>
+
+              <ul class="list">
+                <li><b>API Gateway:</b> This gateway handles things like API requests, enforces policies and routes your traffic efficiently.</li>
+                <li><b>Publisher Portal:</b> The publisher portal allows you to create, document and manage your APIs.</li> 
+                <li><b>Developer Portal:</b> This portal provides you with self services API discovery and subscription for third party developers.</li> 
+                <li><b>Traffic Management:</b> This feature allows you to implement rate limiting, caching and throttling to optimize performance.</li>
+                <li><b>Security & Authentication:</b> It supports OAuth2, JWT, mutual SSL and API key authentication. </li>
+              </ul>
+              <p>There are also a few different types of APIs that you can manage with WSO2:</p>
+
+              <ul class="list">
+                <li><b>Public APIs:</b> These APIs would be open to external developers for innovation and integration.</li> 
+                <li><b>Private APIs:</b> These kinds of APIs for use in your internal systems and for your employees to use securely.</li> 
+                <li><b>Partner APIs:</b> These are APIs that you would share with your business partners with specific access controls.</li> 
+                <li><b>Monetized APIs:</b> Now these are the kinds of APIs you would be familiar with if you’re a developer because these are provided as a paid service with costs based on their usage. </li>
+              </ul>
+
+              <h3>A Deep Dive Into WSO2 API Integration</h3>
+              <p>As you may already know modern applications rely heavily on APIs to connect to things like microservices, databases and external services. What the WSO2 API manager does is that it simplifies the integration process of these APIs and provides a centralized hub for managing these APIs across distributed environments. WSO2 also provides you with resources that you can use to integrate APIs into your applications in simple steps. The first step is the creation of the APIs where you define the API endpoints, methods and authentication mechanisms. Then comes the publishing and deployment where you deploy your APIs to the gateway and make them accessible through the developer portal. And very importantly you have to make sure that you have security implementations where you enforce authentication and authorization policies. </p>
+
+              <picture>
+                <source
+                  srcset="../assets-new/images/wso2-api-development/a-real-world-example-for-hospitals.webp"
+                  type="image/webp" />
+                <img
+                  src="../assets-new/images/wso2-api-development/a-real-world-example-for-hospitals.png"
+                  alt="A Real World Example for Hospitals"
+                  title="A Real World Example for Hospitals" width="996" height="596"
+                  class="img-fluid pb-3" loading="lazy" />
+              </picture>
+
+              <p>WSO2 API manager also provides you with features to manage your traffic where you can apply throttling, caching and loading balancing to streamline the API consumption. Another major part of the process is the monitoring and analytics. You have to be able to track things like your API usage, detect anomalies in the system and apply optimizations for better performance. Integration with third party services is also a big deal because many times you would want to use third party services like payment gateways to enable features inside your applications. The good news there is that the WSO2 API manager supports integration with cloud services like AWS, Azure and Google Cloud which are the providers most application developers use. You can also connect seamlessly with enterprise applications that you may be using like for example Salesforce, SAP and modern applications.</p>
+
+            <h3>How Does WSO2 Work?</h3>
+            <p>We are moving farther now and let’s look at how WSO2 really works and we are going to start with an overview of the architecture. Firstly, WSO2 is based on microservices architecture which means that it is scalable and flexible. It also uses API Gateway as a centralized control point for API traffic which is also a great benefit you get with WSO2 API manager. What’s more impressive is that WSO2 has built in capabilities for managing identity and access for secure API interactions. It also includes great tools for analytics and monitoring which is great for getting performance insight. </p>
+
+                    <h3>The Workflow of API Requests in WSO2:</h3>
+                    <p><b>Client Request:</b> This is the point where an application or user initiates an API request. </p> 
+                    <p><b>API Gateway Processing:</b> At this step the request is validated, checked against security policies and routed to the backend. </p> 
+                    <p><b>Backend Response:</b> At this point the API fetches the data or executes operations and then sends the response back. </p>
+                    <p><b>Logging & analytics:</b> This is where the request details are recorded for monitoring the performance and for auditing using the WSO2 API manager.</p>
+
+                    <p>One of the great benefits of WSO2 is that you get multiple options for deploying your APIs. There are 3 options that you can choose from; On Premises, Cloud Based and Hybrid and all of these options make sense for different purposes. For example if you have a financial business or if you are in the healthcare space then it would make sense for you to deploy your APIs and application locally. Meaning that you would install it within your company’s infrastructure for getting full control. This is especially important for finance and healthcare companies because you would handle a lot of your customer’s personal data and you have to also comply with different global regulations like HIPAA, GDPR, CCPA and SOC2.</p>
+                    <p>
+                        WSO2 API solutions can also be used in a cloud based setting where you can deploy your solution using cloud providers like AWS, Azure and Google Cloud. This is great for businesses that want rapid scaling like in the case of SaaS products or consumer facing applications where you will handle millions of users with good monthly growth of users. Last but not least is a combination of both these approaches which you can call “Hybrid.” Here you would combine on premises and cloud infrastructure for flexibility and deploy APIs that handle sensitive information on premises servers and deploy APIs that handle functionality related APIs on cloud infrastructure. The WSO2 API is so flexible that you can truly tailor your API solutions to the specific needs of your business.
+                    </p>
+
+                    <h3>Discover The Key Features Of WSO2</h3>
+                    <p>
+                        The good news as you may have already figured out is that WSO2 provides a framework for end to end management of your API lifecycle. Let’s break these up into their individual components and see what features you get with WSO2.
+                    </p>
+
+                    <h3 class="h4">API Design</h3>
+                    <p>
+                        For the API design you can use something like OpenAPI/Swagger specifications. WSO2 supports popular API types like REST GraphQL, SOAP and WebSocket APIs. It also provides you with API versioning so that you can maintain backward compatibility. 
+                    </p>
+
+                    <div class="h4">1. Full API Lifecycle Management</div>
+                    <div class="h4">API Development</div>
+                    <p>
+                        The WSO2 API manager is also great for API development and gives you a very intuitive interface where you can define APIn resources and methods. You can also integrate with backend services like REST endpoints, SOAP services and event driven architectures. WSO2 also allows you to set rate limits to your APIs, enable access control and set monetization policies during the development. 
+                    </p>
+
+                    <div class="h4">API Deployment</div>
+                    <p>
+                        As we already discussed in an early part of this blog WSO2 supports deployment on cloud native, on premises and hybrid infrastructure. You can also automate API deployment by using continuous integration/continuous deployment or CI/CD pipelines. It also enables API containerization using Docker and Kubernetes for superior scalability. 
+                    </p>
+
+                    <div class="h4">API Monitoring & analytics</div>
+                    <p>
+                        The WSO2 API manager also provides you with powerful tools to monitor and analyze the performance of your APIs. It provides you with detailed dashboards where you can monitor your API traffic in real time. It logs and racks API performance, latency and errors so that you can always learn from your data and make adjustments to make your system more efficient. It also integrates with external monitoring tools like Prometheus, Grafana and ELK stack if you want to use those solutions. 
+                    </p>
+
+                    <div class="h4">API Retirement</div>
+                    <p>
+                        This is an advanced feature you get with WSO2 where you can control the depreciation of older API versions to make way for newer versions. This is especially great if you provide customers with paid APIs and you can notify API consumers before discontinuing the services. WSO2 API manager also maintains backwards compatibility by providing alternative endpoints.
+                    </p>
+
+                    <div class="h4">2. Built-in Security Features</div>
+                    <p>
+                        The API manager also comes with security features that are enterprise grade which you can use to protect your API endpoints and ensure that your data exchanges are secure. 
+                    </p>
+
+                    <div class="h4">Authentication Mechanisms</div>
+                    <ul class="list">
+                        <li><b>OAuth2 & OpenID Connect:</b> It provides authentication based on tokens which ensure secure aPI access.</li> 
+                        <li><b>JSON Web Tokens or JWT:</b> Ensures that your API requests are authentic and secure.</li> 
+                        <li><b>Mutual TLS or mTLS:</b> It strengthens your API security by verifying client server connections.</li> 
+                        <li><b>API Key Authentication:</b> This allows you to implement simple authentication using unique API keys.</li>
+                    </ul>
+                    <div class="h4">Access Control & Authentication</div>
+                    <ul class="list">
+                        <li><b>Role Based Access Control:</b> The WSO2 API manager allows you to assign permissions based on the user role.</li> 
+                        <li><b>Multi Factor Authentication:</b> This enhances the security for API consumers by authenticating their access using one time passwords.</li>  
+                        <li><b>Scope Based Authorization:</b> This allows you to restrict API access based on predefined scopes.</li>
+                    </ul>
+                    <div class="h4">Threat Protection & Compliance</div>
+                    <ul class="list">
+                        <li>IP Whitelisting & Blacklisting: Here you can easily restrict access to your APIs based on IP addresses.</li> 
+                        <li>Request Validation & Payload Security: It prevents things like SQL injections, XML external entity or XXE and cross site scripting or XSS.</li> 
+                        <li>GDPR & HIPAA Compliance: Another great feature in the WSO2 API manager is that it comes with data privacy and security if you operate in highly regulated industries like finance and healthcare.</li>
+                    </ul>
+
+
+                    <div class="h4">3. Scalability & Performance</div>
+                    <p>
+                        WSO2’s API manager is built on microservices architecture which ensures that you get high availability and scalability if you’re an enterprise that handles large volumes of API requests. But to understand how all of this works let’s look at some of the key performance features that you get with WSO2. Horizontal and vertical scaling is something you can do with the platform where you can scale API gateway nodes dynamically based on the traffic demands. You can also use Kubernetes and cloud auto scaling for distributed environments and balance loads. WSO2 API manager also supports asynchronous processing which optimizes API response times by handling requests asynchronously. You can also enable caching and throttling which reduces backend load by caching AI response and limits excessive API calls. It also supports data streaming in real time using solutions like Kafka, RabbitMQ and WebSockets. 
+                    </p>
+                    <p>
+                        Now let’s look at some performance optimization strategies that you can use to maximize the performance of your APIs. With WSO2 you get effective traffic management where you can implement rate limits and quota management for your APIs. The WSO2 API manager also allows you to distribute your deployments which means that you can deploy API gateways across multiple data centers for redundancy. It also supports clustering of API gateway which is where you can ensure high availability by clustering API gateway instances.
+                    </p>
+
+                    <div class="h4">4. Comprehensive Analytics</div>
+                    <p>
+                        Another great thing going for WSO2 are the tools they provide for monitoring and analyzing your APIs. This includes providing businesses with real time monitoring, logging and insights so that you can optimize your API performance and detect any security threats. The first among these are the API monitoring and usage tracking features you get with WSO2 API manager where you can do real time API traffic analysis and capture request response data, error rates and latencies. You also get analytics on the basis of APIs and users so that you can track APIs on the basis of endpoints as well as consumers. Performance dashboards are also something you get with WSO2 where you can access visual insights through their built in analytics tools. 
+                    </p>
+                    <p>
+                        Apart from this you also get great tools for security and compliance monitoring. A great example for this is the anomaly detection feature that you get with the WSO2 API manager where you can identify unusual API traffic patterns and potential breaches of security. You also get access to the audit logging feature that maintains logs for API access, modifications and failures. Another great feature is for GDPR compliant data retention where you can ensure data privacy while storing logs. Additionally, WSO2 also allows you to integrate with external analytics tools to make the most out of your data and make your systems more efficient. For example you can implement the ELK stack which enables you to have custom log processing and visualization. The WSO2 API manager allows you to connect with advanced performance monitoring tools like Premetheus and Grafana. You can also connect Google Analytics and business intelligence tools which allow for tracking API events and business intelligence reporting.
+                    </p>
+
+                   <div class="h4">5. Developer Portal</div>
+                   <p>
+                    The WSO2 developer portal or the API Marketplace as it is sometimes called provides you with a self service interface for exploring, testing and subscribing to different APIs.
+                   </p>
+                   <div class="h4">Key Features of the Developer Portal </div>
+                   <ul class="list">
+                    <li><b>API Discovery & Documentation:</b> It allows developers to browse API catalogs and view relevant documentation.</li>
+                    <li><b>API Subscription Management:</b> This allows users to register for API access and manage usage limits easily.</li> 
+                    <li><b>Interactive API Testing:</b> This is also called the Try It Out Feature and lets you access the built in console for testing your endpoints.</li> 
+                    <li><b>SDK & Code Samples:</b> The WSO2 API manager also provides you with auto generated SDKs which support multiple programming languages.</li>
+                    <li><b>API Monetization:</b> You can easily monetize your APIs with multiple models like pay as you go, subscriptions and billing integrations.</li>
+                   </ul>
+
+                   <h3>Benefits of the Developer Portal</h3>
+                   <p>
+                    One of the major benefits of the developer portal is that it enhances API adoption and encourages third party developers to use the APIs. Collaboration is a big part of modern software development and features like the ones WSO2 provides enhance opportunities for collaboration. It also improves the discoverability of your APIs where internal and external teams can easily find and test your APIs with the WSO2 API manager. And of course you can make use of API economy and monetize your aPIs for generating additional revenue for your business and even if you are an independent developer.
+                   </p>
+
+                   <h3>Let’s Learn About The Use Cases Of WSO2</h3>
+                   <p>
+                    The use cases for WSO2 are as wide as the features they provide and we are going to take a quick look at some of the different ways you can use the technology.
+                   </p>
+
+                   <div class="h4">Financial Services</div>
+                   <p>
+                    Financial services can benefit greatly with WSO2 with features that let you build API driven applications like banking, implement fintech integrations and ensure regulatory compliance. WSO2 API manager is a great solution for open banking and PSD2 compliance and enables banks to expose APIs securely to any third party providers. It also supports OAuth2, <a href="https://www.techtarget.com/whatis/definition/OpenID" target="_blank" rel="nofollow">OpenID Connect</a> and API security standards which are very important for finance applications. You can also seamlessly manage customer consent and access control when it comes to banking data. Additionally, it allows you to ensure compliance with open banking standards like PSD2, UK Open Banking and so on. 
+                   </p>
+                   <div class="h4">E-Commerce</div>
+                    <p>
+                        For e-commerce businesses WSO2 provides features to streamline your technology components by integrating storefronts, payment gateways, supply chains and customer management systems. The WSO2 API manager allows you to seamlessly integrate payment gateways like Stripe, PayPal, Square and so on. It also implements PCI DSS compliant secure transactions as well as helping you manage transaction security using tokenizations and encrypted payment data. You can also integrate web, mobile and in store shopping experiences through APIs. Additionally, it also allows you to streamline your supply chain operations with features like automated order fulfillment, shipment tracking and warehouse management.  
+                    </p>
+                    <div class="h4">Healthcare</div>
+                    <p>
+                        WSO2 is a great solution for businesses operating in the <a href="https://www.sparkouttech.com/healthcare-software-development/" target="_blank">healthcare sector</a> and allows them to connect systems like Electronic Medical Records, hospital management platforms and insurance providers which ensures that your data exchanges are secure and compliant. The WSO2 API has FHIR & HL7 based API interoperability which means that it supports cross institution data sharing for organizations like hospitals, labs and insurers. All of this while ensuring compliance with global regulations lole HIPAA, GDPR and regional healthcare regulations. 
+                    </p>
+
+                    <div class="h4">Government & Public Services</div>
+                    <p>
+                        WSO3 has been a strong choice for building applications in the public sector because it enables API driven data exchange and e-government services. One of the things you can build using WSO2 for the government is citizen portals and digital identity management solutions where you can enable secure access to government service using single sign on or SSO. WSO2 API manager also supports national identity verification using technologies like OAuth2, OpenID Connect and <a href="https://www.blockchainx.tech/" target="_blank">blockchain based ID solutions</a>. The platform also supports open data and smart city initiatives where you can seamlessly facilitate sharing of data between government agencies through standardized APIs. 
+                    </p>
+                    
+                    <h3>An Overview Of The WSO2 Development Framework</h3>
+                    <p>
+                        The WSO2 framework is very easy to approach and allows you to create solutions for your business rapidly using popular software development technologies. It supports various programming languages. The architecture is based on Java but it supports languages like Python, JavaScript and other languages for providing you with maximum flexibility. The WSO2 API manager also allows you to customize your solutions using Java extensions and scripting.  The development approach is also very flexible because of the modular and microservices based architecture and WSO2 also provides you with <a href="https://www.sparkouttech.com/custom-software-development-services/" target="_blank">software development</a> kits or SDKs for customizing your APIs. It also supports automated deployment with Jenkins, GitHub Actions and Kubernetes as well as providing useful tools for version control and rollback mechanisms.
+                    </p>
+
+                    <h3>A Closer Look Into The WSO2 Enterprise Integrator Documentation</h3>
+                    <p>Firstly, let’s talk about why documentation is so important because it helps developers understand system configurations, integration patterns and the best practices to follow when using WSO2 API manager. Many people assume that just because you are a developer you would know how to use all technologies especially when you know the programming language or frameworks. However, each solution is different and it is far easier to build the software you need if you have things like examples, tutorials and API references helping you onboard quickly. Now the documentation for WSO2 is quite extensive and contains the following sections. </p>
+                    <ul class="list">
+                        <li><b>Getting Started Guide:</b> It covers installation, configuration patterns and best practices.</li> 
+                        <li><b>API Development Guide:</b> It covers detailed and step by step instructions for building and managing your APIs.</li> 
+                        <li><b>Security & Authentication:</b> This covers the WSO2 API manager documentation on implementing OAuth, JQT and other security protocols.</li> 
+                        <li><b>Performance Optimization:</b> This covers the best practices you should follow for scaling your API traffic and improving efficiency.</li> 
+                        <li><b>Troubleshooting &  FAQs:</b> This section would cover the common issues that you may encounter and their solutions. </li>
+                    </ul>
+
+                    <h3>WSO2 Integration Tools That You Need To Know About</h3>
+                    <p>WSO2 provides you with a lot more features and tools than the API manager and is a full fledged API management solution for business. Let’s take a look at some of the tools available and see how you can use them to build WSO2 API for your business.</p>
+                    <div class="h4">WSO2 API Manager</div>
+                    <p>
+                        The API manager is an end to end solution for managing your APIs and can help you ensign, publish, secure, monitor and manage your APIs throughout their lifecycle. It also provides you with security and access control features for things like implementing OAuth2, OpenID Connect, JWT Authentication and API key security. It supports access controls based on user roles and you can also integrate it with external identity providers. You also get features like rate limiting and traffic control where you can enable throttling policies to prevent API abuse and to make sure that users use your WSO2 API fairly. The API manager also provides you with tools to monetize your APIs where you can create customized pricing plans for API usage and distribute it as a service. It also supports billing and invoicing integration for monetizing your APIs.
+                    </p>
+                    <div class="h4">WSO2 Enterprise Integrator</div>
+                    <p>
+                        The enterprise integrator from WSO2 is a very comprehensive middleware platform and is designed for integrating applications, databases, legacy systems and service orchestration for your business. WSO2’s Enterprise Service Bus or ESB is a system that facilitates things like message transformation, protocol mediation and service orchestration. It supports multiple communication protocols which includes HTTP. JMS, MQTT and FTP. It also supports data integration and ETL for your WSO2 API based application and can connect and synchronize structured as well as unstructured data across different databases. Additionally, it supports extract, transform and load processes for data warehouses and analytics. It also provides you with pre-built connectors and adapters like ready to use connectors for Salesforce, SAP, AWS, Google Cloud and more. This reduces the complexity of integrating third party services. 
+                    </p>
+                    <div class="h4">WSO2 Identity Server</div>
+                    <p>
+                        If you’re looking for a robust identity and access management solution for your business then the identity server is the right solution for you where you can do things like authentication, authorization and identity federation for your enterprise. It also allows you to integrate your WSO2 API with external identity providers like Google, Facebook, Azure AD and so on. There is also the privileged access management or PAM where you can securely manage access for privileged users to critical applications and systems. It also gives you tools for auditing and session recording for high security environments. The single sign on feature is also beneficial for businesses looking to enable SSO across multiple applications and can provide your users with a seamless experience.
+                    </p>
+                    <div class="h4">WSO2 Microintegrator</div>
+                    <p>
+                        Their micro integrator is an integration engine that is lightweight and is designed for containerized and cloud native environments. It is container and Kubernetes ready for use in your WSO2 API development and is built for microservices architecture optimized for Docker and Kubernetes. The API driven service to service communication you get with WSO2 also minimizes your overhead. There is also a service chaining and message mediation feature that orchestrates and mediates messages between your microservices efficiently. The platform also supports low latency and high throughput designed for high performance API interactions in low latency environments. This is ideal if you’re building real time applications like in the case of fintech, gaming and IoT.
+                    </p>
+                    <div class="h4">WSO2 Streaming Integrator</div>
+                    <p>
+                        If you’re building a WSO2 API for use cases like data streaming then the streaming integrator is the perfect solution for real time data streaming, analytics and event processing. It is capable of processing high velocity data streams from IoT devices, sensors and logs. It also supports event based architectures with low latency processing. The complex event processing or CEP is also a great addition to this and is capable of detecting patterns and correlations in streaming data. This enables features like fraud detection, anomaly detection and predictive analytics. You can also integrate your application and WSO2 API with big data and <a href="https://www.sparkouttech.com/ai-development-company/" target="_blank">AI systems</a> like Apache Kafka, Apache Spark and Hadoop for big data analytics. It also enables real time insights using machine learning models.
+                    </p>
+
+                    <h4>Embrace The Future Of API Management with WSO2 Framework</h4>
+                    <p>
+                        WSO2 is the perfect solution for businesses looking to build scalable APIs for their business applications. The platform offers you a comprehensive suite of integration tools for all your diverse business needs from API lifecycle management and secure identity authentication to real time analytics. The WSO2 API management solution is also open source and enterprise grade which means that you can build scalable APIs for your business without having to worry about huge overheads and inferior solutions. It is a modern integration and API management platform with support for microservices architecture. By using WSO2 your organization can reduce the complexity of integration, improve the security of your applications and APIs and accelerate innovation. 
+                    </p>
+            </div>
+            <!-- Post-Comment Start -->
+            <div class="post-comment">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="blog-content-wrap mb-0">
+                      <div class="h3">Author Bio</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-lg-12">
+                    <div class="post-commont-details">
+                      <div class="post-comment-main">
+                        <div class="comment_user_image">
+                        <picture>
+                          <source
+                            srcset="../assets-new/images/testimonial/yokesh-sankar.webp"
+                            type="image/webp"
+                          />
+                          <img
+                            src="../assets-new/images/testimonial/yokesh-sankar.png"
+                            alt="yokesh sankar"
+                            title="yokesh sankar"
+                            width="75"
+                            height="75"
+                            loading="lazy"
+                            class="img-fluid"
+                            loading="lazy"
+                          />
+                        </picture>
+                        <div class="ps-3 ps-sm-4">
+                          <div class="mb-2">
+                            <!-- <span class="badge_common">blog</span> -->
+                          </div>
+                          <div class="h4">Yokesh Sankar</div>
+                          <p class="pb-0">CO-Founder</p>
+                          </div>
+                        </div>
+                        <ul class="author-social-share">
+                          <li>
+                            <a href="https://www.linkedin.com/in/yokeshsankar/" target="_blank" rel="nofollow noopener"
+                              ><i class="bi bi-linkedin" aria-hidden="true"></i>
+                              <span class="sr-only">LinkedIn profile of Yokesh Sankar</span>
+                              </a>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com/yokesh_sankar_v" target="_blank" rel="nofollow noopener"
+                              ><i class="bi bi-twitter"  aria-hidden="true"></i>
+                              <span class="sr-only">Twitter profile of Yokesh Sankar</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="msgbox">
+                        <p>
+                          Yokesh Sankar, Co-Founder and Chief Operating Officer of Sparkout Tech Solutions, leverages his expertise to drive innovation and operational excellence in the software industry. Passionate about empowering individuals with essential skills, he uses technology to streamline business processes and enhance efficiency. He advocates for AI and blockchain adoption, helping businesses integrate these technologies seamlessly into their operations. Staying ahead of AI trends, Yokesh explores industry applications and shares insights to foster growth and knowledge in the tech sector.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottomline"></div>
+                </div>
+              </div>
+              <!-- Ends -->
+          </div>
+          <div class="col-lg-3 mt-5">
+            <div class="blog-right-side">
+              <!--recent post-->
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="recent-blogs-head pb-2 pb-md-3">
+                    <h2>Recent Posts</h2>
+                  </div>
+                  <div id="recent-post"></div>
+                </div>
+              </div>
+              <!--end--->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end-->
+
+    <div id="blog-scroll1"></div>
+
+    <section class="contact-section">
+      <div class="container">
+        <hr />
+        <div class="row">
+          <div class="col-md-5">
+            <div class="contact-social-links">
+              <div class="title-wrap">
+                <div class="h4"><span class="dots"></span> Contact</div>
+                <div class="h2">
+                  <span>Let’s Build </span> Something Great <span
+                    class="dots"></span>
+                </div>
+              </div>
+              <p class="m-0">
+                Looking for expert solutions? Sparkout is here to help. Contact us for consultations, inquiries, and support. Your success is our priority—contact us now.
+              </p>
+            
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="getintochform position-relative ps-0 ps-md-5">
+              <form id="quickcontactForm">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-floating mb-4">
+                      <input type="text" id="name1" name="name"
+                        placeholder="Name" class="form-control" />
+                      <label for="name1">Name <span class="red">*</span></label>
+                      <small class="error" id="name1Error"></small>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-floating mb-4">
+                      <input type="email" id="email1" name="email"
+                        placeholder="name@gmail.com" class="form-control" />
+                      <label for="email1">E-mail <span
+                          class="red">*</span></label>
+                      <small class="error" id="email1Error"></small>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-floating mb-4">
+                      <input type="text" id="whatapp_telegram1"
+                        name="whatapp_telegram"
+                        placeholder="Whatsapp/Telegram Id"
+                        class="form-control" />
+                      <label for="whatapp_telegram1">Whatsapp/Telegram
+                        Id</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-floating mb-4">
+                      <input type="text" id="country1" name="country"
+                        placeholder="Country" class="form-control" />
+                      <label for="country1">Country</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-floating mb-4">
+                      <textarea class="form-control" placeholder="Message"
+                        id="description1" name="description"></textarea>
+                      <label for="description1">Message</label>
+                      <small class="error" id="description1Error"></small>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="mb-4">
+                      <label for="enquiry_type1" class="sr-only">Enquiry
+                        Type</label>
+                      <select id="enquiry_type1" name="enquiry_type"
+                        class="form-control">
+                        <option value>Enquiry Type</option>
+                        <option value="Business Enquiry">Business
+                          Enquiry</option>
+                        <option value="Partnership">Partnership</option>
+                        <option value="Career Opportunities">Career
+                          Opportunities</option>
+                        <option value="Event/Media Enquiry">Event/Media
+                          Enquiry</option>
+                        <option value="Investment">Investment</option>
+                        <option value="I want to sell a service">I want to sell
+                          a service</option>
+                      </select>
+                      <small class="error" id="enquiry_type1Error"></small>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                    <div id="responseMessage1" class="mt-3"></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="quick-contact d-flex justify-content-between">
+              <div class="q-contact">
+                <div class="h4 mb-0">For Business</div>
+                <p>
+                  <i class="bi bi-envelope-open"></i>
+                  <a
+                    href="mailto:sales@sparkouttech.com">sales@sparkouttech.com</a>
+                </p>
+                <p>
+                  <i class="bi bi-whatsapp"></i>
+                  <a href="https://wa.me/7708889555" target="_blank"
+                    rel="noopener noreferrer">+91 77088 89555</a>
+                </p>
+                <p>
+                <i class="bi bi-microsoft-teams"></i>
+                <a href="https://teams.microsoft.com/l/chat/0/0?users=yokesh@sparkouttech.com" target="_blank"
+                  rel="noopener noreferrer">yokesh sankar</a>
+              </p>
+                <p>
+                  <i class="bi bi-telegram"></i>
+                  <a href="https://t.me/yokesh_sankar" target="_blank"
+                    rel="noopener noreferrer">t.me/yokesh_sankar</a>
+                </p>
+              </div>
+              <div class="q-contact">
+                <div class="h4 mb-0">For Jobs</div>
+                <p>
+                  <i class="bi bi-people"></i>
+                  <a href="https://www.sparkouttech.com/careers/">See job
+                    openings</a>
+                </p>
+              </div>
+              <div class="q-contact">
+                <div class="h4 mb-0">Join CodeSpot</div>
+                <p>
+                  <i class="bi bi-book"></i>
+                  <a href="https://www.codespotfoundation.org/" target="_blank"
+                    rel="noopener noreferrer">CodeSpot Foundation</a>
+                </p>
+                <p>
+                  <i class="bi bi-whatsapp"></i>
+                  <a href="https://wa.me/8072395240" target="_blank"
+                    rel="noopener noreferrer">+91 80723 95240</a>
+                </p>
+              </div>
+              <div class="q-contact">
+                <div class="h4 mb-0">Contact HR</div>
+                <p>
+                  <i class="bi bi-envelope-open"></i>
+                  <a
+                    href="mailto:career@sparkouttech.com">career@sparkouttech.com</a>
+                </p>
+                <p>
+                  <i class="bi bi-whatsapp"></i>
+                  <a href="https://wa.me/8667726177" target="_blank"
+                    rel="noopener noreferrer">+91 86677 26177</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="btm-hr" />
+      </div>
+    </section>
+    <div id="footer"></div>
+    <div class="scroller"><i class="bi bi-arrow-up"></i></div>
+
+    <!-- JavaScript -->
+                      <script>
+                          fetch('../header.html')
+                              .then(response => response.text())
+                              .then(data => document.getElementById('header').innerHTML = data);
+                      </script>
+                      <script>
+                        fetch('../recent-post.html')
+                            .then(response => response.text())
+                            .then(data => document.getElementById('recent-post').innerHTML = data);
+                      </script>
+
+                    <script>
+                      fetch('../blog-scroll.html')
+                          .then(response => response.text())
+                          .then(data => document.getElementById('blog-scroll1').innerHTML = data);
+                    </script>
+
+                    <script>
+                        fetch('../footer.html')
+                            .then(response => response.text())
+                            .then(data => document.getElementById('footer').innerHTML = data);
+                    </script>
+
+    <script type="text/javascript">
+                          // ---------- Scroll-to-top functionality -----------
+  const scroller = document.querySelector('.scroller');
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scroller.style.display = 'block';
+    } else {
+      scroller.style.display = 'none';
+    }
+  });
+  
+  scroller.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+                        
+                          
+  </script>
+    
+    <script>
+      function scrollBlogs(direction) {
+        const container = document.getElementById('blogScroll');
+        if (!container) return;
+    
+        const card = container.querySelector('.blog-card-wrapper');
+        if (!card) return;
+    
+        const cardWidth = card.offsetWidth + 24; // width + gap
+        if (direction === 'next') {
+          container.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        } else {
+          container.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        }
+      }
+    
+      // Drag-to-scroll
+      window.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById('blogScroll');
+        if (!container) return;
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+    
+        container.addEventListener('mousedown', (e) => {
+          isDown = true;
+          container.classList.add('dragging');
+          startX = e.pageX - container.offsetLeft;
+          scrollLeft = container.scrollLeft;
+        });
+    
+        container.addEventListener('mouseleave', () => {
+          isDown = false;
+          container.classList.remove('dragging');
+        });
+    
+        container.addEventListener('mouseup', () => {
+          isDown = false;
+          container.classList.remove('dragging');
+        });
+    
+        container.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - container.offsetLeft;
+          const walk = (x - startX) * 1.5; // scroll speed
+          container.scrollLeft = scrollLeft - walk;
+        });
+      });
+    </script> 
+    <script src="../assets-new/form-contact.js"></script>
+    <script src="../assets-new/sticky-social-share.js"></script>
+  </body>
+</html>

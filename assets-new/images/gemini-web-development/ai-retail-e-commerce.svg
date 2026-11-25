@@ -1,0 +1,58 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_10195_8381)">
+<path d="M8.74609 52.4284L12.1761 18.4497C12.3725 16.5042 14.0147 15.0234 15.9758 15.0234H52.1898C54.1508 15.0234 55.7931 16.5044 55.9895 18.4497L56.6188 24.6833" stroke="#4C596D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M58.9947 48.2178L60.9492 67.5797C61.1756 69.822 59.4098 71.7686 57.1495 71.7686H41.2736" stroke="#4C596D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M25.1084 23.0077V9.94797C25.1084 5.00609 29.1264 1 34.0826 1C39.039 1 43.0568 5.00609 43.0568 9.94797V23.0075" stroke="#4C596D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.4208 78.5645H37.9107C40.0771 78.5645 41.7694 76.6971 41.5524 74.5462L39.6513 55.7138C39.463 53.8479 37.889 52.4277 36.0096 52.4277H6.56161C4.68224 52.4277 3.10833 53.848 2.91989 55.7138L1.0188 74.5462C0.801612 76.6971 2.49396 78.5645 4.66052 78.5645H8.73458" stroke="#4C596D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.4296 58.527V49.0692C14.4296 45.2939 17.4991 42.2334 21.2853 42.2334C25.0718 42.2334 28.1411 45.2939 28.1411 49.0692V58.527" stroke="#4C596D" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M66.3746 14.5537C73.1631 14.5537 78.6564 20.0468 78.6564 26.8354" stroke="#FF6C1A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M66.3746 19.1934C70.5987 19.1934 74.0168 22.6115 74.0168 26.8355" stroke="#FF6C1A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M66.3746 23.6885C68.1139 23.6885 69.5212 25.0958 69.5212 26.835" stroke="#FF6C1A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M62.884 27.0688C61.0404 25.8519 58.8329 25.1416 56.4587 25.1416C50.0074 25.1416 44.7776 30.3714 44.7776 36.8227C44.7776 43.2739 50.0074 48.5038 56.4587 48.5038C62.9099 48.5038 68.1398 43.2739 68.1398 36.8227C68.1398 34.4324 67.4204 32.2105 66.1884 30.3596" stroke="#FF6C1A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M56.4581 32.7764V40.8678" stroke="#FF6C1A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M52.4121 36.8223H60.5035" stroke="#FF6C1A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_10195_8381">
+<rect width="80" height="80" fill="white"/>
+</clipPath>
+</defs>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</svg>

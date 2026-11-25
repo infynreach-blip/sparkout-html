@@ -1,0 +1,37 @@
+.blog-banners {padding: 50px 0px;}
+
+  /* Tab STart */
+  ul.techstack {list-style: none;padding: 0;display: flex;align-items: center;justify-content: center;flex-wrap: wrap;margin: 0 0 20px;gap: 20px;}
+  .techstack li.tech-list {display: inline-block;}
+  .techstack .tech-list a, .techstack .tech-list .a {
+    font-size: 20px;font-weight: 500 !important;color: #777777;background: #f3f6f9;border: 1px solid #f3f6f9;border-radius: 0;text-decoration: none;padding: 12px 30px;cursor: pointer;display: inline-block;transition: all ease-in .3s;-moz-transition: all ease-in .3s;-ms-transition: all ease-in .3s;-o-transition: all ease-in .3s;-webkit-transition: all ease-in .3s;}
+  .techstack li.tech-list a, .techstack li.tech-list .a {display: block;}
+  .techstack li.tech-list .active,
+  .techstack .tech-list a:hover, .techstack li.tech-list .a:hover,
+  .techstack .tech-list a:focus, .techstack li.tech-list .a:focus {background: #ffe1d1 !important;color: #ff6c1a !important;border: 1px solid #ffe1d1 !important;}
+
+  @media screen and (max-width: 1199px) {ul.techstack {gap: 10px;margin: 0 0 10px;}.techstack .tech-list a, .techstack .tech-list .a {padding: 10px 20px;font-size: 18px;}}
+  @media screen and (max-width: 991px) {.techstack .tech-list a, .techstack .tech-list .a {padding: 10px 20px;font-size: 17px;}}
+@media screen and (max-width: 767px) {.techstack .tech-list a, .techstack .tech-list .a {padding: 6px 15px;font-size: 16px;}}
+@media (max-width: 480px) {.techstack .tech-list a, .techstack .tech-list .a {padding: 4px 8px;font-size: 14px;color: var(--secondrycolor);}}
+ /* Tab End */
+
+/* Card STart */
+ .rgap40 {row-gap: 40px;}
+ .details-img-wrap img {border-radius: 0;margin: 0 0 15px;width: 100%;}
+ .blog-card h3, .blog-card .h3 {font-size: 20px;font-weight: 600;line-height: 150%;color: var(--secondrycolor);margin-bottom: 15px;padding: 0;transition: 0.3s ease-in-out;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden; min-height: 60px;}
+  .blog-card:hover h3 {color: var(--primarycolor);}
+  .blog-card p {color: var(--secondrytextcolor);font-size: 14px;font-weight: 600;line-height: 150%;padding-bottom: 0;}
+  .blog-banners .blog-card .author span {border: 0;padding-right: 0;margin-right: 0;color: var(--primarycolor);}
+  @media screen and (max-width: 1199px) {
+    .blog-card h3, .blog-card .h3 {font-size: 18px;min-height: 55px;}
+    .blog-card p {font-size: 13px;}
+}
+@media screen and (max-width: 767px) {
+    .blog-card h3, .blog-card .h3 {font-size: 17px;min-height: inherit;}
+}
+  @media screen and (max-width: 400px) {
+    .blog-card h3, .blog-card .h3 {font-size: 16px;margin-bottom: 10px;}
+    .rgap40 {row-gap: 30px;}
+  }
+  /* Card End */

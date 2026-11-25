@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+   <channel>
+      <title>Sparkout Tech Solutions News</title>
+      <description>
+        Hire industry professionals with a leading software development company. Bleeding-edge software development services.
+      </description>
+      <link>
+      https://www.sparkouttech.com/news/</link>
+      <atom:link href="https://www.sparkouttech.com/news-feed.xml" rel="self" type="application/rss+xml" />
+      <image>
+         <url>https://www.sparkouttech.com/favicon.png</url>
+         <title>Sparkout Tech Solutions News</title>
+         <link>
+         https://www.sparkouttech.com/news/</link>
+      </image>
+      <lastBuildDate>Mon, 08 Jan 2024 01:55:06 GMT </lastBuildDate>
+      <language> en </language>
+
+
+      <item>
+         <title>
+            AI will be the boss of the fintech industry for the next 5 years
+         </title>
+         <description>
+            <![CDATA[
+               <div>
+                 <img src="https://www.sparkouttech.com/assets-new/images/news-details/fintech-development/fintech-development.png" style="width: 100%;"/>
+                 <div>
+                 Artificial intelligence is taking fintech development to the next level with a great impact in the coming years. Fintechs have entered a new era of value creation with a focus on sustainable and profitable growth.
+                 </div>
+               </div>
+               ]]>
+         </description>
+         <link>
+         https://www.sparkouttech.com/ai-set-to-dominate-fintech-development/</link>
+         <guid isPermaLink="false">587ba1b470004751a78385ddefd18817</guid>
+         <dc:creator> Sparkout Tech Solutions </dc:creator>
+         <media:content medium="image"
+            url="https://www.sparkouttech.com/assets-new/images/news-details/fintech-development/fintech-development.png" />
+      </item>
+
+      <item>
+         <title>
+            Sparkout Tech Steps into the Leading Custom Software Development Company in the USA.
+         </title>
+         <description>
+            <![CDATA[
+               <div>
+                 <img src="https://www.sparkouttech.com/assets-new/images/news-details/top-custom-software/top-custom-software-development-company-in-usa.jpg" style="width: 100%;"/>
+                 <div>
+                 One more to add to Sparkout's milestone. Sparkout Tech Solutions Inc. is marked as the custom software development company in the USA by Selected Firms, representing recognition for exceptional services and dedicated work.
+                 </div>
+               </div>
+               ]]>
+         </description>
+         <link>
+         https://www.sparkouttech.com/top-custom-software-development-company-in-usa/</link>
+         <guid isPermaLink="false">a4a9176c53ff447d95085d23aba76fa4</guid>
+         <dc:creator> Sparkout Tech Solutions </dc:creator>
+         <media:content medium="image"
+            url="https://www.sparkouttech.com/assets-new/images/news-details/top-custom-software/top-custom-software-development-company-in-usa.jpg" />
+      </item>
+
+      <item>
+         <title>
+            Top Mobile app development companies in the USA - by Design Rush
+         </title>
+         <description>
+            <![CDATA[
+               <div>
+                 <img src="https://www.sparkouttech.com/assets-new/images/news-details/top-mobile-app-development-companies/top-mobile-app-development-compan.jpg" style="width: 100%;"/>
+                 <div>
+                 Sparkout was featured in the design rush list of Top mobile Development Companies in the USA. 
+                 </div>
+               </div>
+               ]]>
+         </description>
+         <link>
+         https://www.sparkouttech.com/top-mobile-app-development-companies/</link>
+         <guid isPermaLink="false">4d50e9482daa4d58b9de7d57cdd26f86</guid>
+         <dc:creator> Sparkout Tech Solutions </dc:creator>
+         <media:content medium="image"
+            url="https://www.sparkouttech.com/assets-new/images/news-details/top-mobile-app-development-companies/top-mobile-app-development-compan.jpg" />
+      </item>
+
+       <item>
+         <title>
+            Taking a giant leap into the future: Sparkout Tech is officially a US Entity
+         </title>
+         <description>
+            <![CDATA[
+               <div>
+               <img src="https://www.sparkouttech.com/assets-new/images/news-details/spreading-wings-sparkout/spreading-wings.jpg" style="width: 100%;"/>
+               <div>
+               Grant announcement, Sparkout Tech is officially a US C-Corp entity. The decision to incorporate in the US stems from more than half of the service in the region and a strong family of clients across the nation.
+               </div>
+               </div>
+               ]]>
+         </description>
+         <link>
+         https://www.sparkouttech.com/spreading-wings-sparkout-tech-solutions-to-the-us/</link>
+         <guid isPermaLink="false">4baf61db00554311ac3f04827c6006c7</guid>
+         <dc:creator> Sparkout Tech Solutions </dc:creator>
+         <media:content medium="image"
+            url="https://www.sparkouttech.com/assets-new/images/news-details/spreading-wings-sparkout/spreading-wings.jpg" />
+      </item> 
+       <item>
+         <title>
+            A Legacy of Innovation: Sparkout Tech's 6th Year Anniversary
+         </title>
+         <description>
+            <![CDATA[
+               <div>
+               <img src="https://www.sparkouttech.com/assets-new/images/news-details/sparkout-6th-year-anniversary/6th-year-anniversary.jpg" style="width: 100%;"/>
+               <div>Sparkout Tech's sixth-year anniversary signifies a milestone of continuous progress and groundbreaking achievements. Celebrate with us as we look back on our journey, delivering transformative tech solutions that shape industries and inspire change.</div>
+               </div>
+               ]]>
+         </description>
+         <link>
+         https://www.sparkouttech.com/igniting-possibilities-sparkouts-sixth-year-anniversary/</link>
+         <guid isPermaLink="false">24a1a1eb121848e2ab99ad09a58faed9</guid>
+         <dc:creator> Sparkout Tech Solutions </dc:creator>
+         <media:content medium="image"
+            url="https://www.sparkouttech.com/assets-new/images/news-details/sparkout-6th-year-anniversary/6th-year-anniversary.jpg" />
+      </item> 
+   </channel>
+</rss>

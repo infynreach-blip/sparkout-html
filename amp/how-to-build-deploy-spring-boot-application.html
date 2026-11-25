@@ -1,0 +1,3714 @@
+<!DOCTYPE html>
+<html ⚡="">
+  <head>
+    <meta charset="utf-8" />
+    <title>How to Build & Deploy Spring Boot Applications | Step-by-Step Guide</title>
+    <link rel="canonical" href="https://www.sparkouttech.com/how-to-build-deploy-spring-boot-application/" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="amp-google-client-id-api" content="googleanalytics" />
+    <link rel="icon" type="image/x-icon" href="./img/blog/fav.png">
+    <meta name="description" content="Learn how to build and deploy Spring Boot applications with ease. Explore the setup procedure, deployment methods, and AI integration.">
+    <meta name="keywords" content="How to Build & Deploy Spring Boot Applications, How to Build Spring Boot Applications, Spring Boot Deployment Guide, How to Deploy Spring Boot Applications, Spring Boot Build Tools, Dockerize Spring Boot Application, Spring Boot Framework In Java, Spring Boot application, build Spring Boot app, deploy Spring Boot app, Spring Boot deployment, Java Spring Boot tutorial, Spring Boot production setup, Spring Boot WAR deployment, Spring Boot on Tomcat, deploy Spring Boot to AWS, deploy Spring Boot to Docker, Spring Boot CI/CD, Spring Boot application build steps, Spring Boot Maven, Spring Boot Gradle, Spring Boot server configuration">
+    <meta name="author" content="Sparkout Tech Solutions">
+    <meta property="og:title" content="How to Build & Deploy Spring Boot Applications | Step-by-Step Guide">
+    <meta property="og:site_name" content="Sparkout Tech Solutions">
+    <meta property="og:url" content="https://www.sparkouttech.com/how-to-build-deploy-spring-boot-application/">
+    <meta property="og:description" content="Learn how to build and deploy Spring Boot applications with ease. Explore the setup procedure, deployment methods, and AI integration.">
+    <meta property="og:type" content="Learn how to build and deploy Spring Boot applications with ease. Explore the setup procedure, deployment methods, and AI integration.">
+    <meta property="og:image" content="https://www.sparkouttech.com/assets-new/images/spring-boot-application/how-to-build-deploy-a-spring-boot-application.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://www.sparkouttech.com/how-to-build-deploy-spring-boot-application/">
+    <meta name="twitter:title" content="How to Build & Deploy Spring Boot Applications | Step-by-Step Guide">
+    <meta name="twitter:description" content="Learn how to build and deploy Spring Boot applications with ease. Explore the setup procedure, deployment methods, and AI integration.">
+    <meta name="twitter:image" content="https://www.sparkouttech.com/assets-new/images/spring-boot-application/how-to-build-deploy-a-spring-boot-application.jpg">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style amp-boilerplate="">
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <noscript
+      ><style amp-boilerplate="">
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style></noscript
+    >
+
+    <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
+    <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async></script>
+    <script custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async></script>
+    <script custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js" async></script>
+    <script custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js" async></script>
+    <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
+
+
+    <style amp-custom="">
+      html {
+        font-family: Montserrat, sans-serif;
+        line-height: 1.15;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+      }
+      article,
+      aside,
+      footer,
+      header,
+      nav,
+      section {
+        display: block;
+      }
+      h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+      }
+      figcaption,
+      figure,
+      main {
+        display: block;
+      }
+      figure {
+        margin: 1em 40px;
+      }
+      hr {
+        height: 0;
+        overflow: visible;
+      }
+      p{text-align: left;}
+      pre {
+        font-family: Montserrat, sans-serif;
+        font-size: 1em;
+      }
+      a {
+        background-color: transparent;
+        -webkit-text-decoration-skip: objects;
+        color: #ff6b19;
+        text-decoration: none;
+      }
+      a:active,
+      a:hover {
+        outline-width: 0;
+      }
+      abbr[title] {
+        border-bottom: none;
+        text-decoration: underline;
+        text-decoration: underline dotted;
+      }
+      b,
+      strong {
+        font-weight: inherit;
+        font-weight: bolder;
+      }
+      code,
+      kbd,
+      samp {
+        font-family: Montserrat, sans-serif;
+        font-size: 1em;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+      dfn {
+        font-style: italic;
+      }
+      mark {
+        background-color: #ff0;
+        color: #000;
+      }
+      small {
+        font-size: 80%;
+      }
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      audio,
+      video {
+        display: inline-block;
+      }
+      audio:not([controls]) {
+        display: none;
+        height: 0;
+      }
+      img {
+        border-style: none;
+      }
+      svg:not(:root) {
+        overflow: hidden;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: Montserrat, sans-serif;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+      button,
+      input {
+        overflow: visible;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      [type="reset"],
+      [type="submit"],
+      button,
+      html [type="button"] {
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+      }
+      [type="button"]::-moz-focus-inner,
+      [type="reset"]::-moz-focus-inner,
+      [type="submit"]::-moz-focus-inner,
+      button::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      [type="button"]:-moz-focusring,
+      [type="reset"]:-moz-focusring,
+      [type="submit"]:-moz-focusring,
+      button:-moz-focusring {
+        outline: 1px dotted ButtonText;
+      }
+      fieldset {
+        border: 1px solid silver;
+        margin: 0 2px;
+        padding: 0.35em 0.625em 0.75em;
+      }
+      progress {
+        display: inline-block;
+        vertical-align: baseline;
+      }
+      textarea {
+        overflow: auto;
+      }
+      [type="checkbox"],
+      [type="radio"] {
+        box-sizing: border-box;
+        padding: 0;
+      }
+      [type="number"]::-webkit-inner-spin-button,
+      [type="number"]::-webkit-outer-spin-button {
+        height: auto;
+      }
+      [type="search"] {
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+        appearance: textfield;
+        outline-offset: -2px;
+      }
+      [type="search"]::-webkit-search-cancel-button,
+      [type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      details,
+      menu {
+        display: block;
+      }
+      summary {
+        display: list-item;
+      }
+      canvas {
+        display: inline-block;
+      }
+      [hidden],
+      template {
+        display: none;
+      }
+      .h00 {
+        font-size: 4rem;
+      }
+      .h0,
+      .h1 {
+        font-size: 3rem;
+        color: #ff6c1a;
+      }
+      .h2 {
+        font-size: 2rem;
+        font-family: 'Montserrat', sans-serif;
+        color: #ff6c1a;
+      }
+      .h3 {
+        font-size: 1.5rem;
+        color: #ff6c1a;
+      }
+      .h4 {
+        font-size: 1.125rem;
+        color: #ff6c1a;
+      }
+      .h5 {
+        font-size: 0.875rem;
+      }
+      .h6 {
+        font-size: 0.75rem;
+      }
+      .font-family-inherit {
+        font-family: Montserrat, sans-serif;
+      }
+      .font-size-inherit {
+        font-size: inherit;
+      }
+      .text-decoration-none {
+        text-decoration: none;
+      }
+      .bold {
+        font-weight: 700;
+      }
+      .regular {
+        font-weight: 400;
+      }
+      .italic {
+        font-style: italic;
+      }
+      .caps {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+      }
+      .left-align {
+        text-align: left;
+      }
+      .center {
+        text-align: center;
+      }
+      .right-align {
+        text-align: right;
+      }
+      .justify {
+        text-align: justify;
+      }
+      .nowrap {
+        white-space: nowrap;
+      }
+      .break-word {
+        word-wrap: break-word;
+      }
+      .line-height-1 {
+        line-height: 1rem;
+      }
+      .line-height-2 {
+        line-height: 1.125rem;
+      }
+      .line-height-3 {
+        line-height: 1.5rem;
+      }
+      .line-height-4 {
+        line-height: 2rem;
+      }
+      .list-style-none {
+        list-style: none;
+      }
+      .underline {
+        text-decoration: underline;
+      }
+      .truncate {
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .list-reset {
+        list-style: none;
+        padding-left: 0;
+      }
+      .inline {
+        display: inline;
+      }
+      .block {
+        display: block;
+      }
+      .inline-block {
+        display: inline-block;
+      }
+      .table {
+        display: table;
+      }
+      .table-cell {
+        display: table-cell;
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .overflow-scroll {
+        overflow: scroll;
+      }
+      .overflow-auto {
+        overflow: auto;
+      }
+      .clearfix:after,
+      .clearfix:before {
+        content: " ";
+        display: table;
+      }
+      .clearfix:after {
+        clear: both;
+      }
+      .left {
+        float: left;
+      }
+      .right {
+        float: right;
+      }
+      .fit {
+        max-width: 100%;
+      }
+      .max-width-1 {
+        max-width: 24rem;
+      }
+      .max-width-2 {
+        max-width: 32rem;
+      }
+      .max-width-3 {
+        max-width: 48rem;
+      }
+      .max-width-4 {
+        max-width: 64rem;
+      }
+      .border-box {
+        box-sizing: border-box;
+      }
+      .align-baseline {
+        vertical-align: baseline;
+      }
+      .align-top {
+        vertical-align: top;
+      }
+      .align-middle {
+        vertical-align: middle;
+      }
+      .align-bottom {
+        vertical-align: bottom;
+      }
+      .m0 {
+        margin: 0;
+      }
+      .mt0 {
+        margin-top: 0;
+      }
+      .mr0 {
+        margin-right: 0;
+      }
+      .mb0 {
+        margin-bottom: 0;
+      }
+      .ml0,
+      .mx0 {
+        margin-left: 0;
+      }
+      .mx0 {
+        margin-right: 0;
+      }
+      .my0 {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .m1 {
+        margin: 0.5rem;
+      }
+      .mt1 {
+        margin-top: 0.5rem;
+      }
+      .mr1 {
+        margin-right: 0.5rem;
+      }
+      .mb1 {
+        margin-bottom: 0.5rem;
+      }
+      .ml1,
+      .mx1 {
+        margin-left: 0.5rem;
+      }
+      .mx1 {
+        margin-right: 0.5rem;
+      }
+      .my1 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .m2 {
+        margin: 1rem;
+      }
+      .mt2 {
+        margin-top: 1rem;
+      }
+      .mr2 {
+        margin-right: 1rem;
+      }
+      .mb2 {
+        margin-bottom: 1rem;
+      }
+      .ml2,
+      .mx2 {
+        margin-left: 1rem;
+      }
+      .mx2 {
+        margin-right: 1rem;
+      }
+      .my2 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      .m3 {
+        margin: 1.5rem;
+      }
+      .mt3 {
+        margin-top: 1.5rem;
+      }
+      .mr3 {
+        margin-right: 1.5rem;
+      }
+      .mb3 {
+        margin-bottom: 1.5rem;
+      }
+      .ml3,
+      .mx3 {
+        margin-left: 1.5rem;
+      }
+      .mx3 {
+        margin-right: 1.5rem;
+      }
+      .my3 {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .m4 {
+        margin: 2rem;
+      }
+      .mt4 {
+        margin-top: 2rem;
+      }
+      .mr4 {
+        margin-right: 2rem;
+      }
+      .mb4 {
+        margin-bottom: 2rem;
+      }
+      .ml4,
+      .mx4 {
+        margin-left: 2rem;
+      }
+      .mx4 {
+        margin-right: 2rem;
+      }
+      .my4 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+      .mxn1 {
+        margin-left: calc(0.5rem * -1);
+        margin-right: calc(0.5rem * -1);
+      }
+      .mxn2 {
+        margin-left: calc(1rem * -1);
+        margin-right: calc(1rem * -1);
+      }
+      .mxn3 {
+        margin-left: calc(1.5rem * -1);
+        margin-right: calc(1.5rem * -1);
+      }
+      .mxn4 {
+        margin-left: calc(2rem * -1);
+        margin-right: calc(2rem * -1);
+      }
+      .m-auto {
+        margin: auto;
+      }
+      .mt-auto {
+        margin-top: auto;
+      }
+      .mr-auto {
+        margin-right: auto;
+      }
+      .mb-auto {
+        margin-bottom: auto;
+      }
+      .ml-auto,
+      .mx-auto {
+        margin-left: auto;
+      }
+      .mx-auto {
+        margin-right: auto;
+      }
+      .my-auto {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+      .p0 {
+        padding: 0;
+      }
+      .pt0 {
+        padding-top: 0;
+      }
+      .pr0 {
+        padding-right: 0;
+      }
+      .pb0 {
+        padding-bottom: 0;
+      }
+      .pl0,
+      .px0 {
+        padding-left: 0;
+      }
+      .px0 {
+        padding-right: 0;
+      }
+      .py0 {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .p1 {
+        padding: 0.5rem;
+      }
+      .pt1 {
+        padding-top: 0.5rem;
+      }
+      .pr1 {
+        padding-right: 0.5rem;
+      }
+      .pb1 {
+        padding-bottom: 0.5rem;
+      }
+      .pl1 {
+        padding-left: 0.5rem;
+      }
+      .py1 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+      .px1 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .p2 {
+        padding: 1rem;
+      }
+      .pt2 {
+        padding-top: 1rem;
+      }
+      .pr2 {
+        padding-right: 1rem;
+      }
+      .pb2 {
+        padding-bottom: 1rem;
+      }
+      .pl2 {
+        padding-left: 1rem;
+      }
+      .py2 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      .px2 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .p3 {
+        padding: 1.5rem;
+      }
+      .pt3 {
+        padding-top: 1.5rem;
+      }
+      .pr3 {
+        padding-right: 1.5rem;
+      }
+      .pb3 {
+        padding-bottom: 1.5rem;
+      }
+      .pl3 {
+        padding-left: 1.5rem;
+      }
+      .py3 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+      }
+      .px3 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      .p4 {
+        padding: 2rem;
+      }
+      .pt4 {
+        padding-top: 2rem;
+      }
+      .pr4 {
+        padding-right: 2rem;
+      }
+      .pb4 {
+        padding-bottom: 2rem;
+      }
+      .pl4 {
+        padding-left: 2rem;
+      }
+      .py4 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+      .px4 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      .col {
+        float: left;
+      }
+      .col,
+      .col-right {
+        box-sizing: border-box;
+      }
+      .col-right {
+        float: right;
+      }
+      .col-1 {
+        width: 8.33333%;
+      }
+      .col-2 {
+        width: 16.66667%;
+      }
+      .col-3 {
+        width: 25%;
+      }
+      .col-4 {
+        width: 33.33333%;
+      }
+      .col-5 {
+        width: 41.66667%;
+      }
+      .col-6 {
+        width: 50%;
+      }
+      .col-7 {
+        width: 58.33333%;
+      }
+      .col-8 {
+        width: 66.66667%;
+      }
+      .col-9 {
+        width: 75%;
+      }
+      .col-10 {
+        width: 83.33333%;
+      }
+      .col-11 {
+        width: 91.66667%;
+      }
+      .col-12 {
+        width: 100%;
+      }
+      @media (min-width: 40.06rem) {
+        .sm-col {
+          float: left;
+          box-sizing: border-box;
+        }
+        .sm-col-right {
+          float: right;
+          box-sizing: border-box;
+        }
+        .sm-col-1 {
+          width: 8.33333%;
+        }
+        .sm-col-2 {
+          width: 16.66667%;
+        }
+        .sm-col-3 {
+          width: 25%;
+        }
+        .sm-col-4 {
+          width: 33.33333%;
+        }
+        .sm-col-5 {
+          width: 41.66667%;
+        }
+        .sm-col-6 {
+          width: 50%;
+        }
+        .sm-col-7 {
+          width: 58.33333%;
+        }
+        .sm-col-8 {
+          width: 66.66667%;
+        }
+        .sm-col-9 {
+          width: 75%;
+        }
+        .sm-col-10 {
+          width: 83.33333%;
+        }
+        .sm-col-11 {
+          width: 91.66667%;
+        }
+        .sm-col-12 {
+          width: 100%;
+        }
+      }
+      @media (min-width: 52.06rem) {
+        .md-col {
+          float: left;
+          box-sizing: border-box;
+        }
+        .md-col-right {
+          float: right;
+          box-sizing: border-box;
+        }
+        .md-col-1 {
+          width: 8.33333%;
+        }
+        .md-col-2 {
+          width: 16.66667%;
+        }
+        .md-col-3 {
+          width: 25%;
+        }
+        .md-col-4 {
+          width: 33.33333%;
+        }
+        .md-col-5 {
+          width: 41.66667%;
+        }
+        .md-col-6 {
+          width: 50%;
+        }
+        .md-col-7 {
+          width: 58.33333%;
+        }
+        .md-col-8 {
+          width: 66.66667%;
+        }
+        .md-col-9 {
+          width: 75%;
+        }
+        .md-col-10 {
+          width: 83.33333%;
+        }
+        .md-col-11 {
+          width: 91.66667%;
+        }
+        .md-col-12 {
+          width: 100%;
+        }
+      }
+      @media (min-width: 64.06rem) {
+        .lg-col {
+          float: left;
+          box-sizing: border-box;
+        }
+        .lg-col-right {
+          float: right;
+          box-sizing: border-box;
+        }
+        .lg-col-1 {
+          width: 8.33333%;
+        }
+        .lg-col-2 {
+          width: 16.66667%;
+        }
+        .lg-col-3 {
+          width: 25%;
+        }
+        .lg-col-4 {
+          width: 33.33333%;
+        }
+        .lg-col-5 {
+          width: 41.66667%;
+        }
+        .lg-col-6 {
+          width: 50%;
+        }
+        .lg-col-7 {
+          width: 58.33333%;
+        }
+        .lg-col-8 {
+          width: 66.66667%;
+        }
+        .lg-col-9 {
+          width: 75%;
+        }
+        .lg-col-10 {
+          width: 83.33333%;
+        }
+        .lg-col-11 {
+          width: 91.66667%;
+        }
+        .lg-col-12 {
+          width: 100%;
+        }
+      }
+      .flex {
+        display: -ms-flexbox;
+        display: flex;
+      }
+      @media (min-width: 40.06rem) {
+        .sm-flex {
+          display: -ms-flexbox;
+          display: flex;
+        }
+      }
+      @media (min-width: 52.06rem) {
+        .md-flex {
+          display: -ms-flexbox;
+          display: flex;
+        }
+      }
+      @media (min-width: 64.06rem) {
+        .lg-flex {
+          display: -ms-flexbox;
+          display: flex;
+        }
+      }
+      .flex-column {
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+      .flex-wrap {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+      }
+      .items-start {
+        -ms-flex-align: start;
+        align-items: flex-start;
+      }
+      .items-end {
+        -ms-flex-align: end;
+        align-items: flex-end;
+      }
+      .items-center {
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      .items-baseline {
+        -ms-flex-align: baseline;
+        align-items: baseline;
+      }
+      .items-stretch {
+        -ms-flex-align: stretch;
+        align-items: stretch;
+      }
+      .self-start {
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+      }
+      .self-end {
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+      }
+      .self-center {
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+      }
+      .self-baseline {
+        -ms-flex-item-align: baseline;
+        align-self: baseline;
+      }
+      .self-stretch {
+        -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+      }
+      .justify-start {
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+      }
+      .justify-end {
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+      }
+      .justify-center {
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      .justify-between {
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+      .justify-around {
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+      }
+      .justify-evenly {
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+      }
+      .content-start {
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+      }
+      .content-end {
+        -ms-flex-line-pack: end;
+        align-content: flex-end;
+      }
+      .content-center {
+        -ms-flex-line-pack: center;
+        align-content: center;
+      }
+      .content-between {
+        -ms-flex-line-pack: justify;
+        align-content: space-between;
+      }
+      .content-around {
+        -ms-flex-line-pack: distribute;
+        align-content: space-around;
+      }
+      .content-stretch {
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+      }
+      .flex-auto {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        min-width: 0;
+        min-height: 0;
+      }
+      .flex-none {
+        -ms-flex: none;
+        flex: none;
+      }
+      .order-0 {
+        -ms-flex-order: 0;
+        order: 0;
+      }
+      .order-1 {
+        -ms-flex-order: 1;
+        order: 1;
+      }
+      .order-2 {
+        -ms-flex-order: 2;
+        order: 2;
+      }
+      .order-3 {
+        -ms-flex-order: 3;
+        order: 3;
+      }
+      .order-last {
+        -ms-flex-order: 99999;
+        order: 99999;
+      }
+      .relative {
+        position: relative;
+      }
+      .absolute {
+        position: absolute;
+      }
+      .fixed {
+        position: fixed;
+      }
+      .top-0 {
+        top: 0;
+      }
+      .right-0 {
+        right: 0;
+      }
+      .bottom-0 {
+        bottom: 0;
+      }
+      .left-0 {
+        left: 0;
+      }
+      .z1 {
+        z-index: 1;
+      }
+      .z2 {
+        z-index: 2;
+      }
+      .z3 {
+        z-index: 3;
+      }
+      .z4 {
+        z-index: 4;
+      }
+      .border {
+        border-style: solid;
+        border-width: 1px;
+      }
+      .border-top {
+        border-top-style: solid;
+        border-top-width: 1px;
+      }
+      .border-right {
+        border-right-style: solid;
+        border-right-width: 1px;
+      }
+      .border-bottom {
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+      }
+      .border-left {
+        border-left-style: solid;
+        border-left-width: 1px;
+      }
+      .border-none {
+        border: 0;
+      }
+      .rounded {
+        border-radius: 3px;
+      }
+      .circle {
+        border-radius: 50%;
+      }
+      .rounded-top {
+        border-radius: 3px 3px 0 0;
+      }
+      .rounded-right {
+        border-radius: 0 3px 3px 0;
+      }
+      .rounded-bottom {
+        border-radius: 0 0 3px 3px;
+      }
+      .rounded-left {
+        border-radius: 3px 0 0 3px;
+      }
+      .not-rounded {
+        border-radius: 0;
+      }
+      .hide {
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+      }
+      @media (max-width: 40rem) {
+        .xs-hide {
+          display: none;
+        }
+      }
+      @media (min-width: 40.06rem) and (max-width: 52rem) {
+        .sm-hide {
+          display: none;
+        }
+      }
+      @media (min-width: 52.06rem) and (max-width: 64rem) {
+        .md-hide {
+          display: none;
+        }
+      }
+      @media (min-width: 64.06rem) {
+        .lg-hide {
+          display: none;
+        }
+      }
+      .display-none {
+        display: none;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background: #fff;
+        color: #000000;
+        font-family: Montserrat, sans-serif;
+        min-width: 315px;
+        overflow-x: hidden;
+        font-smooth: always;
+        -webkit-font-smoothing: antialiased;
+      }
+      /* main {
+        max-width: 700px;
+        margin: 0 auto;
+      } */
+      p {
+        padding: 0;
+        margin: 0;
+      }
+      .ampstart-accent {
+        color: #003f93;
+      }
+      #content:target {
+        margin-top: calc(0px - 3.5rem);
+        padding-top: 3.5rem;
+      }
+      .ampstart-title-lg {
+        font-size: 3rem;
+        line-height: 3.5rem;
+        letter-spacing: 0.06rem;
+      }
+      .ampstart-title-md {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        letter-spacing: 0.06rem;
+      }
+      .ampstart-title-sm {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        letter-spacing: 0.06rem;
+      }
+      .ampstart-subtitle,
+      body {
+        line-height: 1.5rem;
+        letter-spacing: normal;
+      }
+      .ampstart-subtitle {
+        color: #ff6b19;
+        font-size: 1.3rem;
+      }
+      .ampstart-byline,
+      .ampstart-caption,
+      .ampstart-hint,
+      .ampstart-label {
+        font-size: 1rem;
+        color: #ff6b19;
+        line-height: 1.125rem;
+        letter-spacing: 0.06rem;
+      }
+      /* .ampstart-label {
+        text-transform: uppercase;
+      } */
+      .ampstart-footer,
+      .ampstart-small-text {
+        font-size: 0.75rem;
+        line-height: 1rem;
+        letter-spacing: 0.06rem;
+      }
+      .ampstart-card {
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 1px -1px rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      }
+      .h1,
+      h1 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        color: #ff6c1a;
+        font-weight: 500;
+      }
+      .h2,
+      h2 {
+        font-size: 1.75rem;
+        line-height: 2rem;
+        color: #252b33;
+        font-weight: 500;
+      }
+      .h3,
+      h3 {
+        font-size: 1.3rem;
+        line-height: 1.75rem;
+        /* color: #ff6c1a; */
+        font-weight: 600;
+      }
+      .h4,
+      h4 {
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        color: #ff6c1a;
+      }
+      .h5,
+      h5 {
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+      }
+      .h6,
+      h6 {
+        font-size: 0.75rem;
+        line-height: 1rem;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+        padding: 0;
+        /* font-weight: 400; */
+        letter-spacing: 0.06rem;
+      }
+      /* a,
+      a:active,
+      a:visited {
+        color: inherit;
+      } */
+      .ampstart-btn {
+        font-family: Montserrat, sans-serif;
+        font-weight: inherit;
+        font-size: 1rem;
+        line-height: 1.125rem;
+        padding: 0.7em 0.8em;
+        text-decoration: none;
+        white-space: nowrap;
+        word-wrap: normal;
+        vertical-align: middle;
+        cursor: pointer;
+        background-color: #000;
+        color: #fff;
+        border: 1px solid #fff;
+      }
+      .ampstart-btn:visited {
+        color: #fff;
+      }
+      .ampstart-btn-secondary {
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #000;
+      }
+      .ampstart-btn-secondary:visited {
+        color: #000;
+      }
+      .ampstart-btn:active .ampstart-btn:focus {
+        opacity: 0.8;
+      }
+      .ampstart-btn[disabled],
+      .ampstart-btn[disabled]:active,
+      .ampstart-btn[disabled]:focus,
+      .ampstart-btn[disabled]:hover {
+        opacity: 0.5;
+        outline: 0;
+        cursor: default;
+      }
+      .ampstart-dropcap:first-letter {
+        color: #000;
+        font-size: 3rem;
+        font-weight: 700;
+        float: left;
+        overflow: hidden;
+        line-height: 3rem;
+        margin-left: 0;
+        margin-right: 0.5rem;
+      }
+      .ampstart-initialcap {
+        padding-top: 1rem;
+        margin-top: 1.5rem;
+      }
+      .ampstart-initialcap:first-letter {
+        color: #000;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-left: -2px;
+      }
+      .ampstart-pullquote {
+        border: none;
+        border-left: 4px solid #000;
+        font-size: 1.5rem;
+        padding-left: 1.5rem;
+      }
+      .ampstart-byline time {
+        font-style: normal;
+        white-space: nowrap;
+      }
+      .amp-carousel-button-next {
+        background-image: url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Next</title><path d="M25.557 14.7L13.818 2.961 16.8 0l16.8 16.8-16.8 16.8-2.961-2.961L25.557 18.9H0v-4.2z" fill="%23FFF" fill-rule="evenodd"/></svg>');
+      }
+      .amp-carousel-button-prev {
+        background-image: url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Previous</title><path d="M33.6 14.7H8.043L19.782 2.961 16.8 0 0 16.8l16.8 16.8 2.961-2.961L8.043 18.9H33.6z" fill="%23FFF" fill-rule="evenodd"/></svg>');
+      }
+      .ampstart-dropdown {
+        min-width: 200px;
+      }
+      .ampstart-dropdown.absolute {
+        z-index: 100;
+      }
+      .ampstart-dropdown.absolute > section,
+      .ampstart-dropdown.absolute > section > header {
+        height: 100%;
+      }
+      .ampstart-dropdown > section > header {
+        background-color: #000;
+        border: 0;
+        color: #fff;
+      }
+      .ampstart-dropdown > section > header:after {
+        display: inline-block;
+        content: "+";
+        padding: 0 0 0 1.5rem;
+        color: #ff6c1a;
+      }
+      .ampstart-dropdown > [expanded] > header:after {
+        content: "–";
+      }
+      .absolute .ampstart-dropdown-items {
+        z-index: 200;
+      }
+      .ampstart-dropdown-item {
+        background-color: #000;
+        color: #003f93;
+        opacity: 0.9;
+      }
+      .ampstart-dropdown-item:active,
+      .ampstart-dropdown-item:hover {
+        opacity: 1;
+      }
+      .ampstart-footer {
+        background-color: #fff;
+        color: #000;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      .ampstart-footer .ampstart-icon {
+        fill: #000;
+      }
+      .ampstart-footer .ampstart-social-follow li:last-child {
+        margin-right: 0;
+      }
+      .ampstart-image-fullpage-hero {
+        color: #fff;
+      }
+      .ampstart-fullpage-hero-heading-text,
+      .ampstart-image-fullpage-hero .ampstart-image-credit {
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        background: #000;
+        padding: 0 1rem 0.2rem;
+      }
+      .ampstart-image-fullpage-hero > amp-img {
+        max-height: calc(100vh - 3.5rem);
+      }
+      .ampstart-image-fullpage-hero > amp-img img {
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+      .ampstart-fullpage-hero-heading {
+        line-height: 3.5rem;
+      }
+      .ampstart-fullpage-hero-cta {
+        background: transparent;
+      }
+      .ampstart-readmore {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0, transparent);
+        color: #fff;
+        margin-top: 5rem;
+        padding-bottom: 3.5rem;
+      }
+      .ampstart-readmore:after {
+        display: block;
+        content: "⌄";
+        font-size: 2rem;
+      }
+      .ampstart-readmore-text {
+        background: #000;
+      }
+      @media (min-width: 52.06rem) {
+        .ampstart-image-fullpage-hero > amp-img {
+          height: 60vh;
+        }
+      }
+      .ampstart-image-heading {
+        color: #fff;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0, transparent);
+      }
+      .ampstart-image-heading > * {
+        margin: 0;
+      }
+      amp-carousel .ampstart-image-with-heading {
+        margin-bottom: 0;
+      }
+      .ampstart-image-with-caption figcaption {
+        color: #ff6b19;
+        line-height: 1.125rem;
+      }
+      amp-carousel .ampstart-image-with-caption {
+        margin-bottom: 0;
+      }
+      .ampstart-input {
+        max-width: 100%;
+        width: 300px;
+        min-width: 100px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      .ampstart-input [disabled],
+      .ampstart-input [disabled] + label {
+        opacity: 0.5;
+      }
+      .ampstart-input [disabled]:focus {
+        outline: 0;
+      }
+      .ampstart-input > input,
+      .ampstart-input > select,
+      .ampstart-input > textarea {
+        width: 100%;
+        margin-top: 1rem;
+        line-height: 1.5rem;
+        border: 0;
+        border-radius: 0;
+        border-bottom: 1px solid #000000;
+        background: none;
+        color: #000000;
+        outline: 0;
+      }
+      .ampstart-input > label {
+        color: #003f93;
+        pointer-events: none;
+        text-align: left;
+        font-size: 0.875rem;
+        line-height: 1rem;
+        opacity: 0;
+        animation: 0.2s;
+        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        animation-fill-mode: forwards;
+      }
+      .ampstart-input > input:focus,
+      .ampstart-input > select:focus,
+      .ampstart-input > textarea:focus {
+        outline: 0;
+      }
+      .ampstart-input > input:focus:-ms-input-placeholder,
+      .ampstart-input > select:focus:-ms-input-placeholder,
+      .ampstart-input > textarea:focus:-ms-input-placeholder {
+        color: transparent;
+      }
+      .ampstart-input > input:focus::placeholder,
+      .ampstart-input > select:focus::placeholder,
+      .ampstart-input > textarea:focus::placeholder {
+        color: transparent;
+      }
+      .ampstart-input > input:not(:placeholder-shown):not([disabled]) + label,
+      .ampstart-input > select:not(:placeholder-shown):not([disabled]) + label,
+      .ampstart-input > textarea:not(:placeholder-shown):not([disabled]) + label {
+        opacity: 1;
+      }
+      .ampstart-input > input:focus + label,
+      .ampstart-input > select:focus + label,
+      .ampstart-input > textarea:focus + label {
+        animation-name: a;
+      }
+      @keyframes a {
+        to {
+          opacity: 1;
+        }
+      }
+      .ampstart-input > label:after {
+        content: "";
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+        background: #003f93;
+        transition: 0.2s;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        visibility: hidden;
+        width: 10px;
+      }
+      .ampstart-input > input:focus + label:after,
+      .ampstart-input > select:focus + label:after,
+      .ampstart-input > textarea:focus + label:after {
+        left: 0;
+        width: 100%;
+        visibility: visible;
+      }
+      .ampstart-input > input[type="search"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+      .ampstart-input > input[type="range"] {
+        border-bottom: 0;
+      }
+      .ampstart-input > input[type="range"] + label:after {
+        display: none;
+      }
+      .ampstart-input > select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+      .ampstart-input > select + label:before {
+        content: "⌄";
+        line-height: 1.5rem;
+        position: absolute;
+        right: 5px;
+        zoom: 2;
+        top: 0;
+        bottom: 0;
+        color: #003f93;
+      }
+      .ampstart-input-chk,
+      .ampstart-input-radio {
+        width: auto;
+        color: #000000;
+      }
+      .ampstart-input input[type="checkbox"],
+      .ampstart-input input[type="radio"] {
+        margin-top: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #003f93;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+        text-align: center;
+      }
+      .ampstart-input input[type="radio"] {
+        border-radius: 20px;
+      }
+      .ampstart-input input[type="checkbox"]:not([disabled]) + label,
+      .ampstart-input input[type="radio"]:not([disabled]) + label {
+        pointer-events: auto;
+        animation: none;
+        vertical-align: middle;
+        opacity: 1;
+        cursor: pointer;
+      }
+      .ampstart-input input[type="checkbox"] + label:after,
+      .ampstart-input input[type="radio"] + label:after {
+        display: none;
+      }
+      .ampstart-input input[type="checkbox"]:after,
+      .ampstart-input input[type="radio"]:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: " ";
+        line-height: 1.4rem;
+        vertical-align: middle;
+        text-align: center;
+        background-color: #fff;
+      }
+      .ampstart-input input[type="checkbox"]:checked:after {
+        background-color: #003f93;
+        color: #fff;
+        content: "✓";
+      }
+      .ampstart-input input[type="radio"]:checked {
+        background-color: #fff;
+      }
+      .ampstart-input input[type="radio"]:after {
+        top: 3px;
+        bottom: 3px;
+        left: 3px;
+        right: 3px;
+        border-radius: 12px;
+      }
+      .ampstart-input input[type="radio"]:checked:after {
+        content: "";
+        font-size: 3rem;
+        background-color: #003f93;
+      }
+      .ampstart-input > label,
+      _:-ms-lang(x) {
+        opacity: 1;
+      }
+      .ampstart-input > input:-ms-input-placeholder,
+      _:-ms-lang(x) {
+        color: transparent;
+      }
+      .ampstart-input > input::placeholder,
+      _:-ms-lang(x) {
+        color: transparent;
+      }
+      .ampstart-input > input::-ms-input-placeholder,
+      _:-ms-lang(x) {
+        color: transparent;
+      }
+      .ampstart-input > select::-ms-expand {
+        display: none;
+      }
+      .ampstart-headerbar {
+        background-color: #fff;
+        color: #000;
+        z-index: 999;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+      }
+      .ampstart-headerbar + :not(amp-sidebar),
+      .ampstart-headerbar + amp-sidebar + * {
+        margin-top: 3.5rem;
+      }
+      .ampstart-headerbar-nav .ampstart-nav-item {
+        padding: 0 1rem;
+        background: transparent;
+        opacity: 0.8;
+      }
+      .ampstart-headerbar-nav {
+        line-height: 3.5rem;
+      }
+      .ampstart-nav-item:active,
+      .ampstart-nav-item:focus,
+      .ampstart-nav-item:hover {
+        opacity: 1;
+      }
+      .ampstart-navbar-trigger:focus {
+        outline: none;
+      }
+      .ampstart-nav a,
+      .ampstart-navbar-trigger,
+      .ampstart-sidebar-faq a {
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .ampstart-nav .ampstart-label {
+        color: inherit;
+      }
+      .ampstart-navbar-trigger {
+        line-height: 3.5rem;
+        font-size: 2rem;
+      }
+      .ampstart-headerbar-nav {
+        -ms-flex: 1;
+        flex: 1;
+      }
+      .ampstart-nav-search {
+        -ms-flex-positive: 0.5;
+        flex-grow: 0.5;
+      }
+      .ampstart-headerbar .ampstart-nav-search:active,
+      .ampstart-headerbar .ampstart-nav-search:focus,
+      .ampstart-headerbar .ampstart-nav-search:hover {
+        box-shadow: none;
+      }
+      .ampstart-nav-search > input {
+        border: none;
+        border-radius: 3px;
+        line-height: normal;
+      }
+      .ampstart-nav-dropdown {
+        min-width: 200px;
+      }
+      .ampstart-nav-dropdown amp-accordion header {
+        background-color: #fff;
+        border: none;
+      }
+      .ampstart-nav-dropdown amp-accordion ul {
+        background-color: #fff;
+      }
+      .ampstart-nav-dropdown .ampstart-dropdown-item,
+      .ampstart-nav-dropdown .ampstart-dropdown > section > header {
+        background-color: #fff;
+        color: #ff6c1a;
+      }
+      a.ampstart-nav-link {
+        color: #ff6c1a;
+      }
+      .ampstart-nav-dropdown .ampstart-dropdown-item a {
+        color: #000000;
+      }
+      .ampstart-sidebar {
+        background-color: #fff;
+        color: #000;
+        min-width: 300px;
+        width: 300px;
+      }
+      .ampstart-sidebar .ampstart-icon {
+        fill: #003f93;
+      }
+      .ampstart-sidebar-header {
+        line-height: 3.5rem;
+        min-height: 3.5rem;
+      }
+      .ampstart-sidebar .ampstart-dropdown-item,
+      .ampstart-sidebar .ampstart-dropdown header,
+      .ampstart-sidebar .ampstart-faq-item,
+      .ampstart-sidebar .ampstart-nav-item,
+      .ampstart-sidebar .ampstart-social-follow {
+        margin: 0 0 1.3rem;
+      }
+      .mb-3{
+        margin-bottom: 1rem;
+        color: #ff6c1a;
+        font-weight: 500;
+        font-size: 16px;
+      }
+      .ampstart-faq-item, .ampstart-faq-item a {
+        color: #ff6c1a;
+      }
+      .i-amphtml-accordion-header {
+        padding: 10px;
+      }
+      .ampstart-sidebar .ampstart-nav-dropdown {
+        margin: 0;
+      }
+      .ampstart-sidebar .ampstart-navbar-trigger {
+        line-height: inherit;
+      }
+      .ampstart-navbar-trigger svg {
+        pointer-events: none;
+      }
+      .ampstart-related-article-section {
+        border-color: #000000;
+      }
+      .ampstart-related-article-section .ampstart-heading {
+        color: #000000;
+        font-weight: 400;
+      }
+      .ampstart-related-article-readmore {
+        color: #000;
+        letter-spacing: 0;
+      }
+      .ampstart-related-section-items > li {
+        border-bottom: 1px solid #000000;
+      }
+      .ampstart-related-section-items > li:last-child {
+        border: none;
+      }
+      .ampstart-related-section-items .ampstart-image-with-caption {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 0;
+      }
+      .ampstart-related-section-items .ampstart-image-with-caption > amp-img,
+      .ampstart-related-section-items .ampstart-image-with-caption > figcaption {
+        -ms-flex: 1;
+        flex: 1;
+      }
+      .ampstart-related-section-items .ampstart-image-with-caption > figcaption {
+        padding-left: 1rem;
+      }
+      @media (min-width: 40.06rem) {
+        .ampstart-related-section-items > li {
+          border: none;
+        }
+        .ampstart-related-section-items .ampstart-image-with-caption > figcaption {
+          padding: 1rem 0;
+        }
+        .ampstart-related-section-items .ampstart-image-with-caption > amp-img,
+        .ampstart-related-section-items .ampstart-image-with-caption > figcaption {
+          -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+        }
+      }
+      .ampstart-social-box {
+        display: -ms-flexbox;
+        display: flex;
+      }
+      .ampstart-social-box > amp-social-share {
+        background-color: #000;
+      }
+      .ampstart-icon {
+        fill: #ff6c1a;
+      }
+      .ampstart-input {
+        width: 100%;
+      }
+      main .ampstart-social-follow {
+        margin-left: auto;
+        margin-right: auto;
+        width: 315px;
+      }
+      main .ampstart-social-follow li {
+        transform: scale(1.8);
+      }
+      h1 + .ampstart-byline time {
+        font-size: 1.3rem;
+        font-weight: 400;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .h1, h1 {
+          font-size: 27px;
+          line-height: 32px;
+        }
+        .h2, h2 {
+          font-size: 25px;
+          line-height: 30px;
+        }
+        .h3, h3 {
+          font-size: 22px;
+          line-height: 25px;
+          font-weight: 400;
+        }
+        .ampstart-subtitle, h1 + .ampstart-byline time {
+          font-size: 16px;
+        }
+        main .ampstart-social-follow {
+          width: 280px;
+        }
+      }
+      .main-content-alt {
+    max-width: 700px;
+    margin: auto;
+}
+    .ampstart-nav-dropdown .ampstart-dropdown-item a:hover {
+           color: #ff6c1a;
+        }
+.callout_box {
+    background-color: #fff;
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 12px 20px 20px #d2d2d2;
+    margin: 25px 24px 30px;
+    border: solid 3px #ff6c1a;
+    }    
+    .callout_box .call_heading {
+    font-size: 1.5rem;
+    padding-bottom: 0;
+    margin-top: 0;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.spark-cta {
+    margin-top: 30px;
+}
+    .spark-cta a.btn-style-one {
+    padding: 10px 38px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 168%;
+    border-radius: 0;
+    height: auto;
+    width: auto;
+    border: 1px solid #ff6c1a;
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+    background: #ff6c1a;
+    white-space: nowrap;
+    text-align: center;
+}
+
+ /* Table Styling */
+ .table {
+        border-collapse: collapse;
+        margin: 20px;
+      }
+
+      .table th, .table td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+      }
+
+      .table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+      }
+
+      .table td {
+        background-color: #fafafa;
+      }
+
+      .table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .table tr:hover {
+        background-color: #f1f1f1;
+      }
+
+  /* how-to-build-deploy-spring-boot-application blog Start */
+      .content-main {position: relative;border-radius: 15px;background: #2b2f35;box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);}
+      .content-main:hover{transform: translateY(-3px);}
+      .content-copy {display:flex; align-items: center;justify-content: space-between;padding: 10px 15px;border-radius: 15px 15px 0 0;border-bottom: 1px solid #ffddb9;}
+      .sub-titles {color: #fff;padding-bottom: 10px; font-weight: 600;}
+      .content-body {color: #ffddb9;padding: 15px 15px;}
+      .content-body p {color: #ffddb9;padding-bottom: 10px;}
+      .copy-wrapper {position: relative;display: flex;align-items: center;justify-content: center;font-size: 14px;border-radius: 8px;color: #fff;background: #ff6c1a;padding: 3px 10px;cursor: pointer;}
+      .copy-wrapper:hover {background-color: #e65a00;}
+      .copy-main {position: absolute;right: 10px;top: 10px;}
+      .copy-tooltip {position: absolute;top: -30px;right: 0;background-color: #fff;color: #000;padding: 4px 8px;border-radius: 4px;font-size: 12px;white-space: nowrap;opacity: 0;pointer-events: none;transform: translateY(5px);transition: opacity 0.3s ease, transform 0.3s ease;z-index: 10;box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);}
+      .copy-tooltip.show {opacity: 1;transform: translateY(0);}
+      @media (max-width:991px) {.copy-main {position: relative;right: 10px;top: 10px;display: flex;justify-content: end;margin-bottom: 5px;}}
+      .internal-links {
+    color: #ff6c1a;
+    word-wrap: break-word;
+}
+      /* End */
+    </style>
+  </head>
+  <body>
+    <!-- Start Navbar -->
+    <header class="ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl2 pr4">
+      <div role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger pr2">☰</div>
+      <amp-img src="img/blog/logo.png" width="168" height="37" layout="fixed" class="my0 mx-auto" alt="The Blog"></amp-img>
+    </header>
+
+<!-- Start Sidebar -->
+<amp-sidebar
+id="header-sidebar"
+class="ampstart-sidebar px3"
+layout="nodisplay"
+>
+<div class="flex justify-start items-center ampstart-sidebar-header">
+  <div
+    role="button"
+    aria-label="close sidebar"
+    on="tap:header-sidebar.toggle"
+    tabindex="0"
+    class="ampstart-navbar-trigger items-start"
+  >
+    ✕
+  </div>
+</div>
+<ul class="ampstart-sidebar-faq list-reset m0">
+  <li class="ampstart-faq-item">
+    <a href="https://www.sparkouttech.com/" class="text-decoration-none"
+      >Home</a
+    >
+  </li>
+</ul>
+<nav class="ampstart-sidebar-nav ampstart-nav">
+  <ul class="list-reset m0 p0 ampstart-label">
+    <li class="ampstart-nav-item ampstart-nav-dropdown relative">
+      <!-- Start Dropdown-inline -->
+      <amp-accordion
+        layout="container"
+        disable-session-states=""
+        class="ampstart-dropdown"
+      >
+        <section>
+          <header>AI</header>
+
+          <ul class="ampstart-dropdown-items list-reset m0 p0">
+            <h5 class="mb-3">AI Solutions</h5>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/botpress-ai-development/"
+                target="_blank"
+                class="text-decoration-none"
+                >Botpress AI Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/runway-ai-development/"
+                target="_blank"
+                class="text-decoration-none"
+                >Runway AI Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/deepgram-ai-development/"
+                class="text-decoration-none"
+                >Deepgram AI Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/livekit-ai-development/"
+                target="_blank"
+                class="text-decoration-none"
+                >Livekit AI Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/elevenlabs-ai-development/"
+                target="_blank"
+                class="text-decoration-none"
+                >Elevenlabs development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/bland-ai-development/"
+                class="text-decoration-none"
+                >Bland AI development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/guardrails-ai-development/"
+                class="text-decoration-none"
+                >Guardrails AI development</a
+              >
+            </li>
+            <h5 class="mb-3">AI Development</h5>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ai-development-company/"
+                class="text-decoration-none"
+                >AI Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ai-chatbot-development/"
+                class="text-decoration-none"
+                >AI Chatbot Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ai-agent-development/"
+                class="text-decoration-none"
+                >AI Agent Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ai-app-development-company/"
+                class="text-decoration-none"
+                >Ai App Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/enterprise-ai-development-company/"
+                class="text-decoration-none"
+                >Enterprise AI Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/agentic-ai-development/"
+                class="text-decoration-none"
+                >Agentic Ai Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ai-consulting-services/"
+                class="text-decoration-none"
+                >AI Consulting Services</a
+              >
+            </li>
+            <h5 class="mb-3">Industries</h5>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ai-agents-in-finance/"
+                target="_blank"
+                class="text-decoration-none"
+                >AI for Banking & Finance</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ai-agents-in-healthcare/"
+                target="_blank"
+                class="text-decoration-none"
+                >AI for Healthcare</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/sales-ai-agent/"
+                target="_blank"
+                class="text-decoration-none"
+                >AI for Retail and E-Commerce</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/contact-us/"
+                class="text-decoration-none"
+                >AI for Manufacturing</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/contact-us/"
+                class="text-decoration-none"
+                >AI for Education</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/contact-us/"
+                class="text-decoration-none"
+                >AI for Logistics & Transportation</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/contact-us/"
+                class="text-decoration-none"
+                >AI for Real Estate</a
+              >
+            </li>
+          </ul>
+        </section>
+      </amp-accordion>
+      <!-- End Dropdown-inline -->
+    </li>
+    <li class="ampstart-nav-item ampstart-nav-dropdown relative">
+      <!-- Start Dropdown-inline -->
+      <amp-accordion
+        layout="container"
+        disable-session-states=""
+        class="ampstart-dropdown"
+      >
+        <section>
+          <header>Solutions</header>
+
+          <ul class="ampstart-dropdown-items list-reset m0 p0">
+            <h5 class="mb-3">Blockchain Solutions</h5>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.blockchainx.tech/nft-marketplace-development/"
+                target="_blank"
+                class="text-decoration-none"
+                >NFT Marketplace</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.blockchainx.tech/metaverse-development-company/"
+                target="_blank"
+                class="text-decoration-none"
+                >Metaverse</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/blockchain-development-company/"
+                class="text-decoration-none"
+                >Enterprise Blockchain Solutions</a
+              >
+            </li>
+            <h5 class="mb-3">Digital Experience (DX)</h5>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ui-ux-development/"
+                class="text-decoration-none"
+                >Customer Experience - UI/UX</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/mobile-app-design-agency/"
+                class="text-decoration-none"
+                >User-Centric Mobile Designs</a
+              >
+            </li>
+            <h5 class="mb-3">Digital Solutions</h5>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://eatzilla.info/"
+                target="_blank"
+                class="text-decoration-none"
+                >AI - Ondemand Delivery Solutions</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.rentalslew.com/"
+                target="_blank"
+                class="text-decoration-none"
+                >Rental Management</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.transgenie.io/"
+                target="_blank"
+                class="text-decoration-none"
+                >SupplyChain Traceability on Blockchain</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ai-document-understanding/"
+                class="text-decoration-none"
+                >Intelligent Document Understanding AI</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/chat-app-development/"
+                class="text-decoration-none"
+                >Enterprise Chat Application Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/hrms-software-development/"
+                class="text-decoration-none"
+                >Human Resource Management Software Development</a
+              >
+            </li>
+            <h5 class="mb-3">IT Life Cycle</h5>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/custom-software-development-services/" class="text-decoration-none">Custom Software Development</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/artificial-intelligence-application-development-company/"
+                class="text-decoration-none"
+                >AI/ML Development</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/generative-ai-development/"
+                class="text-decoration-none"
+                >Generative AI</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/web-application-development/"
+                class="text-decoration-none"
+                >Modern Web Services</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/mobile-application-development/"
+                class="text-decoration-none"
+                >Mobile Solutions</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/devops-services/"
+                class="text-decoration-none"
+                >DevOps Solutions</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/quality-assurance-and-testing-services/"
+                class="text-decoration-none"
+                >Quality Assurance & Testing</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/ar-vr-application-development/"
+                class="text-decoration-none"
+                >Spatial Computing - AR / VR / MR</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/internet-of-things/"
+                class="text-decoration-none"
+                >Internet of Things (IOT)</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/staff-augmentation-services/" class="text-decoration-none">Staff Augmentation Services</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/mvp-development-services/" class="text-decoration-none">MVP Development Services</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/application-modernization-services/" class="text-decoration-none">Application Modernization Services</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/cloud-migration-services/" class="text-decoration-none">Cloud Migration Services</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/software-modernization-services/" class="text-decoration-none">Software Modernization Services</a>
+            </li>
+          </ul>
+        </section>
+      </amp-accordion>
+      <!-- End Dropdown-inline -->
+    </li>
+
+    <li class="ampstart-nav-item ampstart-nav-dropdown relative">
+      <amp-accordion
+        layout="container"
+        disable-session-states=""
+        class="ampstart-dropdown"
+      >
+        <section>
+          <header>Industries</header>
+          <ul class="ampstart-dropdown-items list-reset m0 p0">
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/online-food-delivery-solution/"
+                class="text-decoration-none"
+                >Food & Beverages</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/travel-application-development/"
+                class="text-decoration-none"
+                >Travel</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.transgenie.io/"
+                target="_blank"
+                class="text-decoration-none"
+                >Supply Chain</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/fintech-software-development-company/"
+                class="text-decoration-none"
+                >Fintech</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/real-estate-app-development/"
+                class="text-decoration-none"
+                >Real Estate</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/healthcare-software-development/"
+                class="text-decoration-none"
+                >Healthcare</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/government-software-development-services/"
+                class="text-decoration-none"
+                >Government</a
+              >
+            </li>
+          </ul>
+        </section>
+      </amp-accordion>
+    </li>
+
+    <li class="ampstart-nav-item ampstart-nav-dropdown relative">
+      <amp-accordion layout="container" disable-session-states="" class="ampstart-dropdown">
+        <section>
+          <header>Hire</header>
+          <ul class="ampstart-dropdown-items list-reset m0 p0">
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/hire-nodejs-developers/" class="text-decoration-none">Hire NodeJS Developers</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/hire-reactjs-developers/" class="text-decoration-none">Hire ReactJS Developers</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/hire-angularjs-developers/" class="text-decoration-none">Hire AngularJS Developers</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/hire-android-developers/" class="text-decoration-none">Hire Android Developers</a>
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a href="https://www.sparkouttech.com/hire-ios-developers/" class="text-decoration-none">Hire IOS Developers</a>
+            </li>
+          </ul>
+        </section>
+      </amp-accordion>
+    </li>
+
+    <li class="ampstart-nav-item ampstart-nav-dropdown relative">
+      <!-- Start Dropdown-inline -->
+      <amp-accordion
+        layout="container"
+        disable-session-states=""
+        class="ampstart-dropdown"
+      >
+        <section>
+          <header>Company</header>
+          <ul class="ampstart-dropdown-items list-reset m0 p0">
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/about-us/"
+                class="text-decoration-none"
+                >About Us</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/portfolio/"
+                class="text-decoration-none"
+                >Clients</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/design-portfolio/"
+                class="text-decoration-none"
+                >Design Portfolio</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/careers/"
+                class="text-decoration-none"
+                >Careers</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/blog/"
+                class="text-decoration-none"
+                >Blog</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/news/"
+                class="text-decoration-none"
+                >News</a
+              >
+            </li>
+            <li class="ampstart-dropdown-item">
+              <a
+                href="https://www.sparkouttech.com/case-studies/"
+                class="text-decoration-none"
+                >Case Study</a
+              >
+            </li>
+          </ul>
+        </section>
+      </amp-accordion>
+      <!-- End Dropdown-inline -->
+    </li>
+  </ul>
+</nav>
+
+<ul class="ampstart-sidebar-faq list-reset m0">
+  <li class="ampstart-faq-item">
+    <a
+      href="https://www.sparkouttech.com/contact-us/"
+      class="text-decoration-none"
+      >Get a Quote</a
+    >
+  </li>
+</ul>
+</amp-sidebar>
+<!-- End Sidebar -->
+    <!-- End Navbar -->
+    <main id="content" role="main" class="">
+      <article class="recipe-article">
+        <header>
+          <amp-img src="img/spring-boot-application/how-to-build-deploy-a-spring-boot-application.jpg" width="1284" height="674" layout="responsive" alt="Build & Deploy a Spring Boot App" title="Build & Deploy a Spring Boot App" class="mb4  full-banner"></amp-img>
+
+
+          <!-- End byline -->
+
+        </header>
+        <div class="main-content-alt">
+          <span class="ampstart-subtitle block px3 pt2 mb2">AI</span>
+          <h1 class="mb3 px3">How to Build and Deploy Spring Boot Application – The Ultimate Guide</h1>
+
+          <!-- Start byline -->
+          <address class="ampstart-byline clearfix mb2 px3 h5">
+            <time class="ampstart-byline-pubdate block bold my1" datetime="2025-05-27">May 27, 2025</time>
+          </address>
+          <p class="mb2 px3">In today's fast-moving digital landscape, businesses need applications that are not just reliable but also scalable and quick to launch. That's why many are exploring how to build and deploy Spring Boot applications to meet modern demands. The Spring Boot framework in Java comes in. It is not just another developer tool, it's a powerful framework that helps companies bring their ideas to life faster. You can think of Spring Boot as a shortcut for building apps in Java without compromising on performance and security.​</p>
+          <p class="mb2 px3">For those businesses who don't want to spend hours setting things up from scratch, they can opt for Spring Boot as the go-to choice. Whether it's powering backend services, enterprise platforms, or scalable microservices, it offers the speed and structure needed for modern businesses.</p>
+
+        <h2 class="mb2 px3">What is Spring Boot All About?</h2>
+        <p class="mb2 px3">
+          Spring Boot is a framework built on top of Java and makes it much easier and faster to develop applications. Unlike traditional Java applications that required a lot of setup and configuration, which in turn slowed down development, Spring Boot primarily removes the repetitive tasks by offering pre-configured templates and tools. With this, developers can focus more on writing the actual logic of the app.
+        </p>
+
+        <h3 class="mb1 px3 ">Top 10 Reasons Why Developers Love Spring Boot Development</h3>
+        <p class="mb1 px3"><b>1. Minimal Configuration Required</b></p>
+        <p class="mb2 px3">Spring Boot removes boilerplate code and XML configurations, allowing developers to start building right away.</p>
+        <p class="mb1 px3"><b>2. Quick Development & Deployment</b></p>
+        <p class="mb2 px3">With built defaults and auto-configuration, it speeds up the development process.</p>
+        <p class="mb1 px3"><b>3. Built for Scalability</b></p>
+        <p class="mb2 px3">Spring Boot is ideal for building everything from small services to large enterprise applications.</p>
+        <p class="mb1 px3"><b>4. Seamless Integration with Tools</b></p>
+        <p class="mb2 px3"> Works effortlessly with Spring Boot build tools like Maven and Gradle, streamlining project management.</p>   
+        <p class="mb1 px3"><b>5. Microservices Ready</b></p>
+        <p class="mb2 px3">Perfect for building distributed, modular applications using microservices architecture.</p> 
+        <p class="mb1 px3"><b>6. Production-Ready Features</b></p>
+        <p class="mb2 px3"> Spring Boot offers built-in monitoring, health checks, and metrics for smooth production deployment.</p>
+        <p class="mb1 px3"><b>7. Embedded Server Support</b></p>
+        <p class="mb2 px3">There is no need for an external setup, as it comes with built-in servers like Tomcat or Jetty.</p>   
+        <p class="mb1 px3"><b>8. Strong Ecosystem</b></p>
+        <p class="mb2 px3">Spring Boot leverages the powerful Spring ecosystem, such as Spring MVC, Spring Data, Spring Security, etc.</p> 
+        <p class="mb1 px3"><b>9. Cloud & AI Agent Ready</b></p>    
+        <p class="mb2 px3">It supports building backend services for cloud-native applications and <a href="https://www.sparkouttech.com/ai-agent-development/" target="_blank" class="internal-links">AI agent development</a> tools.</p>
+        <p class="mb1 px3"><b>10. Active Community & Support</b></p>   
+        <p class="mb2 px3"> Supported by a large, active community with well-maintained and extensive documentation.</p>     
+
+        <h2 class="mb2 px3">Spring Boot Development Environment: What You Need to Start</h2>
+        <p class="mb2 px3">It is vital to set up a development environment before building an application with Spring Boot for smooth and efficient coding. Here is what you will need:</p>
+        <h3 class="mb1 px3">IDEs (IntelliJ, Eclipse)</h3>
+        <p class="mb2 px3">
+          You need an Integrated Development Environment (IDE) like IntelliJ IDEA or Eclipse. These tools offer features like intelligent code completion, debugging support, and built-in terminal access to make the development process much easier.
+        </p>
+        <h3 class="mb1 px3">JDK and Maven/Gradle</h3>
+        <p class="mb2 px3">Spring Boot runs on Java, and it is vital to install the latest Java Development Kit (JDK). Besides, you also need to build automation tools like Maven or Gradle to manage dependencies, compile code, and package your application.</p>
+        <h3 class="mb1 px3">Spring Initializr</h3>
+        <p class="mb2 px3"> Spring Initializr, a web-based generator, is vital for starting your project. It helps you create a basic Spring Boot project in a few clicks. You can even choose a build tool like Maven or Gradle, Java version, and the required dependencies. When generated, you can import it into your IDE, and with that, you shall start coding.</p>
+
+        <h2 class="mb2 px3">How to Build a Spring Boot Application [Step-by-Step Guide]</h2>
+        <p class="mb2 px3"><b>Prerequisites:</b></p>
+        <p class="mb2 px3">Ensure the following tools are installed and properly configured:</p>
+
+        <div class="table-responsive ai-table">
+          <table class="table border m3">
+              <thead>
+                  <tr>
+                      <th>Tool</th>
+                      <th>Required Version</th>
+                      <th>How to Check</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td class="fw-medium">
+                        Java JDK
+                      </td>
+                      <td>
+                        17 or higher
+                      </td>
+                      <td>
+                        <b>java -version, javac -version</b>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="fw-medium">Apache Maven</td>
+                      <td>3.8 or higher</td>
+                      <td><b>mvn -version</b></td>
+                  </tr>
+                  <tr>
+                      <td class="fw-medium">IDE</td>
+                      <td>IntelliJ, VS Code</td>
+                      <td>For development ease</td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+
+        <div class="content-main position-relative m3">
+          <div class="content-copy">
+            <div class="sub-titles mb-0 text-white">Sample Output of Checks</div>
+        
+            <!-- Copy Icon with Tooltip -->
+            <div class="copy-wrapper copy-icon-wrapper">
+              <span class="copy-icon">copy</span>
+              <div class="copy-tooltip">Copied!</div>
+            </div>
+          </div>
+        
+          <!-- Content to Copy -->
+          <div class="content-body copy-text">
+            <div class="row">
+              <div class="col-12">
+                <div class="sub-titles mb-1 text-white">java -version</div>
+                <p class="pb-0"># java version "17.0.x"</p>
+              </div>
+              <div class="col-12">
+                <div class="sub-titles mb-1 text-white">javac -version</div>
+                <p class="pb-0"># javac 17.0.x</p>
+              </div>
+              <div class="col-12">
+                <div class="sub-titles mb-1 text-white">mvn -version</div>
+                <p class="pb-0"># Apache Maven 3.9.x</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="px3 mb2">Step-by-Step Project Setup</h2>
+        <p class="px3 mb2"><b>1. Create the Project Directory</b></p>
+        <p class="px3 mb2">The very first step is to create a new folder for your project and navigate into it. This project directory will hold your application files. To create a project directory:</p>
+
+        <div class="content-main position-relative m3">
+          <div class="copy-main">
+            <!-- Copy Icon with Tooltip -->
+            <div class="copy-wrapper copy-icon-wrapper">
+              <span class="copy-icon">copy</span>
+              <div class="copy-tooltip">Copied!</div>
+            </div>
+          </div>
+        
+          <!-- Content to Copy -->
+          <div class="content-body copy-text">
+            <pre class="mt-lg-3 my-0"><code>mkdir myapp <br>cd myapp</code></pre>        
+          </div>
+        </div>
+
+        <div class="px3 mb2"><b>2. Create pom.xml</b></div>
+                <p class="px3 mb2">This step involves creating the Maven project description file that defines the core configuration of your Spring Boot application. It includes Spring Boot project metadata, starter parent, essential dependencies, and the build plugin required to package and run the application.</p>
+                <p class="px3 mb2">To create a file named <span class="internal-links">pom.xml</span> in the root directory:</p>
+                <div class="content-main position-relative m3">                
+                  <div class="content-body copy-text">
+                    <pre class="pb-2 pb-md-0 mb-0"><code>&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+                          xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+                          xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 
+              http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+                      &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+                  </code></pre>
+                  </div>
+                </div>
+
+                <h2 class="px3 mb2"><b>The steps involved are as follows: </b></h2>
+                <p class="px3"><b>1. To Define Project Metadata:</b></p>
+                <p class="px3 mb2">The following tags, like <span class="internal-links">groupId</span>, <span class="internal-links">artifactId</span>, <span class="internal-links">version</span>, <span class="internal-links">packaging</span>, and project name/description, uniquely identify your project:</p>
+                <div class="content-main position-relative m3">           
+                  <div class="content-body copy-text">
+                    <pre class="pb-2 pb-md-0 mb-0"><code>&lt;groupId&gt;com.example&lt;/groupId&gt;
+&lt;artifactId&gt;myapp&lt;/artifactId&gt;
+&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+&lt;packaging&gt;jar&lt;/packaging&gt;
+
+&lt;name&gt;myapp&lt;/name&gt;
+&lt;description&gt;Spring Boot Application&lt;/description&gt;</code></pre>                      
+                  </div>
+                </div>
+
+                <div class="px3 mb2"><b>2. To Set the Parent </b></div>
+                <p class="px3 mb2">The code <span class="internal-links">spring-boot-starter-parent</span> represents the parent tag that lets you inherit default configurations, dependency versions, and plugins from Spring Boot:</p>
+                <div class="content-main position-relative m3">              
+                  <div class="content-body copy-text">
+                    <pre class="pb-2 pb-md-0 mb-0"><code>&lt;parent&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+    &lt;version&gt;3.2.0&lt;/version&gt;
+    &lt;relativePath/&gt;
+&lt;/parent&gt;</code></pre>                                            
+                  </div>
+                </div>
+
+                <div class="px3 mb2"><b>3. To Add Dependencies</b></div>
+                <p class="px3 mb2">The following code will fetch the necessary libraries for building and testing your web application.</p>
+                <p class="px3 mb2">The <span class="internal-links">&lt;dependencies&gt;</span> section includes</p>
+                <p class="px3 mb2"><span class="internal-links">spring-boot-starter-web</span> that covers everything needed to build web and RESTful applications using Spring MVC.</p>
+                <p class="px3 mb2"><span class="internal-links">Spring-boot-starter-test </span>to add libraries like JUnit and Mockito for writing unit & integration testing.</p>
+                <div class="content-main position-relative m3">                
+                  <div class="content-body copy-text">
+                    <pre class="pb-2 pb-md-0 mb-0"><code>&lt;dependencies&gt;
+    &lt;!-- Web Starter --&gt;
+    &lt;dependency&gt;
+          &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+          &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+                      
+    &lt;!-- Optional: Test Starter --&gt;
+    &lt;dependency&gt;
+          &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+          &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+          &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>                                                                
+                  </div>
+                </div>
+
+                <div class="px3 mb2"><b>4. To Configure Build Plugin</b></div>
+                <p class="px3 mb2">To add the Spring Boot build plugin to build an executable JAR and run your app with the help of Maven commands, use the code below:</p>
+                <div class="content-main position-relative m3">                
+                  <div class="content-body copy-text">
+                    <pre class="pb-2 pb-md-0 mb-0"><code> &lt;build&gt;
+    &lt;plugins&gt;
+           &lt;plugin&gt;
+              &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+              &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+           &lt;/plugin&gt;
+    &lt;/plugins&gt;
+  &lt;/build&gt;
+&lt;/project&gt;</code></pre>                                                                
+                  </div>
+                </div>
+
+                <p class="px3 mb2">Upon completing this step, you have prepared your project to compile, build, and run as a Spring Boot web application.</p>
+
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mb-0 pb-md-0 pb-2"><code>&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+
+http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+                      
+     &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+                      
+     &lt;groupId&gt;com.example&lt;/groupId&gt;
+     &lt;artifactId&gt;myapp&lt;/artifactId&gt;
+     &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+     &lt;packaging&gt;jar&lt;/packaging&gt;
+                      
+     &lt;name&gt;myapp&lt;/name&gt;
+     &lt;description&gt;Spring Boot Application&lt;/description&gt;
+                      
+     &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;3.2.0&lt;/version&gt;
+        &lt;relativePath/&gt;
+     &lt;/parent&gt;
+                      
+     &lt;dependencies&gt;
+         &lt;!-- Web Starter --&gt;
+         &lt;dependency&gt;
+             &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+             &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+         &lt;/dependency&gt;
+                      
+         &lt;!-- Optional: Test Starter --&gt;
+         &lt;dependency&gt;
+             &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+             &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+             &lt;scope&gt;test&lt;/scope&gt;
+         &lt;/dependency&gt;
+     &lt;/dependencies&gt;
+                      
+     &lt;build&gt;
+         &lt;plugins&gt;
+         &lt;plugin&gt;
+              &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+              &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+              &lt;/plugin&gt;
+         &lt;/plugins&gt;
+         &lt;/build&gt;
+                      
+&lt;/project&gt;</code></pre>                      
+                  </div>
+                </div>
+
+                <p class="px3 mb2">With this class, your application will have a valid entry point that Spring Boot can run. Now, you can go ahead building features like REST controllers and services.</p>
+
+                <h2 class="px3 mb2">5. Create a Simple REST Controller</h2>
+                <p class="px3 mb2">To handle HTTP requests, it is vital to create a basic REST controller and this steps does the same. This section stands as your first endpoint where you can test if or not your Spring Boot application is working accurately.</p>
+
+                <div class="px3 mb2"><b>1. To Create the File</b></div>
+                <p class="px3 mb2">Begin with creating a file named <span class="internal-links">HelloController.java</span> inside your main Java package. </p>
+                <p class="px3 mb2">File: <span class="internal-links text-break">src/main/java/com/example/myapp/HelloController.java</span></p>
+
+                <div class="px3 mb2"><b>2. To Add the Controller Code</b></div>
+                <p class="px3 mb2">This controller connects a simple HTTP GET request to a response string.</p>
+                <p class="px3 mb2"><span class="internal-links">@RestController</span> implies the class as a RESTful controller while</p>
+                <p class="px3 mb2"><span class="internal-links">@GetMapping("/hello")</span> maps GET requests to <span class="internal-links">/hello</span> to the <span class="internal-links">sayHello()</span> method.</p>
+                <p class="px3 mb2"><span class="internal-links">sayHello()</span> method is used to return a plain string as the response (<span class="internal-links">Hello, created from scratch!</span>), which is converted into an HTTP response body atomatically.</p>
+
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                  <div class="content-body copy-text">
+                    <pre class="pb-2 pb-md-0 mb-0"><code>package com.example.myapp;
+                      
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+                      
+@RestController
+public class HelloController {
+                      
+   @GetMapping("/hello")
+   public String sayHello() {
+       return "Hello, created from scratch!";
+  }
+}</code></pre>                                                                
+                  </div>
+                </div>
+                <p class="px3 mb2">When your application is running, then it means your Spring Boot app and basic REST API are working.</p>
+
+                <h2 class="px3 mb2">6. Create Configuration File</h2>
+                <p class="px3 mb2">To manage application-level settings like server port, database connections, logging levels, etc., Spring Boot uses a configuration file named <span class="internal-links">application.properties</span> (or <span class="internal-links">application.yml</span>).</p>
+
+                <div class="px3 mb2"><b>1. To Create the File</b></div>
+                <p class="px3 mb2">Inside the <span class="internal-links">resources</span> directory, create a new file named:</p>
+                <p class="px3 mb2">File: <span class="internal-links text-break">src/main/resources/application.properties</span> (You can leave it empty or add custom settings like port)</p>
+
+                <div class="px3 mb2"><b>2. To Add Optional Configuration</b></div>
+                <p class="px3 mb2">You can either leave it empty or specify basic settings like changing the default port. By default Spring Boot runs on port <span class="internal-links">8080</span> and uncommenting <span class="internal-links">server.port=8081</span> changes the server to listen to port <span class="internal-links">8081</span>.</p>
+                <p class="px3 mb2">You can later use this file to define database connection propertise, caching configs, logging levels, and environment-specific variables.</p>
+                <p class="px3 mb2">properties</p>
+
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code># Optional configuration
+# server.port=8081</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">As a result, your application will read from <span class="internal-links">application.properties</span> everytime it starts and you can even customize behavior without changing the Java code.</p>
+
+                <h2 class="px3 mb2">7. Build and Run the Application</h2>
+                <p class="px3 mb2">Now, your code and configuration are ready and it’s time to compile the project and launch the Spring Boot application. During this step, an executable .jar file gets created and it runs on Java.</p>
+
+                <div class="px3 mb2"><b>1. Navigate to the Root Projet Directory</b></div>
+                <p class="px3 mb2">Ensure you are in the root folder where the pom.xml file is located.</p>
+                <p class="px3 mb2">From the root directory:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>cd myapp</code></pre>        
+                  </div>
+                </div>
+
+                <div class="px3 mb2"><b>2. To Build the Project Using Maven</b></div>
+                <p class="px3 mb2">This command clears previous builds if any and packages your application into a .jar file.</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>mvn clean package</code></pre>        
+                  </div>
+                </div>
+                <p class="px3 mb2">This compiles your code and dependencies into a JAR file under <span class="internal-links">target/</span>.</p>
+
+                <div class="px3 mb2"><b>3. To Run the Generated Jar File</b></div>
+                <p class="px3 mb2">After successful build, you shall launch the application using:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>java -jar target/myapp-0.0.1-SNAPSHOT.jar</code></pre>        
+                  </div>
+                </div>
+                <p class="px3 mb2"><span class="internal-links">java -jar</span> … this starts your Spring Boot app with the help of built-in server which is usually Tomcat. Thus you will see logs printed in console that ends with Tomcat started on port(s): 8080 </p>
+
+                <h2 class="px3 mb2">8. Test the Application</h2>
+                <p class="px3 mb2">When your application is running, it’s now time to verify that everything works correctly by testing the REST endpoint that you have created already.</p>
+                <div class="px3 mb2"><b>1. Open your browser or use a tool like Postman:</b></div>
+                <p class="px3 mb2">Access the <span class="internal-links">/hello</span> endpoint by visiting the following URL:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>http://localhost:8080/hello</code></pre>        
+                  </div>
+                </div>
+
+                <div class="px3 mb2"><b>2. You Should See the Expected Output:</b> </div>
+                <p class="px3 mb2">If the setup is correct, then you should see this message in your browser or API response:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>Hello, created from scratch!</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">This means your application started without errors, and the <span class="internal-links">HelloController</span> is working as expected. Besides, the <span class="internal-links">/hello</span> endpoint is reachable and returning the accurate responses. </p>
+                <p class="px3 mb2">With the above screen, you have successfully built and tested your first Spring Boot application from scratch. You can further process this by adding more endpoints, connecting to databases, or secure your app.</p>
+
+                <h2 class="mx2 mb3">Spring Boot Deployment Guide</h2>
+                <p class="mx2 mb3">Putting your Spring Boot application into action means choosing the right deployment method. No matter if you are building a chatbot development platform, an AI-powered tool, or a full-scale enterprise solution, deployment strategies play a major role in performance, scalability, and uptime. Check out the most commonly used deployment methods:</p>
+
+                <h3 class="mx2 mb3"><b>Method 1: Deploy on a Virtual Machine using AWS EC2</b></h3>
+                <p class="mx2 mb3">Deploying a Spring Boot application on AWS E2C is the most reliable and flexible option to manage your infrastructure. This is because the E2C (Elastic Compute Cloud) offers scalable virtual servers in the cloud. With this, it is easy to create a Linux based instance, access it on SSH, and set up your runtime environment. Thus this approach gives complete control over your deployment and is ideal for the developers who are looking to configure security groups, storage, and networking settings.</p>
+                <p class="mx2 mb3">With EC2 instance ready, Java JDK 17+ can be installed and Spring Boot .jar file can be transferred using SCP, and the application can be launched using command line. Upon opening the port 8080 in the security group makes the app accessible via a browser.  </p>
+
+                <div class="mx2 mb3"><b>Steps-by-Step Overview:</b></div>
+
+                <p class="mx2 mb3">1. Provide a Virtual Machine</p>
+                <p class="mx2 mb3">Create a VM using your cloud platforms like AWS EC2, Google Cloud, Azure or DigitalOcean. Choose a basic Ubuntu/Linux instance.</p>
+                <p class="mx2 mb3">2. Access the Server via SSH</p>
+                <p class="mx2 mb3">Login to your VM using <span class="internal-links">ssh user@server-ip</span></p>
+                <p class="mx2 mb3">3. Install Required Runtime</p>
+                <p class="mx2 mb3">Check if the server has Java JDK 17+ or higher installed using</p>
+
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>sudo apt update
+sudo apt install openjdk-17-jdk -y</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">4. Transfer your App to the Server</p>
+                <p class="px3 mb2">Copy the <span class="internal-links">.jar</span> to server using <span class="internal-links">scp</span> or SFTP:</p>
+
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>scp target/myapp-0.0.1-SNAPSHOT.jar user@server-ip:/home/user/</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">Note: Open port <span class="internal-links">8080</span> in firewall/security group settings.</p>
+                <p class="px3 mb2">5. Run the Application </p>
+                <p class="px3 mb2">Execute the app using:</p>
+
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>java -jar myapp-0.0.1-SNAPSHOT.jar</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">6. Open the App in Your Browser</p>
+                <p class="px3 mb2">Navigate to <span class="internal-links">http://server-ip:8080/hello</span></p>
+                <p class="px3 mb2">And you will see the response as: <span class="internal-links">Hello, created from scratch!</span></p>
+
+                <div class="px3 mb2">To Run App Continuously, Run the App with a <span class="internal-links">systemd</span> Process</div>
+                <p class="px3 mb2">If you want your Spring Boot application to run in the background even after logging out or restarting the server, then use <span class="internal-links">systemd</span>, the Linux service manager. This method is suitable for production deployment that needs high availability and automatic restarts. Managing systemd is easy with <span class="internal-links">start</span>, <span class="internal-links">stop</span>, <span class="internal-links">restart</span>, and <span class="internal-links">status</span> commands.</p>
+
+                <div class="px3 mb2"><b>Step 1: Create a <span class="internal-links">systemd</span> Service File</b></div>
+                <p class="px3 mb2">Open and create a new service file:</p>
+
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>sudo nano /etc/systemd/system/myapp.service</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">Then, paste the following (update the JAR path if needed):</p>
+
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <div class="content-body copy-text">
+                    <pre class="pb-2 pb-md-0 mb-0"><code>[Unit]
+Description=Spring Boot App
+After=network.target
+                      
+[Service]
+User=ubuntu
+ExecStart=/usr/bin/java -jar /home/ubuntu/myapp-0.0.1-SNAPSHOT.jar
+SuccessExitStatus=143
+Restart=on-failure
+RestartSec=5
+                      
+[Install]
+WantedBy=multi-user.target</code></pre>                                                                
+                  </div>
+                </div>
+                <p class="px3 mb2">FYI - Change <span class="internal-links">/home/ubuntu/myapp-0.0.1-SNAPSHOT.jar</span> with your actual JAR path if different.</p>
+
+                <div class="px3 mb2"><b>Step 2: Reload and Start the <span class="internal-links">systemd</span> Process</b></div>
+                <p class="px3 mb2">In order to activate and start your Spring Boot app as a background service: </p>
+
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>sudo systemctl daemon-reload
+sudo systemctl start myapp
+sudo systemctl enable myapp</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">This will:</p>
+                <ul>
+                  <li>Start your app in the background</li>
+                  <li>Restart it automatically on failure or reboot</li>
+                  <li>Keep it running after logout</li>
+                </ul>
+
+                <div class="px3 mb2">Step 3: Open in Browser</div>
+                <p class="px3 mb2">Now, open this URL in your browser:</p>
+
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>http://&lt;your-server-ip&gt;:8080/hello</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">You should now see: </p>
+
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>Hello, created from scratch!</code></pre>        
+                  </div>
+                </div>
+
+                <div class="px3 mb2"><b>Method 2: Full Deployment Guide: Spring Boot with Docker (Local to EC2/VM)</b></div>
+                <p class="px3 mb2">Dockerize Spring Boot Application uses containers to ensure consistency across development, testing, and production. Docker allows you to package your Spring Boot application with all its dependencies into a single container, which runs consistently across different environments. If you want to make deployment easier and environment agnostic, using Docker is valid. It helps package your Spring Boot app with all dependencies into a portable container.</p>
+                <p class="px3 mb2">This method allows you to build and test the Docker image locally and then deploy it to any cloud VM like AWS EC2. This is useful for the teams looking for a portable, reproducible builds.</p>
+
+                <div class="px3 mb1">Prerequisites</div>
+                <div class="px3 mb2"><b>On Local Machine:</b></div>
+                <ul>
+                  <li>Java JDK 17+</li>
+                  <li>Maven</li>
+                  <li>Docker installed and running</li>
+                  <li>Spring Boot application with <span class="internal-links">.jar</span> file</li>
+                </ul>
+
+                <div class="px3 mb2"><b>On Remote Server (EC2/VM):</b></div>
+                <ul>
+                  <li>Ubuntu (or similar Linux distro)</li>
+                  <li>SSH access (key pair or password)</li>
+                  <li>Docker installed and configured</li>
+                </ul>
+
+                <div class="px3 mb2">Step 1: Package the Spring Boot App</div>
+                <p class="px3 mb2">Just before containerizing, you should compile and package your Spring Boot project into a JAR file. This way, you ensure your application is production-ready and can run on any environment.</p>
+                <p class="px3 mb2">1. Open your terminal and navigate to your Spring Boot project directory.</p>
+                <p class="px3 mb2">2. Build the app:</p>
+
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>mvn clean package</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2"><b>3. This generates a .jar file at <span class="internal-links">target/myapp-0.0.1-SNAPSHOT.jar</b></span>.</p>
+
+                <div class="px3 mb2">Step 2: Create a Dockerfile</div>
+                <p class="px3 mb2">The Dockerfile defines how your Spring Boot JAR will run inside a container. It specifies the base image (Java 17), copies the JAR file, and sets up the app entry point for execution.</p>
+                <p class="px3 mb2">Create a file named <span class="internal-links">Dockerfile</span> in the root of your project:</p>
+
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <div class="content-body copy-text">
+                    <pre class="pb-2 pb-md-0 mb-0"><code># Use official OpenJDK base image
+FROM eclipse-temurin:17-jdk
+                      
+# Add the JAR file to the container
+ARG JAR_FILE=target/myapp-0.0.1-SNAPSHOT.jar
+COPY ${JAR_FILE} app.jar
+                      
+# Run the jar file
+ENTRYPOINT ["java", "-jar", "/app.jar"]</code></pre>                                                                
+                  </div>
+                </div>
+
+                <p class="px3 mb2">You can also create a <span class="internal-links">.dockerignore</span> file to exclude unnecessary files.</p>
+
+                <div class="px3 mb2">Step 3: Build the Docker Image Locally</div>
+                <p class="px3 mb2">By using Docker commands, you shall build your images from the Dockerfile. The image generated will serve as a portable, self-contained unit that includes both your app and all its dependencies.</p>
+
+                <p class="px3 mb2">Build the image:</p>
+
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>docker build -t myapp</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">Check the image:</p>
+
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>docker images</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">Run the container:</p>
+
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>docker run -p 8080:8080 myapp</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">Open in browser:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>http://localhost:8080/hello</code></pre>        
+                  </div>
+                </div>
+
+                <div class="px3 mb2">Step 4: Prepare for EC2/VM Deployment</div>
+                <p class="px3 mb2">There are two ways to deploy:</p>
+                <p class="px3 mb2">Option A - Copy the Docker image directly to your VM.</p>
+                <p class="px3 mb2">Option B - Transfer your entire project to the VM & build the Docker image there.</p>
+                <p class="px3 mb2">Both the options ensure your app runs consistently in production.</p>
+
+                <div class="px3 mb2">Option A: Copy Image to Server (Best for simple setups)</div>
+                <p class="px3 mb2">1. Save the Docker image:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>docker save -o myapp.tar myapp</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">2. Copy the image to the remote server:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>scp myapp.tar ubuntu@&lt;EC2-IP&gt;:/home/ubuntu/</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">3. SSH into your server:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>ssh ubuntu@&lt;EC2-IP&gt;</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">4. Load the image:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>docker load -i myapp.tar</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">5. Run the container:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>docker run -d -p 80:8080 myapp</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">6. Once deployed and port 80 is open, visit:</p>
+                <div class="content-main m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>http://&lt;your-ec2-public-ip&gt;/hello</code></pre>        
+                  </div>
+                </div>
+
+                <div class="px3 mb2">Option B: Copy Source Code & Build Image on Server</div>
+                <p class="px3 mb2">1. Copy your full project folder:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>scp -r ./myapp ubuntu@&lt;EC2-IP&gt;:/home/ubuntu/</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">2. SSH into the server:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>ssh ubuntu@&lt;EC2-IP&gt;</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">3. Inside <span class="internal-links">/home/ubuntu/myapp</span>, build and run:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>docker build -t myapp.
+docker run -d -p 80:8080 myapp</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">4. Exposes your app at <span class="internal-links">http://hello</span></p>
+
+                  <div class="px3 mb2">Manage Docker Container</div>
+                  <p class="px3 mb2">When the deployment is done, you can proceed to monitor and control your container using simple Docker commands, such as start, stop, check logs, etc., and ensure it restarts on failure or reboot.</p>
+                  
+                <p class="px3 mb2">1. Check running containers:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>docker ps</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">2. Stop container:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>docker stop &lt;/container_id&gt;</code></pre>        
+                  </div>
+                </div>
+
+                <p class="px3 mb2">3. View logs:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>docker logs &lt;/container_id&gt;</code></pre>        
+                  </div>
+                </div>
+
+                <div class="px3 mb2">Run as a Dockerized Service with Restart</div>
+                <p class="px3 mb2">To make your app production-resilient, you need to run it as a background Docker service that auto-restarts when crashed or system reboots.</p>
+                <p class="px3 mb2">For production reliability:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>docker run -d --restart unless-stopped -p 80:8080 myapp</code></pre>        
+                  </div>
+                </div>
+
+                <div class="px3 mb2">Summary</div>
+                <p class="px3 mb2">Take a quick look at the section that lists the essential Docker commands from build to deployment. These commands makes executing and repeating the entire process effortless.</p>
+
+                <div class="table-responsive ai-table">
+                  <table class="table border m3">
+                      <thead>
+                          <tr>
+                              <th>Step</th>
+                              <th>Command</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>Build JAR</td>
+                              <td><b>mvn clean package</b></td>
+                          </tr>
+                          <tr>
+                              <td>Build Docker Image</td>
+                              <td><b>docker build -t myapp</b></td>
+                          </tr>
+                          <tr>
+                            <td>Run Locally</td>
+                            <td><b>docker run -p 8080:8080 myapp</b></td>
+                          </tr>
+                          <tr>
+                            <td>Copy to Server</td>
+                            <td><b>scp myapp.tar <br> ubuntu@&lt;EC2-IP&gt;:/home/ubuntu/</b></td>
+                          </tr>
+                          <tr>
+                            <td>Load on Server</td>
+                            <td><b>docker load -i myapp.tar</b></td>
+                          </tr>
+                          <tr>
+                            <td>Run on Server</td>
+                            <td><b>docker run -d -p 80:8080 myapp</b></td>
+                          </tr>
+                      </tbody>
+                  </table>
+                </div>
+
+                <div class="px3 mb2">Access the App</div>
+                <p class="px3 mb2">Once deployed and port 80 is open, visit:</p>
+                <div class="content-main position-relative m3">
+                  <div class="copy-main">
+                    <!-- Copy Icon with Tooltip -->
+                    <div class="copy-wrapper copy-icon-wrapper">
+                      <span class="copy-icon">copy</span>
+                      <div class="copy-tooltip">Copied!</div>
+                    </div>
+                  </div>
+                
+                  <!-- Content to Copy -->
+                  <div class="content-body copy-text">
+                    <pre class="mt-lg-3 my-0"><code>http://&lt;your-ec2-public-ip&gt;/hello</code></pre>        
+                  </div>
+                </div>
+
+                <h2 class="px3 mb2">Integrating Spring Boot with AI & Chatbots</h2>
+                <p class="px3 mb2">Spring Boot is the most commonly used backend framework for building intelligent applications due to its modular design, robust ecosystem, and effortless integration capabilities.</p>
+
+                <amp-img src="img/spring-boot-application/spring-boot-meets-ai-chatbots.webp" alt="Spring Boot integration with AI and chatbot platforms for building intelligent, scalable applications."
+                title="Integrate AI & Chatbots with Spring Boot" width="831" height="387" layout="responsive" class="mb3 mx3" ></amp-img>
+
+                <p class="px3 mb2"><b>1. Chatbot Development Platforms</b> <br> Spring Boot can handle user sessions, route conversations, and manage integrations with messaging platforms. This includes Facebook Messenger, WhatsApp, or web chat widgets. It functions as middleware that integrates front-end interfaces with AI engines, making it ideal for <a href="https://www.sparkouttech.com/ai-chatbot-development/" target="_blank" class="internal-links">AI chatbot development</a> companies..</p>
+
+                  <p class="px3 mb2"><b>2. AI Agent Development</b> <br> Whether you are building autonomous AI agents or task-based virtual assistants, Spring Boot is all that you need to manage business logic, data persistence, and API orchestration. By tying up with the right AI agent development company, businesses can seamlessly connect with vector databases, RAG pipelines, or LLMs.</p>
+
+                  <p class="px3 mb2"><b>3. AI Chatbot Development Companies</b> <br> AI chatbot development companies widely choose Spring Boot for its scalability and maintainability. It makes it easier to roll out AI-powered features that include personalized responses, user intent recognition, and contextual memory.</p>
+
+                  <p class="px3 mb2">Spring Boot integrates effortlessly with RESTful APIs, WebSocket, and AI/ML libraries. This enables smooth communication between the backend and AI services. The following are the tools that can be integrated with:</p>
+
+                  <ul>
+                    <li>NLP tools like spaCy, NLTK, and external APIs such as OpenAI, Google Dialogflow.</li>
+                    <li>Machine learning models use external APIs or custom endpoints built with Python/Node.js.</li>
+                    <li>Data processing pipelines offer intelligent insights and personalized user experiences.</li>
+                  </ul>
+
+                  <p class="px3 mb2">Overall, Spring Boot offers the reliability, flexibility, and performance required for cutting-edge <a href="https://www.sparkouttech.com/ai-development-company/" target="_blank" class="internal-links">AI development</a> and chatbot development solutions.</p>
+
+                  <h2 class="px3 mb2">Why Choose Sparkout to Build & Deploy Spring Boot Applications</h2>
+                <p class="px3 mb2">At Sparkout Tech, we go beyond basic application development. We build intelligent, scalable, and production-ready backend systems using Spring Boot. Our solutions are tailored to support <a href="https://www.sparkouttech.com/top-ai-agent-platforms/" target="_blank" class="internal-links">AI-powered platforms</a>, enterprise-grade software, and chatbot-based solutions. Here is what sets us apart:</p>
+
+                <amp-img src="img/spring-boot-application/spring-boot-applications.webp"
+                alt="End-to-end Spring Boot application development with AI-first approach and enterprise-grade scalability"
+                title="Build Intelligent, Scalable Spring Boot Applications with Sparkout" width="831" height="494" layout="responsive" class="mb3 mx3" ></amp-img>
+                
+                <p class="px3 mb2"><b>1. Proven Expertise</b> <br> – We have delivered Spring Boot applications across diverse industries, including fintech, e-commerce, healthcare, and AI startups. We have a deep understanding of domain-specific challenges and know the right tricks to solve them efficiently.</p>
+
+                <p class="px3 mb2"><b>2. AI-First Approach</b> <br> – We are unlike generic development companies, and what makes us unique from the competitors is that we prioritize AI and automation. Thus, we build systems to integrate AI agents, NLP tools, and machine learning APIs to make your platform smarter and adaptive.</p>
+
+                <p class="px3 mb2"><b>3. Full-Cycle Support</b> <br> – Our team handles everything from backend architecture design to code development and testing to setting up CI/CD pipelines and handling cloud deployment effortlessly. With this end-to-end support, we ensure seamless delivery and maintenance.</p>
+
+                <p class="px3 mb2"><b>4. Fast Turnaround</b> <br> – We follow agile methodology and use pre-built modules to offer rapid development cycles without compromising on code quality, performance, and security.</p>
+
+                <p class="px3 mb2"><b>5. Trusted by Enterprises</b> – Sparkout Tech is a highly recognized and top AI agent development company. We are known for delivering reliable, maintainable, and scalable backend architectures that power high-demand applications.</p>
+
+
+        <h2 class="px3 mb2">Frequently Asked Questions</h2>
+          <amp-accordion class="mx2 mb3">
+            <section>
+              <h5 class="faq-title py-1 px-1">1. Can I deploy Spring Boot on AWS?</h5>
+              <div class="faq-answer py1">
+                <p class="px3 mb2">Yes. It is possible to deploy Spring Boot on AWS using EC2, Elastic Beanstalk, or Docker containers via ECS.</p>
+              </div>
+            </section>
+    
+            <section>
+              <h5 class="faq-title">2. What are the possibilities to monitor a Spring Boot app in production?</h5>
+              <div class="faq-answer py1">
+                <p class="px3 mb2">You can choose Actuator endpoints, Prometheus, and Grafana to observe Spring Boot during production.</p>
+              </div>
+            </section>
+    
+            <section>
+              <h5 class="faq-title">3. What is the best way to deploy a Spring Boot app using Docker?</h5>
+              <div class="faq-answer py1">
+                <p class="px3 mb2">You should create a Dockerfile that packages your JAR file. By using Docker build, you can create the image and use Docker run to launch it. When it comes to production, orchestrating containers with Docker Compose or Kubernetes can be used for better scalability and reliability.</p>
+              </div>
+            </section>
+
+            <section>
+                <h5 class="faq-title">4. What are the advantages of using Spring Boot in AI agent development?</h5>
+                <div class="faq-answer py1">
+                  <p class="px3 mb2">Spring Boot offers a robust backend foundation for managing data flows, API endpoints, and service orchestration in AI agent development. With its scalability and integration capabilities, it works great in deploying intelligent agents in production environments.</p>
+                </div>
+              </section>
+
+              <section>
+                <h5 class="faq-title">5. Is Spring Boot's performance faster than Django?</h5>
+                <div class="faq-answer py1">
+                  <p class="px3 mb2">Yes. Spring Boot generally performs better when compared to Django. It is particularly visible during the response time and throughput.</p>
+                </div>
+              </section>
+          </amp-accordion>
+
+      </div>
+
+
+          <ul class="ampstart-social-follow list-reset flex justify-around items-center flex-wrap m0 mb2 pt3">
+            <li>
+              <a href="https://twitter.com/sparkouttech" target="_blank" class="inline-block p1" aria-label="Link to AMP HTML Twitter"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.2" viewBox="0 0 53 49">
+                  <title>Twitter</title>
+                  <path
+                    d="M45 6.9c-1.6 1-3.3 1.6-5.2 2-1.5-1.6-3.6-2.6-5.9-2.6-4.5 0-8.2 3.7-8.2 8.3 0 .6.1 1.3.2 1.9-6.8-.4-12.8-3.7-16.8-8.7C8.4 9 8 10.5 8 12c0 2.8 1.4 5.4 3.6 6.9-1.3-.1-2.6-.5-3.7-1.1v.1c0 4 2.8 7.4 6.6 8.1-.7.2-1.5.3-2.2.3-.5 0-1 0-1.5-.1 1 3.3 4 5.7 7.6 5.7-2.8 2.2-6.3 3.6-10.2 3.6-.6 0-1.3-.1-1.9-.1 3.6 2.3 7.9 3.7 12.5 3.7 15.1 0 23.3-12.6 23.3-23.6 0-.3 0-.7-.1-1 1.6-1.2 3-2.7 4.1-4.3-1.4.6-3 1.1-4.7 1.3 1.7-1 3-2.7 3.6-4.6"
+                    class="ampstart-icon ampstart-icon-twitter"></path></svg></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/sparkouttech" target="_blank" class="inline-block p1" aria-label="Link to AMP HTML Facebook"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="23.6" viewBox="0 0 56 55">
+                  <title>Facebook</title>
+                  <path
+                    d="M47.5 43c0 1.2-.9 2.1-2.1 2.1h-10V30h5.1l.8-5.9h-5.9v-3.7c0-1.7.5-2.9 3-2.9h3.1v-5.3c-.6 0-2.4-.2-4.6-.2-4.5 0-7.5 2.7-7.5 7.8v4.3h-5.1V30h5.1v15.1H10.7c-1.2 0-2.2-.9-2.2-2.1V8.3c0-1.2 1-2.2 2.2-2.2h34.7c1.2 0 2.1 1 2.1 2.2V43"
+                    class="ampstart-icon ampstart-icon-fb"></path></svg></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/sparkout_tech/" target="_blank" class="inline-block p1" aria-label="Link to AMP HTML Instagram"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 54 54">
+                  <title>instagram</title>
+                  <path
+                    d="M27.2 6.1c-5.1 0-5.8 0-7.8.1s-3.4.4-4.6.9c-1.2.5-2.3 1.1-3.3 2.2-1.1 1-1.7 2.1-2.2 3.3-.5 1.2-.8 2.6-.9 4.6-.1 2-.1 2.7-.1 7.8s0 5.8.1 7.8.4 3.4.9 4.6c.5 1.2 1.1 2.3 2.2 3.3 1 1.1 2.1 1.7 3.3 2.2 1.2.5 2.6.8 4.6.9 2 .1 2.7.1 7.8.1s5.8 0 7.8-.1 3.4-.4 4.6-.9c1.2-.5 2.3-1.1 3.3-2.2 1.1-1 1.7-2.1 2.2-3.3.5-1.2.8-2.6.9-4.6.1-2 .1-2.7.1-7.8s0-5.8-.1-7.8-.4-3.4-.9-4.6c-.5-1.2-1.1-2.3-2.2-3.3-1-1.1-2.1-1.7-3.3-2.2-1.2-.5-2.6-.8-4.6-.9-2-.1-2.7-.1-7.8-.1zm0 3.4c5 0 5.6 0 7.6.1 1.9.1 2.9.4 3.5.7.9.3 1.6.7 2.2 1.4.7.6 1.1 1.3 1.4 2.2.3.6.6 1.6.7 3.5.1 2 .1 2.6.1 7.6s0 5.6-.1 7.6c-.1 1.9-.4 2.9-.7 3.5-.3.9-.7 1.6-1.4 2.2-.7.7-1.3 1.1-2.2 1.4-.6.3-1.7.6-3.5.7-2 .1-2.6.1-7.6.1-5.1 0-5.7 0-7.7-.1-1.8-.1-2.9-.4-3.5-.7-.9-.3-1.5-.7-2.2-1.4-.7-.7-1.1-1.3-1.4-2.2-.3-.6-.6-1.7-.7-3.5 0-2-.1-2.6-.1-7.6 0-5.1.1-5.7.1-7.7.1-1.8.4-2.8.7-3.5.3-.9.7-1.5 1.4-2.2.7-.6 1.3-1.1 2.2-1.4.6-.3 1.6-.6 3.5-.7h7.7zm0 5.8c-5.4 0-9.7 4.3-9.7 9.7 0 5.4 4.3 9.7 9.7 9.7 5.4 0 9.7-4.3 9.7-9.7 0-5.4-4.3-9.7-9.7-9.7zm0 16c-3.5 0-6.3-2.8-6.3-6.3s2.8-6.3 6.3-6.3 6.3 2.8 6.3 6.3-2.8 6.3-6.3 6.3zm12.4-16.4c0 1.3-1.1 2.3-2.3 2.3-1.3 0-2.3-1-2.3-2.3 0-1.2 1-2.3 2.3-2.3 1.2 0 2.3 1.1 2.3 2.3z"
+                    class="ampstart-icon ampstart-icon-instagram"></path></svg></a>
+            </li>
+
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <!-- Start Footer -->
+    <footer class="ampstart-footer flex flex-column items-center px3">
+      <nav class="ampstart-footer-nav">
+        <ul class="list-reset flex flex-wrap mb3">
+          <li class="px1">
+            <a class="text-decoration-none ampstart-label" href="https://www.sparkouttech.com/about-us/">About</a>
+          </li>
+          <li class="px1">
+            <a class="text-decoration-none ampstart-label" href="https://www.sparkouttech.com/contact-us/">Contact</a>
+          </li>
+          <li class="px1">
+            <a class="text-decoration-none ampstart-label" href="https://www.sparkouttech.com/terms-conditions/">Terms</a>
+          </li>
+        </ul>
+      </nav>
+      <small> © Sparkout Tech, 2025 </small>
+    </footer>
+    <!-- End Footer -->
+  </body>
+</html>

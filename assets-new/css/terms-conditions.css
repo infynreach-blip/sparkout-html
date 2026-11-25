@@ -1,0 +1,10 @@
+/* Terms and Conditons styles */
+.terms_conditons h3 {font-size: 24px;line-height: 36px;font-weight: 600;padding: 0 0 10px;margin: 0;}
+  .terms_conditons h4 {font-size: 20px;line-height: 30px;font-weight: 500;}
+  .terms_conditons p, ul.numerics li {font-size: 18px;line-height: 28px;font-weight: 400;color: #767676;}
+  
+  @media (max-width: 1440px) {
+    .terms_conditons h3 {font-size: 24px;}
+    .terms_conditons h4 {font-size: 18px;}
+    .terms_conditons p, ul.numerics li {font-size: 16px;line-height: 26px;}
+  }

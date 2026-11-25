@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
+    <title>Thank You - Sparkout</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Sparkout Tech Solutions" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Thank You - Sparkout" />
+    <meta property="og:site_name" content="Sparkout Tech Solutions" />
+    <meta property="og:url" content="https://www.sparkouttech.com/thank-you/">
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:image" content="https://www.sparkouttech.com/assets-new/images/twitter-card.jpg" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://www.sparkouttech.com/thank-you/">
+    <meta name="twitter:title" content="Thank You - Sparkout">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://www.sparkouttech.com/assets-new/images/twitter-card.jpg">
+    <link rel="canonical" href="https://www.sparkouttech.com/thank-you/" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" /></noscript>
+    <link rel="stylesheet" href="../assets-new/fonts-demo/bootstrap-icons.css" media="print" onload="this.media='all'" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="../assets-new/css/common.css" media="all" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="../assets-new/css/common.css" /></noscript>
+    <link rel="stylesheet" href="../assets-new/css/thank-you.css" media="all" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="../assets-new/css/thank-you.css" /></noscript>
+  </head>
+  <body>
+    <div id="header"></div>
+    <section class="thankyou-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-wrap">
+                        <h1 class="text-center pb-1">
+                            <span>Thank you for reaching out to us </span> 
+                            <!-- <span class="dots"></span> -->
+                        </h1>
+                        <p class="text-center">
+                            We have received your inquiry and one of our team members will get back to you within 1 business day.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="content">
+                    <span class="tick">✓</span>
+                    <p class="text-center pt-3 pb-1 ">If you need immediate assistance, you can connect with us on:</p>
+                </div>
+            </div>
+            <div class="banner-cta-btns">
+                <a href="https://wa.me/7708889555" target="_blank" rel="noopener noreferrer" class="mt-3" >CONNECT ON WHATSAPP</a>
+                <a href="https://t.me/yokesh_sankar" target="_blank" rel="noopener noreferrer" class="mt-sm-3 mt-2" >CONNECT ON TELEGRAM</a>
+             </div>
+        </div>
+    </section>
+    
+
+    <div id="footer"></div>
+    <div class="scroller"><i class="bi bi-arrow-up"></i></div>
+
+   <!-- JavaScript -->
+   <script>
+    fetch('../header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+</script>
+
+<script>
+  fetch('../footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+</script>
+
+    <script type="text/javascript">
+    // ---------- Scroll-to-top functionality -----------
+  const scroller = document.querySelector('.scroller');
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scroller.style.display = 'block';
+    } else {
+      scroller.style.display = 'none';
+    }
+  });
+  
+  scroller.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+<script src="../assets-new/form-handler.js"></script>
+<script src="../assets-new/sticky-social-share.js"></script>
+
+  </body>
+</html>

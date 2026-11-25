@@ -1,0 +1,75 @@
+name: sparkout-html-development
+
+on:
+  push:
+    branches: [development]
+
+jobs:
+  sparkout-html:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Establish VPN connection
+        run: |
+          sudo apt update
+          sudo apt install -y openvpn openvpn-systemd-resolved
+          
+          # First VPN attempt
+          echo "${{ secrets.VPN_CONFIG_1 }}" > vpn-config-1.ovpn
+          echo "${{ secrets.VPN_USERNAME_1 }}" > vpn-credentials-1.txt
+          echo "${{ secrets.VPN_PASSWORD_1 }}" >> vpn-credentials-1.txt
+          sudo openvpn --config vpn-config-1.ovpn --auth-user-pass vpn-credentials-1.txt --daemon
+          sleep 15
+          # Check if VPN connection is established
+          if ping -c 1 8.8.8.8 &> /dev/null; then
+              echo "OFFICE-1 VPN CONNECTION ESTABLISHED SUCCESSFULLY."
+          else
+              echo "OFFICE-1 VPN CONNECTION FAILED, ATTEMPTING OFFICE-2 VPN."
+              
+              # Second VPN attempt
+              echo "${{ secrets.VPN_CONFIG_2 }}" > vpn-config-2.ovpn
+              echo "${{ secrets.VPN_USERNAME_2 }}" > vpn-credentials-2.txt
+              echo "${{ secrets.VPN_PASSWORD_2 }}" >> vpn-credentials-2.txt
+              sudo openvpn --config vpn-config-2.ovpn --auth-user-pass vpn-credentials-2.txt --daemon
+              sleep 15
+              # Check if second VPN connection is established
+              if ping -c 1 8.8.8.8 &> /dev/null; then
+                  echo "OFFICE-2 VPN CONNECTION ESTABLISHED SUCCESSFULLY."
+              else
+                  echo "Both VPN connections failed."
+                  exit 1
+              fi
+          fi
+      - name: Deploy to development server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DEV_SSH_HOST }}
+          username: ${{ secrets.DEV_SSH_USERNAME }}
+          key: ${{ secrets.DEV_SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            cd /var/www/html/sparkout-html  &&
+            sudo git pull origin development || { echo 'Deployment failed' && exit 1; }
+            
+    #     # Notify on fail
+    #   - name: Notify on failure
+    #     if: failure()
+    #     run: |
+    #         curl -X POST -H "Content-Type: application/json" -d '{
+    #         "text": "❌❌❌ GitHub Action Deployment failed ❌❌❌\n\nBranch: **${{ github.ref }}**\nRepository: **${{ github.repository }}**\nLast Failed Message: **${{ github.event.workflow_run.conclusion_message }}**\n\n[View Details](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+    #         }' "https://cliq.zoho.com/company/654406765/api/v2/channelsbyname/${{ secrets.CLIQ_CHANNEL_NAME_DEVOPS }}/message?zapikey=${{ secrets.CLIQ_API_KEY_DEVOPS }}"
+            
+    #         curl -X POST -H "Content-Type: application/json" -d '{
+    #         "text": "❌❌❌ GitHub Action Deployment failed ❌❌❌\n\nBranch: **${{ github.ref }}**\nRepository: **${{ github.repository }}**\nLast Failed Message: **${{ github.event.workflow_run.conclusion_message }}**\n\n[View Details](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+    #         }' "https://cliq.zoho.com/company/654406765/api/v2/channelsbyname/${{ secrets.CLIQ_CHANNEL }}/message?zapikey=${{ secrets.CLIQ_API_KEY }}"
+    #   # Example: Notify on success
+    #   - name: Notify on success
+    #     if: success()
+    #     run: |
+    #         curl -X POST -H "Content-Type: application/json" -d '{"text":"✅✅✅GitHub Action Deployemnt passed for branch ${{ github.ref }} in repository ${{ github.repository }}"}' "https://cliq.zoho.com/company/654406765/api/v2/channelsbyname/chanelname/message?zapikey=${{ secrets.CLIQ_API_KEY }}"
+      - name: Kill VPN connection
+        if: always()
+        run: |
+          sudo killall openvpn
